@@ -1,0 +1,87 @@
+header {
+    font-family: 'Koulen', cursive;
+    background-color: black;
+    color: mintcream;
+    border: 2px solid mintcream;
+    border-radius: 5px;
+    text-indent: 25px;
+    margin-right: 240px;
+    margin-left: 100px;
+    font-size: 150%;
+}
+
+.bigbox {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: mintcream;
+    margin-right: 240px;
+    margin-left: 100px;
+    text-indent: 25px;
+    font-family: 'Koulen', cursive;
+    margin-top: -5px;
+    height: 70vh;
+}
+
+.middlebox {
+    position: relative;
+    top: 2vh;
+    background-color: mintcream;
+    margin-left: 75px;
+    margin-right: 300px;
+    height: 65vh;
+}
+
+.titre {
+    margin-right: 150px;
+    font-size: 150%;
+    text-indent: 80px;
+    background-color: grey;
+    border: 2px solid black;
+}
+
+.box1 {
+    position: relative;
+    top: 5vh;
+    margin-right: 150px;
+    text-indent: 80px;
+    background-color: lightgray;
+    border: 2px solid black;
+}
+
+.box2 {
+    position: relative;
+    top: 7vh;
+    margin-right: 150px;
+    text-indent: 80px;
+    background-color: lightgray;
+    border: 2px solid black;
+}
+
+.box3 {
+    position: relative;
+    top: 9vh;
+    margin-right: 150px;
+    text-indent: 80px;
+    background-color: lightgray;
+    border: 2px solid black;
+}
+
+.box4 {
+    position: relative;
+    bottom: 45vh;
+    left: 105vh;
+    margin-right: 580px;
+    background-color: lightgray;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.box5 {
+    position: relative;
+    bottom: 38vh;
+    left: 105vh;
+    margin-right: 580px;
+    text-align: center;
+    background-color: lightgray;
+    border: 2px solid black;
+}
