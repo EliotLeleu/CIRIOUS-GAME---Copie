@@ -1,73 +1,225 @@
-header {
+/*PAGE FACEJUNIA DE BASE SANS AUCUN ECRAN DEDANS !!!!!!!*/
+#FaceJunia{
+    background-color: white;
+    height: 85vh;
+    width: 60vw;
+    margin: 4vh 40vh;
+    border: solid 8px black;
+}
+
+.headerFaceJunia {
     background-color: lightsteelblue;
     font-size: 200%;
-    margin-left: 300px;
-    margin-right: 300px;
-    margin-top: 10px;
-    border: 4px solid black;
-    border-radius: 3px;
-    height: 50px;
-    text-indent: 7px;
-    padding-top: 13px;    
+    border-bottom: 8px solid black;
+    height: 10vh;
 }
 
-.bigbox {
-    max-width: 100%;
-    max-height: 100%;
-    margin-left: 300px;
-    margin-right: 300px;
-    margin-top: -20px;
-    height: 700px;
+.headerFaceJunia .Title{
+    position: relative;
+    top: 20%;
+    left: 2%;
+}
+
+.headerFaceJunia .cross{
+    position: relative;
+    top: 10%;
+}
+
+/*ECRAN PRINCIPALE DE FACEJUNIA UNE FOIS CONNECTE !!!!!!!*/
+.bigboxFaceJunia {
+    height: 73.5vh;
     background-color: white;
-    border-bottom: 4px solid black;
-    border-left: 4px solid black;
-    border-right: 4px solid black;
-    border-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: gray lightgray ;
 }
 
-.middlebox {
+/*CHANGER LA BARRE DE SCROLL DANS CHROME*/
+.bigboxFaceJunia::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+.bigboxFaceJunia::-webkit-scrollbar-track {
+    background: lightgray;
+  }
+  
+.bigboxFaceJunia::-webkit-scrollbar-thumb {
+    background-color: rgb(70, 33, 33);
+    border-radius: 20px;
+    border: 0px solid lightgray; 
+}
+
+/*FOND GRIS OU IL Y A LA PHOTO ET LES DONNEES DU JOUEUR*/
+.middleboxFaceJunia {
     background-color: rgb(217, 216, 219);
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 15vh;
+    margin-right: 14vh;
+    height: 100vh;
 }
 
 .wallpaper {
-    text-align: center;
-    margin-top: 20px;
+    background-image: url(../image/wallpaper-images-hero.jpg);
+    background-size: cover;
     position: relative; 
-    top: 2vh;
+    top: 0.5vh;
+    left: 15vh;
+    height: 18vh;
+    width: 30vw;
+    border-radius: 15px;
 }
 
 .pdp {
     text-align: center;
-    /*margin-top: 25px;*/
     position: relative;
-    bottom: 1vh;
+    left: 20vw;
+    bottom: 5vh;
+    background-image: url(../image/pdp-annon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 15px;
 }
 
 .name {
     text-align: center;
     font-family: 'Koulen', cursive;
-    font-size: 140%;
-    margin-top: -25px;
+    font-size: 100%;
+    position: relative;
+    bottom: 10vh;
+
 }
 
 .details {
     font-family: 'Koulen', cursive;
-    text-indent: 75px;
+    text-indent: 12vh;
     background-color: white;
     border: 3px solid black;
     border-radius: 5px;
+    position: relative;
+    bottom: 10vh;
 }
 
 .infos {
     font-family: 'Koulen', cursive;
-    text-indent: 10px absolute;
     white-space: pre;
+    position: relative;
+    bottom: 11vh;
 }
 
 .loisirs {
+    font-family: 'Koulen', cursive;
     margin-left: 50px;
     word-spacing: 0.2em;
     font-size: 100%;
+    position: relative;
+    bottom: 10vh;
+}
+
+.reglage{
+    position: relative;
+    bottom: 58.5vh;
+    left: 89vh;
+    height: 4.5vh;
+    width: 5vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0.5vh;
+    font-size: 1.5rem;
+}
+
+
+/*ECRAN VERROUILLE DE FACEJUNIA !!!!!!!*/
+
+#FaceJuniaLock{
+    background-color: white;
+    height: 85vh;
+    width: 60vw;
+    margin: 4vh 40vh;
+    border: solid 8px black;
+}
+
+.middleboxlockFaceJunia {
+    background-color: rgb(217, 216, 219);
+    margin-left: 15vh;
+    margin-right: 14vh;
+    height: 74vh;
+    
+}
+
+.bigboxlockFaceJunia {
+    height: 74vh;
+    background-color: white;
+    position: relative;
+    bottom: 3.5vh;
+}
+
+.FaceJuniaPass{
+    text-align: center;
+    position: relative;
+    top: 20vh;
+}
+
+.FaceJuniaPass h1{
+    font-size: 1.8rem;
+}
+
+#FaceJuniapassword{
+    font-size: 5vh;
+}
+
+.valideFaceJunia{
+    margin-top: 2vh;
+    border: 2px solid black;
+    height: 5vh;
+    width: 8vw;
+    border-radius: 10px;
+    position: relative;
+    left: 19vw;
+    padding-top: 0.5vh;
+}
+
+/*ECRAN DE PARAMETRE DE FACE JUNIA*/
+
+.middleboxFaceJunia_para {
+    background-color: rgb(217, 216, 219);
+    margin-left: 15vh;
+    margin-right: 14vh;
+    height: 74vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bigboxFaceJunia_para {
+    height: 74vh;
+    background-color: white;
+}
+
+.border{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding:2vh;
+}
+
+
+/*ECRAN DE CHANGEMENT DE MDP*/
+
+.middleboxFaceJunia_changeMdp {
+    background-color: rgb(217, 216, 219);
+    margin-left: 15vh;
+    margin-right: 14vh;
+    height: 74vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bigboxFaceJunia_changeMdp {
+    height: 74vh;
+    background-color: white;
 }

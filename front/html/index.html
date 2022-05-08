@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!--FaceJunia-->
+    <link rel="stylesheet" type="text/css" href="../css/facejunia.css" />
+    <link rel="stylesheet" type="text/css" href="../css/instagroove.css" />
+    <link rel="stylesheet" type="text/css" href="../css/imail.css" />
+    <link rel="stylesheet" type="text/css" href="../css/faux-rom.css" />
+    <script src="https://kit.fontawesome.com/8d713fbf44.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Jeu</title>
+</head>
+<body>
+    <!-- Page de l'ordi -->
+    <div id="Room">
+
+        <div id="Ordi"></div>
+        <div class="OrdiClick">
+            <p>Ordinateur</p>
+        </div>
+        
+        <div id="Biblio"></div>
+        <div class="BiblioClick">
+            <p>Bibliothèque</p>
+        </div>
+
+        <canvas id="myCanvas"></canvas>
+    </div>
+
+    <div id="PClock">
+        <h1>Session de Joachim</h1>
+        <input type="text" id="PCpassword">
+        <div class="ComeBackRoom">Go Room</div>
+    </div>
+    
+    <div id="PC">
+        <div class="Icon IconFaceJunia" rel="FaceJunia">FaceJunia</div>
+        <div class="Icon IconInstaGroove" rel="InstaGroove">InstaGroove</div>
+        <div class="Icon IconImail" rel="Imail">Imail</div>
+        <div class="Icon IconForum" rel="Faux-Rom">Forum</div>
+        <div class="ComeBackRoom">Go Room</div>
+    </div>
+
+    <!-- Page des sites -->
+    <div id="FaceJunia" rel="FaceJunia">
+        
+        <div class="headerFaceJunia">
+            <i class="Title fa-brands fa-facebook">FaceJunia</i>
+            <div class="goBack"> <i class="cross fa-solid fa-xmark"></i> </div>
+        </div>
+
+
+        <!-- Affichage fenetre fermer -->
+        <div class="bigboxlockFaceJunia">
+            <div class="middleboxlockFaceJunia">
+
+                <div class="FaceJuniaPass">
+                    <h1>Mots de Passe</h1>
+                    <input type="text" id="FaceJuniapassword">
+                    <div class="valide valideFaceJunia" rel="FaceJuniapassword">Se connecter</div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Affichage fenetre ouvert -->
+        <div class="bigboxFaceJunia">
+            <div class="middleboxFaceJunia">
+                <div class="wallpaper"></div>
+            
+                <div class="pdp"></div>
+                
+                <div class="name">
+                    <h1>Nom Prenom </h1>
+                </div>
+        
+                <div class="details"> 
+                    <h2>Details publics : </h2>
+                </div>
+
+                <div class="fa-cog fa-solid reglage"></div>
+                
+            
+                <div class="infos">
+                    <i class="fa-solid fa-heart"> Celibataire </i>
+                    <i class="fa-solid fa-graduation-cap"> Etudie a Venomous School</i>
+                    <i class="fa-solid fa-house"> Habite a l'ile</i>
+                    <i class="fa-solid fa-phone"> 01 23 45 67 89</i>
+                </div>
+        
+                <div class="loisirs">
+                    <h3>Loisirs : Le sport - les amies - l'informatique</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Affichage fenetre parametre -->
+        <div class="bigboxFaceJunia_para">
+            <div class="middleboxFaceJunia_para">
+
+                <div class="border changeMdp">Changer le mot de passe</div>
+                <div class="border changeInfo">Changer les infos</div>
+                <div class="border deconnection">Se déconnecter</div>
+                <div class="border retourProfil">Retrouner sur le profil</div>
+
+            </div>
+        </div>
+
+        <!-- Affichage fenetre Changement de mots de passe -->
+        <div class="bigboxFaceJunia_changeMdp">
+            <div class="middleboxFaceJunia_changeMdp">
+
+                <h1>Changer son Mot de Passe</h1>
+
+                <div>Ancien Mot de Passe
+                    <input type="text">
+                </div>
+                
+                <div>Nouveau Mot de Passe
+                    <input type="text">
+                </div>
+                
+                <div>Confirmation
+                    <input type="text">
+                </div>
+
+                <div class="annulerMdp">Annuler</div>
+                <div class="ConfirmerMdp">Confirmer</div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="InstaGrooveLock">
+        
+        <div class="headerInstaGroove">
+            <i class="Title fa-brands fa-instagram">InstaGroove</i>
+            <div class="goBack"> <i class="cross fa-solid fa-xmark"></i> </div>
+        </div>
+    
+        <div class="bigboxlock_InstaGroove">
+            <div class="middleboxlock_InstaGroove">
+
+                <div class="InstaGroovePass">
+                    <h1>Mots de Passe</h1>
+                    <input type="text" id="InstaGroovepassword">
+                    <div class="valide valideInstaGroove" rel="InstaGroovepassword">Se connecter</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="InstaGroove">
+        <div class="headerInstaGroove">
+            <i class="Title fa-brands fa-instagram"> InstaGroove</i>
+            <div class="goBack"> <i class="cross fa-solid fa-xmark"></i> </div>
+        </div>
+    </div>
+
+    <div id="ImailLock">
+        
+        <div class="headerImail">
+            <i class="Title fa-brands fa-solid fa-envelope"> Imail</i>
+            <div class="goBack"> <i class="cross fa-solid fa-xmark"></i> </div>
+        </div>
+    
+        <div class="bigboxlock_Imail">
+            <div class="middleboxlock_Imail">
+
+                <div class="ImailPass">
+                    <h1>Mots de Passe</h1>
+                    <input type="text" id="Imailpassword">
+                    <div class="valide valideImail" rel="Imailpassword">Se connecter</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="Imail">
+        <div class="headerImail">
+            <i class="Title fa-brands fa-solid fa-envelope"> Imail</i>
+            <div class="goBack"> <i class="cross fa-solid fa-xmark"></i> </div>
+        </div>
+
+    </div>
+
+
+
+    <div id="Faux-RomLock">
+        
+        <div class="headerFaux-Rom">
+            <i class="Title fa-brands fa-solid fa-envelope"> Faux-Rom</i>
+            <div class="goBack"> <i class="cross fa-solid fa-xmark"></i> </div>
+        </div>
+    
+        <div class="bigboxlock_Faux-Rom">
+            <div class="middleboxlock_Faux-Rom">
+
+                <div class="Faux-RomPass">
+                    <h1>Mots de Passe</h1>
+                    <input type="text" id="Faux-Rompassword">
+                    <div class="valide valideFaux-Rom" rel="Faux-Rompassword">Se connecter</div>
+                </div>
+            </div>
+        </div>
+
+    </div> 
+    <div id="Faux-Rom">
+        <div class="headerFaux-Rom">
+            <i class="Title fa-brands fa-instagram"> Faux-Rom</i>
+            <div class="goBack"> <i class="cross fa-solid fa-xmark"></i> </div>
+        </div>
+
+    </div>
+    
+</body>
+    <script src="../js/changeMdp.js"></script>
+    <script src="../js/page.js"></script>
+    <script src="../js/player.js"></script>
+</html>

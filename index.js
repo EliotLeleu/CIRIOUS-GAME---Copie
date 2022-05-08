@@ -56,7 +56,7 @@ if (app.get('env') === 'production') {
 http.listen(5000, () => {
     console.log('Serveur lancé sur le port 5000');
 });
-    
+
 app.use(express.static(path.join(__dirname, )));
 app.use(routes);
     
@@ -64,3 +64,4 @@ app.use((err, req, res, next) => {
 // console.log(err);
     return res.send('Internal Server Error');   
 });
+

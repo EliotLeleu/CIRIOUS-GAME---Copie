@@ -1,29 +1,30 @@
-#Faux-Rom{
+#Imail{
+    background-color: orange;
     height: 85vh;
     width: 60vw;
     margin: 4vh 40vh;
     border: solid 8px black;
 }
 
-.headerFaux-Rom {
-    background-color: darkgreen;
+.headerImail {
+    background-color: gray;
     font-size: 200%;
     border-bottom: 8px solid black;
     height: 10vh;
 }
 
-.headerFaux-Rom .Title{
+.headerImail .Title{
     position: relative;
     top: 20%;
     left: 2%;
 }
 
-.headerFaux-Rom .cross{
+.headerImail .cross{
     position: relative;
     top: 10%;
 }
 
-#Faux-RomLock{
+#ImailLock{
     background-color: white;
     height: 85vh;
     width: 60vw;
@@ -31,34 +32,34 @@
     border: solid 8px black;
 }
 
-.middleboxlock_Faux-Rom {
-    background-color: green;
+.middleboxlock_Imail {
+    background-color: yellow;
     height: 74vh;
     height: 100%;
 }
 
-.bigboxlock_Faux-Rom {
+.bigboxlock_Imail {
     height: 74vh;
     background-color: white;
     position: relative;
     bottom: 3.5vh;
 }
 
-.Faux-RomPass{
+.ImailPass{
     text-align: center;
     position: relative;
     top: 20vh;
 }
 
-.Faux-RomPass h1{
+.ImailPass h1{
     font-size: 1.8rem;
 }
 
-#Faux-Rompassword{
+#Imailpassword{
     font-size: 5vh;
 }
 
-.valideFaux-Rom{
+.valideImail{
     margin-top: 2vh;
     border: 2px solid black;
     height: 5vh;
