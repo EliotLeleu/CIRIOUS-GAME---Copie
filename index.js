@@ -57,6 +57,11 @@ http.listen(5000, () => {
     console.log('Serveur lancé sur le port 5000');
 });
 
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/front/html/index.html');
+
+});
+
 app.use(express.static(path.join(__dirname, )));
 app.use(routes);
     

@@ -6,6 +6,7 @@ let FaceJuniascreenClose = document.querySelector('.bigboxlockFaceJunia')
 let FaceJuniascreenOpen = document.querySelector('.bigboxFaceJunia')
 let FaceJuniascreen_Para = document.querySelector('.bigboxFaceJunia_para')
 let FaceJuniascreen_changeMdp = document.querySelector('.bigboxFaceJunia_changeMdp')
+let FaceJuniascreen_changeInfo = document.querySelector('.bigboxFaceJunia_changeInfo')
 
 let InstaGroovescreen = document.querySelector('#InstaGroove')
 let InstaGroovescreenLock = document.querySelector('#InstaGrooveLock')
@@ -25,6 +26,7 @@ FaceJuniascreenClose.style.display = "none"
 FaceJuniascreenOpen.style.display = "none"
 FaceJuniascreen_Para.style.display = "none"
 FaceJuniascreen_changeMdp.style.display = "none"
+FaceJuniascreen_changeInfo.style.display = "none"
 
 InstaGroovescreenLock.style.display = "none"
 InstaGroovescreen.style.display = "none"
@@ -88,6 +90,7 @@ $(document).ready(function() {
             let vo = $(this).parent().parent().attr("rel")
             $('.bigbox' + vo +'_para')[0].style.display = "none"
             $('.bigbox' + vo +'_changeMdp')[0].style.display = "none"
+            $('.bigbox' + vo +'_changeInfo')[0].style.display = "none"
         }
         va.style.display = "none"
         PCscreen.style.display = "block"
@@ -185,6 +188,7 @@ $(document).ready(function() {
         FaceJuniascreenOpen.style.display = "none"
         FaceJuniascreen_Para.style.display = "block"
     })
+    //Pour aller sur la page Modifier son mdp avec les fonctions de confirmation et d'annulation
     $('.changeMdp').click(function (){
         FaceJuniascreen_Para.style.display = "none"
         FaceJuniascreen_changeMdp.style.display = "block"
@@ -227,16 +231,25 @@ $(document).ready(function() {
         }
     })
 
+    //Pour aller sur la page Modifier ses Infos avec les fonctions de confirmation et d'annulation
     $('.changeInfo').click(function (){
-        FaceJuniascreenOpen.style.display = "none"
-        FaceJuniascreen_Para.style.display = "block"
+        FaceJuniascreen_Para.style.display = "none"
+        FaceJuniascreen_changeInfo.style.display = "block"
     })
+    $('.annulerInfo').click(function (){
+        FaceJuniascreen_changeInfo.style.display = "none"
+        FaceJuniascreen_Para.style.display = "block"
+        console.log("Peut être clear les infos qu'on a pas fini d'écrire ?")
+        
+    })
+    $('.ConfirmerInfo').click(function (){
+        console.log("Il faut faire la fonction qui change les infos sur la page de base") 
+    })
+
     $('.deconnection').click(function (){   
         FaceJunia_is_lock = true
         FaceJuniascreen_Para.style.display = "none"
-        FaceJuniascreen.style.display = "none"
-        PCscreen.style.display = "block"
-
+        FaceJuniascreenClose.style.display = "block"
     })
     $('.retourProfil').click(function (){
         FaceJuniascreen_Para.style.display = "none"

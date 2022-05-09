@@ -223,3 +223,21 @@
     height: 74vh;
     background-color: white;
 }
+
+/*ECRAN DE CHANGEMENT DES INFOS*/
+
+.middleboxFaceJunia_changeInfo {
+    background-color: rgb(217, 216, 219);
+    margin-left: 15vh;
+    margin-right: 14vh;
+    height: 74vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bigboxFaceJunia_changeInfo {
+    height: 74vh;
+    background-color: white;
+}
