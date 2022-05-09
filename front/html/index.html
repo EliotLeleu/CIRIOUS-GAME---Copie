@@ -109,7 +109,7 @@
                 <div class="border changeMdp">Changer le mot de passe</div>
                 <div class="border changeInfo">Changer les infos</div>
                 <div class="border deconnection">Se déconnecter</div>
-                <div class="border retourProfil">Retrouner sur le profil</div>
+                <div class="border retourProfil">Retourner sur le profil</div>
 
             </div>
         </div>
@@ -121,16 +121,18 @@
                 <h1>Changer son Mot de Passe</h1>
 
                 <div>Ancien Mot de Passe
-                    <input type="text">
+                    <input class="form-control" id="oldPassword" name="oldPassword" value="" placeholder="Entrez l'ancien mot de passe" type="password">
                 </div>
                 
                 <div>Nouveau Mot de Passe
-                    <input type="text">
+                    <input class="form-control" id="newPassword" name="newPassword" value="" placeholder="Entrez le nouveau mot de passe" type="password">
                 </div>
                 
                 <div>Confirmation
-                    <input type="text">
+                    <input class="form-control" id="confirmPassword" name="confirmPassword" value="" placeholder="Re-saisissez le nouveau mot de passe" type="password">
                 </div>
+
+                <span id="msg"></span>
 
                 <div class="annulerMdp">Annuler</div>
                 <div class="ConfirmerMdp">Confirmer</div>
@@ -225,6 +227,6 @@
     
 </body>
     <script src="../js/changeMdp.js"></script>
-    <script src="../js/page.js"></script>
+    <script src="/front/js/page.js"></script>
     <script src="../js/player.js"></script>
 </html>

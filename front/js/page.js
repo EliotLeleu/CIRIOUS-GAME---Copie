@@ -20,11 +20,11 @@ let Imail_is_lock = true
 let FauxRom_is_lock = true
 
 PCscreen.style.display = "none"
-FaceJuniascreen.style.display = "block"
+FaceJuniascreen.style.display = "none"
 FaceJuniascreenClose.style.display = "none"
 FaceJuniascreenOpen.style.display = "none"
 FaceJuniascreen_Para.style.display = "none"
-FaceJuniascreen_changeMdp.style.display = "block"
+FaceJuniascreen_changeMdp.style.display = "none"
 
 InstaGroovescreenLock.style.display = "none"
 InstaGroovescreen.style.display = "none"
@@ -93,13 +93,19 @@ $(document).ready(function() {
         PCscreen.style.display = "block"
     })
 
+    let motdepasseFaceJunia = "YO"
+    let motdepasseInstaGroove = "YO"
+    let motdepasseImail = "YO"
+    let motdepasseFauxRom = "YO"
+
+
     //Test Mots de Passe pour les sites avec le bouton se connnecter
     $(".valide").click(function() {
         let va = $(this).attr('rel')
         console.log(va)
         switch(va){
             case "FaceJuniapassword" :
-                if(($('#'+ va)[0].value) == "YO"){
+                if(($('#'+ va)[0].value) == motdepasseFaceJunia){
                     FaceJunia_is_lock = false
                     FaceJuniascreenClose.style.display = "none"
                     FaceJuniascreenOpen.style.display = "block"
@@ -107,7 +113,7 @@ $(document).ready(function() {
                 break;
             
             case "InstaGroovepassword" :
-                if(($('#'+ va)[0].value) == "YO"){
+                if(($('#'+ va)[0].value) == motdepasseInstaGroove){
                     InstaGroove_is_lock = false
                     InstaGroovescreenLock.style.display = "none"
                     InstaGroovescreen.style.display = "block"
@@ -115,7 +121,7 @@ $(document).ready(function() {
                 break;
             
             case "Imailpassword" :
-                if(($('#'+ va)[0].value) == "YO"){
+                if(($('#'+ va)[0].value) == motdepasseImail){
                     Imail_is_lock = false
                     ImailscreenLock.style.display = "none"
                     Imailscreen.style.display = "block"
@@ -123,7 +129,7 @@ $(document).ready(function() {
                 break;
                 
             case "Faux-Rompassword" :
-                if(($('#'+ va)[0].value) == "YO"){
+                if(($('#'+ va)[0].value) == motdepasseFauxRom){
                     FauxRom_is_lock = false
                     FauxRomscreenLock.style.display = "none"
                     FauxRomscreen.style.display = "block"
@@ -136,7 +142,7 @@ $(document).ready(function() {
     $('#FaceJuniapassword')[0].onkeypress = function(e){
         var e=window.event || e;
 		var touche=e.charCode || e.keyCode;
-		if((touche==13) && (this.value == "YO")){
+		if((touche==13) && (this.value == motdepasseFaceJunia)){
             FaceJunia_is_lock = false
             FaceJuniascreenClose.style.display = "none"
             FaceJuniascreenOpen.style.display = "block"  
@@ -146,7 +152,7 @@ $(document).ready(function() {
     $('#InstaGroovepassword')[0].onkeypress = function(e){
         var e=window.event || e;
 		var touche=e.charCode || e.keyCode;
-		if((touche==13) && (this.value == "YO")){
+		if((touche==13) && (this.value == motdepasseInstaGroove)){
             InstaGroove_is_lock = false
             InstaGroovescreenLock.style.display = "none"
             InstaGroovescreen.style.display = "block"
@@ -156,7 +162,7 @@ $(document).ready(function() {
     $('#Imailpassword')[0].onkeypress = function(e){
         var e=window.event || e;
 		var touche=e.charCode || e.keyCode;
-		if((touche==13) && (this.value == "YO")){
+		if((touche==13) && (this.value == motdepasseImail)){
             Imail_is_lock = false
             ImailscreenLock.style.display = "none"
             Imailscreen.style.display = "block"
@@ -166,7 +172,7 @@ $(document).ready(function() {
     $('#Faux-Rompassword')[0].onkeypress = function(e){
         var e=window.event || e;
 		var touche=e.charCode || e.keyCode;
-		if((touche==13) && (this.value == "YO")){
+		if((touche==13) && (this.value == motdepasseFauxRom)){
             FauxRom_is_lock = false
             FauxRomscreenLock.style.display = "none"
             FauxRomscreen.style.display = "block"
@@ -189,14 +195,43 @@ $(document).ready(function() {
         
     })
     $('.ConfirmerMdp').click(function (){
-        console.log("Il faut faire la fonction qui change le mots de passe") 
+        
+        var oldpassword = document.getElementById('oldPassword').value;
+        var newpassword = document.getElementById('newPassword').value;
+        var confirmpassword = document.getElementById('confirmPassword').value;
+        if (oldpassword == "" || newpassword == "" || confirmpassword == "") {
+            alert('Veuillez remplir tous les champs');
+        }
+        else if (oldpassword == newpassword) {
+            alert("L'ancien et le nouveau mot de passe ne peuvent être identique");
+        }
+        else if (newpassword != confirmpassword) {
+            alert("Les mots de passe ne correspondent pas");
+        }
+        else {
+            if ((newpassword.match( /[0-9]/g) && 
+                    newpassword.match( /[A-Z]/g) && 
+                    newpassword.match(/[a-z]/g) && 
+                    newpassword.match( /[^a-zA-Z\d]/g) &&
+                    newpassword.length == 9) || (newpassword.match(/[a-z]/g) && newpassword.length == 12)) {
+                msg = "<p style='color:green'>Mot de passe fort.</p>"; 
+                FaceJuniascreen_changeMdp.style.display = "none";
+                FaceJuniascreen_Para.style.display = "block";
+                alert("Le mot de passe a été correctement modifié")
+                motdepasseFaceJunia = newpassword;
+                    }
+            else {
+                msg = "<p style='color:red'>Mot de passe faible.</p>";
+            }
+            document.getElementById("msg").innerHTML= msg; 
+        }
     })
 
     $('.changeInfo').click(function (){
         FaceJuniascreenOpen.style.display = "none"
         FaceJuniascreen_Para.style.display = "block"
     })
-    $('.deconnection').click(function (){
+    $('.deconnection').click(function (){   
         FaceJunia_is_lock = true
         FaceJuniascreen_Para.style.display = "none"
         FaceJuniascreen.style.display = "none"
@@ -207,4 +242,6 @@ $(document).ready(function() {
         FaceJuniascreen_Para.style.display = "none"
         FaceJuniascreenOpen.style.display = "block"
     })
+
 });
+

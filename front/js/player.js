@@ -8,7 +8,7 @@ let PClock = document.querySelector('#PClock')
 PClock.style.display = "none"
 
 let Room = document.querySelector('#Room')
-Room.style.display = "none"
+Room.style.display = "block"
 
 let Ordi = document.querySelector('#Ordi')
 let ClickOrdi = document.querySelector('.OrdiClick')
