@@ -90,10 +90,10 @@
                 
             
                 <div class="infos">
-                    <i class="fa-solid fa-heart"> Celibataire </i>
-                    <i class="fa-solid fa-graduation-cap"> Etudie a Venomous School</i>
-                    <i class="fa-solid fa-house"> Habite a l'ile</i>
-                    <i class="fa-solid fa-phone"> 01 23 45 67 89</i>
+                    <i class="fa-solid fa-heart" id="co"> Celibataire </i>
+                    <i class="fa-solid fa-graduation-cap" id="etu"> Etudie a Venomous School</i>
+                    <i class="fa-solid fa-house" id="hab"> Habite a l'ile</i>
+                    <i class="fa-solid fa-phone" id="tel"> 01 23 45 67 89</i>
                 </div>
         
                 <div class="loisirs">
@@ -155,7 +155,7 @@
                         <option value="celibataire">Célibataire</option>
                         <option value="seul">Seul</option>
                     </select>
-                    <select name="StatuePrivatePubic" id="">
+                    <select name="StatuePrivatePubic" id="StatueAffectifState">
                         <option value="prive">Privé</option>
                         <option value="public">Public</option>
                     </select>
@@ -163,8 +163,8 @@
                     
                 <div><i class="fa-solid fa-graduation-cap"></i> 
                     École 
-                    <input type="text">
-                    <select name="ecolePrivatePubic" id="">
+                    <input type="text" id="ecoleinfo">
+                    <select name="ecolePrivatePubic" id="ecolestate">
                         <option value="prive">Privé</option>
                         <option value="public">Public</option>
                     </select>
@@ -172,8 +172,8 @@
                 
                 <div><i class="fa-solid fa-house"></i>
                     Adresse
-                    <input type="text">
-                    <select name="AdressePrivatePubic" id="">
+                    <input type="text" id="habitatinfo">
+                    <select name="AdressePrivatePubic" id="habitatstate">
                         <option value="prive">Privé</option>
                         <option value="public">Public</option>
                     </select>
@@ -181,8 +181,8 @@
 
                 <div><i class="fa-solid fa-phone"></i>
                     Télephone
-                    <input type="text">
-                    <select name="TelPrivatePubic" id="">
+                    <input type="text" id="telinfo">
+                    <select name="TelPrivatePubic" id="telstate">
                         <option value="prive">Privé</option>
                         <option value="public">Public</option>
                     </select>
@@ -252,14 +252,14 @@
 
 
 
-    <div id="Faux-RomLock">
+    <div id="Faux-Rom" rel="Faux-Rom">
         
         <div class="headerFaux-Rom">
             <i class="Title fa-brands fa-solid fa-envelope"> Faux-Rom</i>
             <div class="goBack"> <i class="cross fa-solid fa-xmark"></i> </div>
         </div>
     
-        <div class="bigboxlock_Faux-Rom">
+        <div class="bigboxlockFaux-Rom">
             <div class="middleboxlock_Faux-Rom">
 
                 <div class="Faux-RomPass">
@@ -270,13 +270,48 @@
             </div>
         </div>
 
-    </div> 
-    <div id="Faux-Rom">
-        <div class="headerFaux-Rom">
-            <i class="Title fa-brands fa-instagram"> Faux-Rom</i>
-            <div class="goBack"> <i class="cross fa-solid fa-xmark"></i> </div>
+        <div class="bigboxFaux-Rom">
+            <div class="middleboxFaux-Rom">
+                
+                <div class="titre">
+                    <h3>Le titre qu'on va mettre</h3>
+                </div>
+        
+               <div class="box1">
+                    <p>Il etait une fois....................
+                        ....................................
+                        ....................................
+                        ....................................
+                        ....................................</p>
+                </div>
+            
+                <div class="box2">
+                    <p>Il etait une fois....................
+                        ....................................
+                        ....................................
+                        ....................................
+                        ....................................</p>
+                </div>
+        
+                <div class="box3"> 
+                    <p>Il etait une fois....................
+                        ....................................
+                        ....................................
+                        ....................................
+                        ....................................</p>
+                </div>
+    
+                <div class="box4">
+                    <p> PUB </p>
+                    <img src="/front/css/img/lave-vaiselle.jpg" alt="photo pub lave-vaiselle" height="100" width="80">
+                </div>
+    
+                <div class="box5">
+                    <p> Autre PUB </p>
+                    <img src="/front/css/img/voiture.jpg" alt="pub voiture" width="120" height="75">
+                </div>
+            </div>
         </div>
-
     </div>
     
 </body>

@@ -10,17 +10,20 @@ let FaceJuniascreen_changeInfo = document.querySelector('.bigboxFaceJunia_change
 
 let InstaGroovescreen = document.querySelector('#InstaGroove')
 let InstaGroovescreenLock = document.querySelector('#InstaGrooveLock')
+
 let Imailscreen = document.querySelector('#Imail')
 let ImailscreenLock = document.querySelector('#ImailLock')
+
 let FauxRomscreen = document.querySelector('#Faux-Rom')
-let FauxRomscreenLock = document.querySelector('#Faux-RomLock')
+let FauxRomscreenClose = document.querySelector('.bigboxlockFaux-Rom')
+let FauxRomscreenOpen = document.querySelector('.bigboxFaux-Rom')
 
 let FaceJunia_is_lock = true
 let InstaGroove_is_lock = true
 let Imail_is_lock = true
 let FauxRom_is_lock = true
 
-PCscreen.style.display = "none"
+PCscreen.style.display = "block"
 FaceJuniascreen.style.display = "none"
 FaceJuniascreenClose.style.display = "none"
 FaceJuniascreenOpen.style.display = "none"
@@ -33,7 +36,8 @@ InstaGroovescreen.style.display = "none"
 Imailscreen.style.display = "none"
 ImailscreenLock.style.display = "none"
 FauxRomscreen.style.display = "none"
-FauxRomscreenLock.style.display = "none"
+FauxRomscreenClose.style.display = "none"
+FauxRomscreenOpen.style.display = "none"
 
 $(document).ready(function() {
 
@@ -71,11 +75,12 @@ $(document).ready(function() {
                 break;
 
             case "Faux-Rom":
+                FauxRomscreen.style.display = "block"
                 if(FauxRom_is_lock){
-                $('#' + va + "Lock")[0].style.display = "block"
+                $('.bigboxlock' + va)[0].style.display = "block"
                 }
                 else{
-                    $('#' + va)[0].style.display = "block"
+                    $('.bigbox' + va)[0].style.display = "block"
                 }
                 break;
         }
@@ -86,12 +91,12 @@ $(document).ready(function() {
     //Pour revenir a l'écran d'accueil de l'ordi
     $('.goBack').click(function(){ 
         let va = $(this).parent().parent()[0]
-        if($(this).parent().parent().attr("rel")){
+        /*if($(this).parent().parent().attr("rel")){
             let vo = $(this).parent().parent().attr("rel")
             $('.bigbox' + vo +'_para')[0].style.display = "none"
             $('.bigbox' + vo +'_changeMdp')[0].style.display = "none"
             $('.bigbox' + vo +'_changeInfo')[0].style.display = "none"
-        }
+        } */
         va.style.display = "none"
         PCscreen.style.display = "block"
     })
@@ -134,8 +139,9 @@ $(document).ready(function() {
             case "Faux-Rompassword" :
                 if(($('#'+ va)[0].value) == motdepasseFauxRom){
                     FauxRom_is_lock = false
-                    FauxRomscreenLock.style.display = "none"
-                    FauxRomscreen.style.display = "block"
+                    FauxRomscreenClose.style.display = "none"
+                    FauxRomscreenOpen.style.display = "block"
+                    console.log("fait")
                 }
                 break;
             }
@@ -177,8 +183,8 @@ $(document).ready(function() {
 		var touche=e.charCode || e.keyCode;
 		if((touche==13) && (this.value == motdepasseFauxRom)){
             FauxRom_is_lock = false
-            FauxRomscreenLock.style.display = "none"
-            FauxRomscreen.style.display = "block"
+            FauxRomscreenClose.style.display = "none"
+            FauxRomscreenOpen.style.display = "block"
 		}
 	}
 
@@ -188,7 +194,6 @@ $(document).ready(function() {
         FaceJuniascreenOpen.style.display = "none"
         FaceJuniascreen_Para.style.display = "block"
     })
-    //Pour aller sur la page Modifier son mdp avec les fonctions de confirmation et d'annulation
     $('.changeMdp').click(function (){
         FaceJuniascreen_Para.style.display = "none"
         FaceJuniascreen_changeMdp.style.display = "block"
@@ -198,6 +203,12 @@ $(document).ready(function() {
         FaceJuniascreen_Para.style.display = "block"
         
     })
+    $('.changeInfo').click(function (){
+        FaceJuniascreen_changeInfo.style.display = "block"
+        FaceJuniascreen_Para.style.display = "none"
+        
+    })
+
     $('.ConfirmerMdp').click(function (){
         
         var oldpassword = document.getElementById('oldPassword').value;
@@ -213,11 +224,7 @@ $(document).ready(function() {
             alert("Les mots de passe ne correspondent pas");
         }
         else {
-            if ((newpassword.match( /[0-9]/g) && 
-                    newpassword.match( /[A-Z]/g) && 
-                    newpassword.match(/[a-z]/g) && 
-                    newpassword.match( /[^a-zA-Z\d]/g) &&
-                    newpassword.length == 9) || (newpassword.match(/[a-z]/g) && newpassword.length == 12)) {
+            if ((newpassword.match( /[0-9]/g) && newpassword.match( /[A-Z]/g) && newpassword.match(/[a-z]/g) && newpassword.match( /[^a-zA-Z\d]/g) && newpassword.length == 9) || (newpassword.match(/[a-z]/g) && newpassword.length == 12)) {
                 msg = "<p style='color:green'>Mot de passe fort.</p>"; 
                 FaceJuniascreen_changeMdp.style.display = "none";
                 FaceJuniascreen_Para.style.display = "block";
@@ -231,25 +238,34 @@ $(document).ready(function() {
         }
     })
 
-    //Pour aller sur la page Modifier ses Infos avec les fonctions de confirmation et d'annulation
-    $('.changeInfo').click(function (){
-        FaceJuniascreen_Para.style.display = "none"
-        FaceJuniascreen_changeInfo.style.display = "block"
-    })
-    $('.annulerInfo').click(function (){
+    $('.ConfirmerInfo').click(function (){
+
+        var statueaffectif = document.getElementById('StatueAffectif').value;
+        var statueaffectifstate = document.getElementById('StatueAffectifState').value;
+        document.getElementById('co').innerHTML = statueaffectif + " ( " +statueaffectifstate + " )"; 
+
+        var ecole = document.getElementById('ecoleinfo').value
+        var ecolestate = document.getElementById('ecolestate').value
+        document.getElementById('etu').innerHTML = ecole + " ( " + ecolestate + " )"; 
+
+        var habitat = document.getElementById('habitatinfo').value
+        var habitatstate = document.getElementById('habitatstate').value
+        document.getElementById('hab').innerHTML = habitat + " ( " + habitatstate + " )"; 
+
+        var telephone = document.getElementById('telinfo').value
+        var telephonestate = document.getElementById('telstate').value
+        document.getElementById('tel').innerHTML = telephone + " ( " + telephonestate + " )"; 
+
+
+        alert("Changement correctement effectué ! ")
         FaceJuniascreen_changeInfo.style.display = "none"
         FaceJuniascreen_Para.style.display = "block"
-        console.log("Peut être clear les infos qu'on a pas fini d'écrire ?")
-        
     })
-    $('.ConfirmerInfo').click(function (){
-        console.log("Il faut faire la fonction qui change les infos sur la page de base") 
-    })
-
     $('.deconnection').click(function (){   
         FaceJunia_is_lock = true
         FaceJuniascreen_Para.style.display = "none"
         FaceJuniascreenClose.style.display = "block"
+
     })
     $('.retourProfil').click(function (){
         FaceJuniascreen_Para.style.display = "none"

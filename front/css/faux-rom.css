@@ -23,13 +23,13 @@
     top: 10%;
 }
 
-#Faux-RomLock{
+/*.bigboxlockFaux-Rom{
     background-color: white;
     height: 85vh;
     width: 60vw;
     margin: 4vh 40vh;
     border: solid 8px black;
-}
+}*/
 
 .middleboxlock_Faux-Rom {
     background-color: green;
@@ -37,7 +37,7 @@
     height: 100%;
 }
 
-.bigboxlock_Faux-Rom {
+.bigboxlockFaux-Rom {
     height: 74vh;
     background-color: white;
     position: relative;
@@ -68,3 +68,6 @@
     left: 25.5vw;
     padding-top: 0.5vh;
 }
+
+
+
