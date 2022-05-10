@@ -199,6 +199,16 @@
 
 .confirm {
     text-align: center;
+    border: 2px solid black;
+    border-radius: 3px;
+    position: relative;
+    top: 2vh;
+}
+
+.mdpFaux-Rom {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 3px;
 }
 
 .retournerFaux-Rom {
@@ -208,5 +218,23 @@
     position: absolute;
     top: 80vh;
     left: 85vh;
+}
+
+/*ECRAN DE CHANGEMENT DE MDP*/
+
+.middleboxFaux-Rom_changeMdp {
+    background-color: rgb(217, 216, 219);
+    margin-left: 15vh;
+    margin-right: 14vh;
+    height: 74vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bigboxFaux-Rom_changeMdp {
+    height: 74vh;
+    background-color: white;
 }
 

@@ -121,26 +121,26 @@
                 <h1>Changer son Mot de Passe</h1>
 
                 <div>Ancien Mot de Passe
-                    <input class="form-control" id="oldPassword" name="oldPassword" value="" placeholder="Entrez l'ancien mot de passe" type="password">
+                    <input class="form-control" id="oldPasswordFaceJunia" name="oldPassword" value="" placeholder="Entrez l'ancien mot de passe" type="password">
                 </div>
                 
                 <div>Nouveau Mot de Passe
-                    <input class="form-control" id="newPassword" name="newPassword" value="" placeholder="Entrez le nouveau mot de passe" type="password">
+                    <input class="form-control" id="newPasswordFaceJunia" name="newPassword" value="" placeholder="Entrez le nouveau mot de passe" type="password">
                 </div>
                 
                 <div>Confirmation
-                    <input class="form-control" id="confirmPassword" name="confirmPassword" value="" placeholder="Re-saisissez le nouveau mot de passe" type="password">
+                    <input class="form-control" id="confirmPasswordFaceJunia" name="confirmPassword" value="" placeholder="Re-saisissez le nouveau mot de passe" type="password">
                 </div>
 
                 <span id="msg"></span>
 
                 <div class="annulerMdp">Annuler</div>
-                <div class="ConfirmerMdp">Confirmer</div>
+                <div class="ConfirmerMdpFaceJunia">Confirmer</div>
 
             </div>
         </div>
 
-        <!-- Affichage fenetre Changement de mots de passe -->
+        <!-- Affichage fenetre infos -->
         <div class="bigboxFaceJunia_changeInfo">
             <div class="middleboxFaceJunia_changeInfo">
 
@@ -189,7 +189,7 @@
                 </div>
 
                 <div class="annulerInfo">Annuler</div>
-                <div class="ConfirmerInfo">Confirmer</div>
+                <div class="ConfirmerInfoFaceJunia">Confirmer</div>
 
             </div>
         </div>
@@ -324,15 +324,15 @@
                     <div class="pseudoinfo adds">Pseudo : <div id="pseudovalue"></div>
                     </div>
     
-                    <div class="sexeinfo adds">Sexe : 
+                    <div class="sexeinfo adds">Sexe : Homme
                         <div id="sexevalue"></div>
                     </div>
                     
-                    <div class="ageinfo adds"> Age :
+                    <div class="ageinfo adds"> Age : 20
                         <div id="agevalue"></div>
                     </div>
     
-                    <div class="descinfo adds">Description :
+                    <div class="descinfo adds">Description : Nothing to say
                         <div id="descvalue"></div>
                     </div>
                 </div>
@@ -343,8 +343,8 @@
     
                     <div class="sexeinfo adds">Sexe : 
                         <select name="sexevalue" id="sexeinfo">
-                            <option value="homme">Homme</option>
                             <option value="femme">Femme</option>
+                            <option value="homme">Homme</option>
                             <option value="jsp">Ne préfère pas préciser</option>
                         </select>
                     </div>
@@ -354,6 +354,8 @@
     
                     <div class="descinfo adds">Description :<input type="text" id="descinfo">
                     </div>
+
+                    <div class="mdpFaux-Rom">Changer le mot de passe</div>
 
                     <div class="confirm">Confirmer </div>
 
@@ -365,6 +367,33 @@
 
             </div>
         </div>
+
+        <!-- Affichage fenetre Changement de mots de passe -->
+        <div class="bigboxFaux-Rom_changeMdp">
+            <div class="middleboxFaux-Rom_changeMdp">
+
+                <h1>Changer son Mot de Passe</h1>
+
+                <div>Ancien Mot de Passe
+                    <input id="oldPasswordFaux-Rom" value="" placeholder="Entrez l'ancien mot de passe">
+                </div>
+                
+                <div>Nouveau Mot de Passe
+                    <input id="newPasswordFaux-Rom" value="" placeholder="Entrez le nouveau mot de passe">
+                </div>
+                
+                <div>Confirmation
+                    <input id="confirmPasswordFaux-Rom" value="" placeholder="Re-saisissez le nouveau mot de passe">
+                </div>
+
+                <span id="msgFaux-Rom"></span>
+
+                <div class="annulerMdpFaux-Rom">Annuler</div>
+                <div class="ConfirmerMdpFaux-Rom">Confirmer</div>
+
+            </div>
+        </div>
+
     </div>
     
 </body>

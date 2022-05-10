@@ -18,6 +18,7 @@ let FauxRomscreen = document.querySelector('#Faux-Rom')
 let FauxRomscreenClose = document.querySelector('.bigboxlockFaux-Rom')
 let FauxRomscreenOpen = document.querySelector('.bigboxFaux-Rom')
 let FauxRomscreen_Para = document.querySelector('.bigboxFaux-Rom_para')
+let FauxRomscreen_changeMdp = document.querySelector('.bigboxFaux-Rom_changeMdp')
 
 let FaceJunia_is_lock = true
 let InstaGroove_is_lock = true
@@ -42,6 +43,7 @@ FauxRomscreen.style.display = "none"
 FauxRomscreenClose.style.display = "none"
 FauxRomscreenOpen.style.display = "none"
 FauxRomscreen_Para.style.display = "none"
+FauxRomscreen_changeMdp.style.display = "none"
 
 $(document).ready(function() {
 
@@ -97,10 +99,10 @@ $(document).ready(function() {
         let va = $(this).parent().parent()[0]
         /*if($(this).parent().parent().attr("rel")){
             let vo = $(this).parent().parent().attr("rel")
-            $('.bigbox' + vo +'_para')[0].style.display = "none"
+            $('.bigbox' + vo +'_para +')[0].style.display = "none"
             $('.bigbox' + vo +'_changeMdp')[0].style.display = "none"
             $('.bigbox' + vo +'_changeInfo')[0].style.display = "none"
-        } */
+        }*/
         va.style.display = "none"
         PCscreen.style.display = "block"
     })
@@ -205,19 +207,19 @@ $(document).ready(function() {
     $('.annulerMdp').click(function (){
         FaceJuniascreen_changeMdp.style.display = "none"
         FaceJuniascreen_Para.style.display = "block"
-        
     })
+
     $('.changeInfo').click(function (){
         FaceJuniascreen_changeInfo.style.display = "block"
         FaceJuniascreen_Para.style.display = "none"
         
     })
 
-    $('.ConfirmerMdp').click(function (){
+    $('.ConfirmerMdpFaceJunia').click(function (){
         
-        var oldpassword = document.getElementById('oldPassword').value;
-        var newpassword = document.getElementById('newPassword').value;
-        var confirmpassword = document.getElementById('confirmPassword').value;
+        var oldpassword = document.getElementById('oldPasswordFaceJunia').value;
+        var newpassword = document.getElementById('newPasswordFaceJunia').value;
+        var confirmpassword = document.getElementById('confirmPasswordFaceJunia').value;
         if (oldpassword == "" || newpassword == "" || confirmpassword == "") {
             alert('Veuillez remplir tous les champs');
         }
@@ -229,20 +231,20 @@ $(document).ready(function() {
         }
         else {
             if ((newpassword.match( /[0-9]/g) && newpassword.match( /[A-Z]/g) && newpassword.match(/[a-z]/g) && newpassword.match( /[^a-zA-Z\d]/g) && newpassword.length == 9) || (newpassword.match(/[a-z]/g) && newpassword.length == 12)) {
-                msg = "<p style='color:green'>Mot de passe fort.</p>"; 
+                msg = "<p style='color:green'>Votre mot de passe est fort ! Il resiste 3 semaines.</p>"; 
                 FaceJuniascreen_changeMdp.style.display = "none";
                 FaceJuniascreen_Para.style.display = "block";
                 alert("Le mot de passe a été correctement modifié")
                 motdepasseFaceJunia = newpassword;
                     }
             else {
-                msg = "<p style='color:red'>Mot de passe faible.</p>";
+                msg = "<p style='color:red'>Votre mot de passe faible est trop faible pour ce niveau.</p>";
             }
             document.getElementById("msg").innerHTML= msg; 
         }
     })
 
-    $('.ConfirmerInfo').click(function (){
+    $('.ConfirmerInfoFaceJunia').click(function (){
 
         var statueaffectif = document.getElementById('StatueAffectif').value;
         var statueaffectifstate = document.getElementById('StatueAffectifState').value;
@@ -298,12 +300,50 @@ $(document).ready(function() {
 
         alert("Les informations ont été enregistrés, vous êtes désormais connectés.")
 
-
     })
 
+    $('.mdpFaux-Rom').click(function (){
+        FauxRomscreen_Para.style.display = "none"
+        FauxRomscreen_changeMdp.style.display = "block"
+    })
+
+    $('.annulerMdpFaux-Rom').click(function (){
+        FauxRomscreen_changeMdp.style.display = "none"
+        FauxRomscreen_Para.style.display = "block"
+    })
+
+    $('.ConfirmerMdpFaux-Rom').click(function (){
+        
+        var oldpassword = document.getElementById('oldPasswordFaux-Rom').value;
+        var newpassword = document.getElementById('newPasswordFaux-Rom').value;
+        var confirmpassword = document.getElementById('confirmPasswordFaux-Rom').value;
+        if (oldpassword == "" || newpassword == "" || confirmpassword == "") {
+            alert('Veuillez remplir tous les champs');
+        }
+        else if (oldpassword == newpassword) {
+            alert("L'ancien et le nouveau mot de passe ne peuvent être identique");
+        }
+        else if (newpassword != confirmpassword) {
+            alert("Les mots de passe ne correspondent pas");
+        }
+        else {
+            if ((newpassword.match( /[0-9]/g) && newpassword.match( /[A-Z]/g) && newpassword.match(/[a-z]/g) && newpassword.match( /[^a-zA-Z\d]/g) && newpassword.length == 10) || (newpassword.match(/[a-z]/g) && newpassword.match( /[A-Z]/g) && newpassword.length == 11)) {
+                msg = "<p style='color:green'>Votre mot de passe fort, il resiste 5 ans !</p>"; 
+                FauxRom_changeMdp.style.display = "none";
+                FauxRomscreen_Para.style.display = "block";
+                alert("Le mot de passe a été correctement modifié")
+                motdepasseFauxRom = newpassword;
+                    }
+            else {
+                msg = "<p style='color:red'>Mot de passe trop faible pour ce niveau.</p>";
+            }
+            document.getElementById("msgFaux-Rom").innerHTML= msg; 
+        }
+    })
 
     $('.retournerFaux-Rom').click(function (){
         FauxRomscreen_Para.style.display = "none"
+        FauxRomscreen_changeMdp.style.display = "none"
         FauxRomscreenOpen.style.display = "block"
     })   
 
