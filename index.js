@@ -52,9 +52,32 @@ if (app.get('env') === 'production') {
     session.cookie.secure = true // serve secure cookies
 }
 
+io.on('connection', (socket) =>{
+    console.log(`Un élève s\'est connecté`);
+
+    socket.on('disconnect', () => {
+        console.log('Un élève s\'est déconnecté')
+    });
+
+    //Mise a jour de la page des missions
+    socket.on('whichMission', (nb) => {
+        socket.emit("thisMission" ,nb)
+    });
+
+    //Mise a jour des mots de passe une fois changé
+    socket.on('newMdp',(newpassword, site) => {
+        socket.emit('addNewMDP',({newpassword, site}));
+    });
+});
+
 //Ceci est un commentaire
 http.listen(5000, () => {
     console.log('Serveur lancé sur le port 5000');
+});
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/front/html/index.html');
+
 });
 
 app.use(express.static(path.join(__dirname, )));

@@ -163,3 +163,61 @@ body{
     border-radius: 10px;
     text-align: center;
 }
+
+
+.PtitCarre{
+    height: 22vh;
+    width: 6vw;
+    position: absolute;
+    top: 1vh;
+    left: 94vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Carre{
+    height: 4.5vw;
+    width: 4.5vw;
+    background-color: gray;
+}
+
+.GrosCarre{
+    height: 70vh;
+    width: 30vw;
+    background-color: gray;
+    position: absolute;
+    left: 35vw;
+    top: 20vh;
+    border-radius: 50px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.mission h1{
+    background-color: green;
+    height: 8vh;
+    border: 3px solid black;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    position: relative;
+    bottom: 3.5vh;
+}
+
+.blockNote h1{
+    background-color: red;
+    height: 8vh;
+    border: 3px solid black;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    position: relative;
+    bottom: 3.5vh;
+}
+
+.GrosCarre .leave{
+    position: relative;
+    bottom: 13vh;
+    left: 10vw;
+    
+}

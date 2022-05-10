@@ -50,6 +50,26 @@
         <div class="ComeBackRoom">Go Room</div>
     </div>
 
+    <div class="PtitCarre">
+        <div class="Carre clickMission"  onclick="document.querySelector('.mission').style.display = 'block', document.querySelector('.blockNote').style.display = 'none'">Mission</div>
+        <div class="Carre clickBlockNote" onclick="document.querySelector('.blockNote').style.display = 'block', document.querySelector('.mission').style.display = 'none'">Block-Note</div>
+    </div>
+
+    <div class="grosCarre">
+        <div class="GrosCarre mission">
+            <h1>Mission</h1>    
+            <div class="leave cross fa-solid fa-xmark" onclick="document.querySelector('.mission').style.display = 'none'"></div>
+            <h2 id="TitreMission">Chambre</h2>
+            <ul id="listeMission"></ul>
+        </div>
+
+        <div class="GrosCarre blockNote">
+            <h1>Block-Note</h1>
+            <div class="leave cross fa-solid fa-xmark" onclick="document.querySelector('.blockNote').style.display = 'none'"></div>
+        </div>
+
+    </div>
+    
     <!-- Page des sites -->
     <div id="FaceJunia" rel="FaceJunia">
         
@@ -57,7 +77,6 @@
             <i class="Title fa-brands fa-facebook">FaceJunia</i>
             <div class="goBack"> <i class="cross fa-solid fa-xmark"></i> </div>
         </div>
-
 
         <!-- Affichage fenetre fermer -->
         <div class="bigboxlockFaceJunia">
@@ -109,7 +128,7 @@
                 <div class="border changeMdp">Changer le mot de passe</div>
                 <div class="border changeInfo">Changer les infos</div>
                 <div class="border deconnection">Se déconnecter</div>
-                <div class="border retourProfil">Retourner sur le profil</div>
+                <div class="border retourProfil">Retrouner sur le profil</div>
 
             </div>
         </div>
@@ -121,15 +140,15 @@
                 <h1>Changer son Mot de Passe</h1>
 
                 <div>Ancien Mot de Passe
-                    <input class="form-control" id="oldPasswordFaceJunia" name="oldPassword" value="" placeholder="Entrez l'ancien mot de passe" type="password">
+                    <input class="form-control" id="oldPassword" name="oldPassword" value="" placeholder="Entrez l'ancien mot de passe" type="password">
                 </div>
                 
                 <div>Nouveau Mot de Passe
-                    <input class="form-control" id="newPasswordFaceJunia" name="newPassword" value="" placeholder="Entrez le nouveau mot de passe" type="password">
+                    <input class="form-control" id="newPassword" name="newPassword" value="" placeholder="Entrez le nouveau mot de passe" type="password">
                 </div>
                 
                 <div>Confirmation
-                    <input class="form-control" id="confirmPasswordFaceJunia" name="confirmPassword" value="" placeholder="Re-saisissez le nouveau mot de passe" type="password">
+                    <input class="form-control" id="confirmPassword" name="confirmPassword" value="" placeholder="Re-saisissez le nouveau mot de passe" type="password">
                 </div>
 
                 <span id="msg"></span>
@@ -140,7 +159,7 @@
             </div>
         </div>
 
-        <!-- Affichage fenetre infos -->
+        <!-- Affichage fenetre Changement de mots de passe -->
         <div class="bigboxFaceJunia_changeInfo">
             <div class="middleboxFaceJunia_changeInfo">
 
@@ -150,14 +169,14 @@
                     Statue affectif
                     <select name="StatueAffectif" id="StatueAffectif">
 
-                        <option value="marie">Marié</option>
+                        <option value="marié">Marié</option>
                         <option value="couple">Couple</option>
                         <option value="celibataire">Célibataire</option>
                         <option value="seul">Seul</option>
                     </select>
                     <select name="StatuePrivatePubic" id="StatueAffectifState">
-                        <option value="prive">Privé</option>
                         <option value="public">Public</option>
+                        <option value="prive">Privé</option>
                     </select>
                 </div> 
                     
@@ -165,8 +184,9 @@
                     École 
                     <input type="text" id="ecoleinfo">
                     <select name="ecolePrivatePubic" id="ecolestate">
-                        <option value="prive">Privé</option>
                         <option value="public">Public</option>
+                        <option value="prive">Privé</option>
+                        
                     </select>
                 </div>
                 
@@ -174,8 +194,8 @@
                     Adresse
                     <input type="text" id="habitatinfo">
                     <select name="AdressePrivatePubic" id="habitatstate">
-                        <option value="prive">Privé</option>
                         <option value="public">Public</option>
+                        <option value="prive">Privé</option>
                     </select>
                 </div>
 
@@ -183,8 +203,8 @@
                     Télephone
                     <input type="text" id="telinfo">
                     <select name="TelPrivatePubic" id="telstate">
-                        <option value="prive">Privé</option>
                         <option value="public">Public</option>
+                        <option value="prive">Privé</option>
                     </select>
                 </div>
 
@@ -250,8 +270,6 @@
 
     </div>
 
-
-
     <div id="Faux-Rom" rel="Faux-Rom">
         
         <div class="headerFaux-Rom">
@@ -295,12 +313,8 @@
                         ....................................</p>
                 </div>
         
-                <div class="box3"> 
-                    <p>Il etait une fois....................
-                        ....................................
-                        ....................................
-                        ....................................
-                        ....................................</p>
+                <div class="box3" onclick="document.querySelector('.bigboxFaux-Rom').style.display = 'none', document.querySelector('.bigboxFaux-Rom_reponseBastiens').style.display = 'block'"> 
+                    <p>Bastiens</p>
                 </div>
     
                 <div class="box4">
@@ -321,19 +335,14 @@
             <div class="middleboxFaux-Rom_para">
 
                 <div class="profil">
-                    <div class="pseudoinfo adds">Pseudo : <div id="pseudovalue"></div>
-                    </div>
+                    <div class="pseudoinfo adds" div id="pseudovalue">Pseudo : Talaso_Pesto</div>
     
-                    <div class="sexeinfo adds">Sexe : Homme
-                        <div id="sexevalue"></div>
-                    </div>
-                    
-                    <div class="ageinfo adds"> Age : 20
-                        <div id="agevalue"></div>
-                    </div>
-    
-                    <div class="descinfo adds">Description : Nothing to say
-                        <div id="descvalue"></div>
+                    <div class="descinfo adds" id="descvalue">Description : 
+                        Bonjour je suis Talaso_Pesto.
+                        J'habite a JuniaCity, j'adore l'informatique et le sport.
+                        J'ai une soeur de 16 ans, elle s'appelle Mathilde.
+                        Nos 2 parents travaillent chez Tesla.
+                        J'ai un chien qui s'appelle macro.
                     </div>
                 </div>
 
@@ -341,24 +350,12 @@
                     <div class="pseudoinfo adds">Pseudo : <input type="text" id="pseudoinfo">
                     </div>
     
-                    <div class="sexeinfo adds">Sexe : 
-                        <select name="sexevalue" id="sexeinfo">
-                            <option value="femme">Femme</option>
-                            <option value="homme">Homme</option>
-                            <option value="jsp">Ne préfère pas préciser</option>
-                        </select>
-                    </div>
-                    
-                    <div class="ageinfo adds"> Age : <input type="text" id="ageinfo">
-                    </div>
-    
                     <div class="descinfo adds">Description :<input type="text" id="descinfo">
                     </div>
 
                     <div class="mdpFaux-Rom">Changer le mot de passe</div>
 
-                    <div class="confirm">Confirmer </div>
-
+                    <div class="ConfirmerInfoFauxRom">Confirmer </div>
                 </div>
 
                 
@@ -394,10 +391,27 @@
             </div>
         </div>
 
+        <!-- Affichage fenetre Changement de mots de passe -->
+        <div class="bigboxFaux-Rom_reponseBastiens">
+            <div class="middleboxFaux-Rom_reponseBastiens">
+
+                <h1>Bastiens</h1>
+
+                <div class="discutionBastiens">
+                    <div>Je voudrais sécurisé mes données personnelles, savez vous quels moteurs est le meilleurs pour être le plus protégé</div>
+                </div>
+                
+
+                <input type="text" id="reponseBastiens"><div class="EnvoieReponseFauxRom">Envoyé</div>
+
+            </div>
+        </div>
+
     </div>
     
 </body>
-    <script src="../js/changeMdp.js"></script>
-    <script src="/front/js/page.js"></script>
     <script src="../js/player.js"></script>
+    <script src="../js/mission.js"></script>
+    <script src="/front/js/page.js"></script>
+    
 </html>

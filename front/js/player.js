@@ -1,3 +1,5 @@
+let socket = io()
+
 let inRoom = true
 let inComputer = false
 let inBiblio = false
@@ -170,6 +172,7 @@ $(document).ready(function() {
         if(PC_is_lock){
             PClock.style.display = "block"
             Room.style.display = "none"
+            socket.emit('whichMission',(1))
         }
         else{
             PC.style.display = "block"
@@ -192,6 +195,7 @@ $(document).ready(function() {
             PClock.style.display = "none"
             PC.style.display = "block"
             PC_is_lock = false
+            socket.emit('whichMission',(2))
 		}
 	}
 })
