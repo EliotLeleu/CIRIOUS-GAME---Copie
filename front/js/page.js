@@ -17,6 +17,7 @@ let ImailscreenLock = document.querySelector('#ImailLock')
 let FauxRomscreen = document.querySelector('#Faux-Rom')
 let FauxRomscreenClose = document.querySelector('.bigboxlockFaux-Rom')
 let FauxRomscreenOpen = document.querySelector('.bigboxFaux-Rom')
+let FauxRomscreen_Para = document.querySelector('.bigboxFaux-Rom_para')
 
 let FaceJunia_is_lock = true
 let InstaGroove_is_lock = true
@@ -33,11 +34,14 @@ FaceJuniascreen_changeInfo.style.display = "none"
 
 InstaGroovescreenLock.style.display = "none"
 InstaGroovescreen.style.display = "none"
+
 Imailscreen.style.display = "none"
 ImailscreenLock.style.display = "none"
+
 FauxRomscreen.style.display = "none"
 FauxRomscreenClose.style.display = "none"
 FauxRomscreenOpen.style.display = "none"
+FauxRomscreen_Para.style.display = "none"
 
 $(document).ready(function() {
 
@@ -271,6 +275,37 @@ $(document).ready(function() {
         FaceJuniascreen_Para.style.display = "none"
         FaceJuniascreenOpen.style.display = "block"
     })
+
+    //Parametrage Faux-Rom// 
+
+    $('.iconereg').click(function (){
+        FauxRomscreenOpen.style.display = "none"
+        FauxRomscreen_Para.style.display = "block"
+    })
+
+    $('.confirm').click(function (){
+        var pseudo = document.getElementById('pseudoinfo').value;
+        document.getElementById('pseudovalue').innerHTML = pseudo
+
+        var sexe = document.getElementById('sexeinfo').value;
+        document.getElementById('sexevalue').innerHTML = sexe
+
+        var age = document.getElementById('ageinfo').value;
+        document.getElementById('agevalue').innerHTML = age
+
+        var desc = document.getElementById('descinfo').value;
+        document.getElementById('descvalue').innerHTML = desc
+
+        alert("Les informations ont été enregistrés, vous êtes désormais connectés.")
+
+
+    })
+
+
+    $('.retournerFaux-Rom').click(function (){
+        FauxRomscreen_Para.style.display = "none"
+        FauxRomscreenOpen.style.display = "block"
+    })   
 
 });
 

@@ -6,10 +6,12 @@
 }
 
 .headerFaux-Rom {
-    background-color: darkgreen;
+    background-color: rgb(48, 46, 46);
     font-size: 200%;
     border-bottom: 8px solid black;
     height: 10vh;
+    color: white;
+    top: 5vh;
 }
 
 .headerFaux-Rom .Title{
@@ -32,8 +34,8 @@
 }*/
 
 .middleboxlock_Faux-Rom {
-    background-color: green;
-    height: 74vh;
+    background-color: rgb(168, 162, 162);
+    height: 75vh;
     height: 100%;
 }
 
@@ -69,5 +71,142 @@
     padding-top: 0.5vh;
 }
 
+.bigboxFaux-Rom {
+    background-color: rgb(168, 162, 162);
+    position: relative;
+    bottom: 3.5vh;
+}
 
+.middleboxFaux-Rom {
+    background-color: rgb(168, 162, 162);
+    height: 74.5vh;
+}
+
+.titre {
+    font-family: 'Koulen', cursive;
+    position: relative;
+    height: 8vh;
+    left: 15vh;
+    margin-right: 40vh;
+    margin-top: 3vh;
+    border: 4px solid black;
+    border-radius: 4px;
+
+}
+
+.box1 {
+    font-family: 'Koulen', cursive;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 2px;
+    left: 10vh;
+    margin-right: 60vh;
+    bottom: 3vh;
+}
+
+.box2 {
+    font-family: 'Koulen', cursive;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 2px;
+    left: 10vh;
+    margin-right: 60vh;
+    bottom: 2vh;
+}
+
+.box3 {
+    font-family: 'Koulen', cursive;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 2px;
+    left: 10vh;
+    margin-right: 60vh;
+    bottom: 1vh;
+}
+
+.box4 {
+    font-size: 120%;
+    text-align: center;
+    font-family: 'Koulen', cursive;
+    position: relative;
+    border: 2px solid black;
+    width: 25vh;
+    height: 23vh;
+    border-radius: 2px;
+    left: 80vh;
+    bottom: 45vh;
+}
+
+.box5 {
+    font-size: 120%;
+    text-align: center;
+    font-family: 'Koulen', cursive;
+    position: relative;
+    border: 2px solid black;
+    width: 25vh;
+    border-radius: 2px;
+    height: 23vh;
+    left: 80vh;
+    bottom: 40vh;
+}
+
+.iconereg {
+    position: relative;
+    height: 7vh;
+    width: 7vh;
+    font-size: 150%;
+    left: 6vh;
+    top: -2vh;
+}   
+
+.middleboxFaux-Rom_para {
+    display: flex; 
+    background-color: rgb(168, 162, 162);
+}
+
+.profilmodif {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2vh;
+    margin: 2vh;
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 50vh;
+    /* position: relative;
+    left: 60vh;
+    bottom: 60vh;
+    height: 50vh; */
+}
+
+.profil {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2vh;
+    margin: 2vh;
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 50vh;
+}
+
+.adds {
+    border: 3px solid black;
+    border-radius: 5px;
+    margin: 2vh;
+    padding: 2vh;
+}
+
+.confirm {
+    text-align: center;
+}
+
+.retournerFaux-Rom {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 2vh;
+    position: absolute;
+    top: 80vh;
+    left: 85vh;
+}
 
