@@ -171,7 +171,66 @@ $('.EnvoieReponseFauxRom').click(function (){
             console.log("FauxRom Fini")
         }
     }
+})
 
+//Confirmation MDP InstaGroove
+$('.ConfirmerMdpInstaGroove').click(function (){
+        
+    var oldpassword = document.getElementById('oldPasswordInstaGroove').value;
+    var newpassword = document.getElementById('newPasswordInstaGroove').value;
+    var confirmpassword = document.getElementById('confirmPasswordInstaGroove').value;
+    if (oldpassword == "" || newpassword == "" || confirmpassword == "") {
+        alert('Veuillez remplir tous les champs');
+    }
+    else if (oldpassword == newpassword) {
+        alert("L'ancien et le nouveau mot de passe ne peuvent être identique");
+    }
+    else if (newpassword != confirmpassword) {
+        alert("Les mots de passe ne correspondent pas");
+    }
+    else {
+        if ((newpassword.match(/[a-z]/g) && newpassword.length == 17) || (newpassword.match(/[a-z]/g) && newpassword.match( /[A-Z]/g) && newpassword.length == 14)) {
+            msg = "<p style='color:green'>Votre mot de passe fort, il resiste 800 000 ans !</p>"; 
+            document.querySelector(".bigboxInstaGroove_changeMdp").style.display = "none";
+            document.querySelector(".bigboxInstaGroove_para").style.display = "block";
+            alert("Le mot de passe a été correctement modifié")
+            Instagroove_mission_1= true
+            socket.emit('newMdp',newpassword, 2)
+            if((Instagroove_mission_1 == true) && (InstaGroove_mission_2 == true) && (InstaGroove_mission_3 == true)){
+                socket.emit('whichMission',(9))
+                console.log("InstaGroove Fini")
+            }
+        }
+        else {
+            msg = "<p style='color:red'>Mot de passe trop faible pour ce niveau.</p>";
+        }
+        document.getElementById("msgInstaGroove").innerHTML= msg; 
+    }
+})
+
+//Confirmation Info InstaGroove
+
+$('.ConfirmerInfoInstaGroove').click(function () {
+
+    let newpseudoInstaGroove = document.getElementById('pseudoinfoInstaGroove').value
+    document.querySelector('.pseudoInstaGroovechange').innerHTML = newpseudoInstaGroove;
+
+    let newlocaInstaGroove = document.getElementById('locainfoInstaGroove').value
+    document.querySelector('.locInstaGroovechange').innerHTML = newlocaInstaGroove;
+
+    let newstatueInstaGroove = document.getElementById('statueinfoInstaGroove').value
+    document.querySelector('.statutInstaGroovechange').innerHTML = newstatueInstaGroove;
+    console.log("yo")
+    alert("Vos données ont été correctement sauvegardés.")
+    console.log("ya")
+    InstaGroovescreen_Para.style.display = "none";
+    InstaGroovescreenOpen.style.display = "block";
+
+    replocaInstaGroove = document.getElementsByClassName('locInstaGroovechange');
+
+    if(replocaInstaGroove == "non"){
+        Instagroove_mission_2 == true;
+    }
 
 })
 
@@ -253,13 +312,20 @@ $('.clickMission').click(function (){
             break;
 
         case 6:
-            //Evenement annexe
             var li = document.createElement('li');
             li.innerHTML = "Enleve les pops ups";
             listeMission.appendChild(li);
             break;
-
+        
         case 7:
+            //Ouvrir InstaGroove
+            TitreMission.innerHTML = "InstaGroove"
+            var li = document.createElement('li');
+            li.innerHTML = "Ouvrir InstaGroove";
+            listeMission.appendChild(li);
+            break;
+
+        case 8:
             //INSTAGROOVE
             TitreMission.innerHTML = "Instagroove"
             var li1 = document.createElement('li');
@@ -273,8 +339,16 @@ $('.clickMission').click(function (){
             listeMission.appendChild(li3);
             break;
 
-        case 7:
-            //INSTAGROOVE
+        case 9:
+            //Ouvrir IMAIL
+            TitreMission.innerHTML = "Imail"
+            var li = document.createElement('li');
+            li.innerHTML = "Ouvrir Imail";
+            listeMission.appendChild(li);
+            break;
+
+        case 10:
+            //IMail
             var li1 = document.createElement('li');
             var li2 = document.createElement('li');
             var li3 = document.createElement('li');

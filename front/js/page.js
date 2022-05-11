@@ -9,10 +9,14 @@ let FaceJuniascreen_changeMdp = document.querySelector('.bigboxFaceJunia_changeM
 let FaceJuniascreen_changeInfo = document.querySelector('.bigboxFaceJunia_changeInfo')
 
 let InstaGroovescreen = document.querySelector('#InstaGroove')
-let InstaGroovescreenLock = document.querySelector('#InstaGrooveLock')
+let InstaGroovescreenClose = document.querySelector('.bigboxLockInstaGroove')
+let InstaGroovescreenOpen = document.querySelector('.bigboxInstaGroove')
+let InstaGroovescreen_Para = document.querySelector('.bigboxInstaGroove_para')
+let InstaGroovescreen_changeMdp = document.querySelector('.bigboxInstaGroove_changeMdp')
 
 let Imailscreen = document.querySelector('#Imail')
-let ImailscreenLock = document.querySelector('#ImailLock')
+let ImailscreenClose = document.querySelector('.bigboxLockImail')
+let ImailscreenOpen = document.querySelector('.bigboxImail')
 
 let FauxRomscreen = document.querySelector('#Faux-Rom')
 let FauxRomscreenClose = document.querySelector('.bigboxlockFaux-Rom')
@@ -32,7 +36,7 @@ Mission.style.display = "none"
 BlocNote.style.display = "none"
 
 
-PCscreen.style.display = "block"
+PCscreen.style.display = "none"
 FaceJuniascreen.style.display = "none"
 FaceJuniascreenClose.style.display = "none"
 FaceJuniascreenOpen.style.display = "none"
@@ -40,11 +44,15 @@ FaceJuniascreen_Para.style.display = "none"
 FaceJuniascreen_changeMdp.style.display = "none"
 FaceJuniascreen_changeInfo.style.display = "none"
 
-InstaGroovescreenLock.style.display = "none"
-InstaGroovescreen.style.display = "none"
+InstaGroovescreen.style.display = "block"
+InstaGroovescreenClose.style.display = "none"
+InstaGroovescreenOpen.style.display = "none"
+InstaGroovescreen_Para.style.display = "block"
+InstaGroovescreen_changeMdp.style.display = "none"
 
 Imailscreen.style.display = "none"
-ImailscreenLock.style.display = "none"
+ImailscreenClose.style.display = "none"
+ImailscreenOpen.style.display = "none"
 
 FauxRomscreen.style.display = "none"
 FauxRomscreenClose.style.display = "none"
@@ -93,21 +101,22 @@ $(document).ready(function() {
                 break;
             
             case "InstaGroove":
-                console.log(InstaGroove_is_lock)
+                InstaGroovescreen.style.display = "block"
                 if(InstaGroove_is_lock){
-                $('#' + va + "Lock")[0].style.display = "block"
+                $('.bigboxLock' + va)[0].style.display = "block"
                 }
                 else{
-                    $('#' + va)[0].style.display = "block"
+                    $('.bigbox' + va)[0].style.display = "block"
                 }
                 break;
 
             case "Imail":
+                Imailcreen.style.display = "block"
                 if(Imail_is_lock){
-                $('#' + va + "Lock")[0].style.display = "block"
+                $('.bigboxLock' + va)[0].style.display = "block"
                 }
                 else{
-                    $('#' + va)[0].style.display = "block"
+                    $('.bigbox' + va)[0].style.display = "block"
                 }
                 break;
 
@@ -155,16 +164,16 @@ $(document).ready(function() {
             case "InstaGroovepassword" :
                 if(($('#'+ va)[0].value) == motdepasseInstaGroove){
                     InstaGroove_is_lock = false
-                    InstaGroovescreenLock.style.display = "none"
-                    InstaGroovescreen.style.display = "block"
+                    InstaGroovescreenClose.style.display = "none"
+                    InstaGroovescreenOpen.style.display = "block"
                 }
                 break;
             
             case "Imailpassword" :
                 if(($('#'+ va)[0].value) == motdepasseImail){
                     Imail_is_lock = false
-                    ImailscreenLock.style.display = "none"
-                    Imailscreen.style.display = "block"
+                    ImailscreenClose.style.display = "none"
+                    ImailscreenOpen.style.display = "block"
                 }
                 break;
                 
@@ -196,8 +205,8 @@ $(document).ready(function() {
 		var touche=e.charCode || e.keyCode;
 		if((touche==13) && (this.value == motdepasseInstaGroove)){
             InstaGroove_is_lock = false
-            InstaGroovescreenLock.style.display = "none"
-            InstaGroovescreen.style.display = "block"
+            InstaGroovescreenClose.style.display = "none"
+            InstaGroovescreenOpen.style.display = "block"
 		}
 	}
 
@@ -206,8 +215,8 @@ $(document).ready(function() {
 		var touche=e.charCode || e.keyCode;
 		if((touche==13) && (this.value == motdepasseImail)){
             Imail_is_lock = false
-            ImailscreenLock.style.display = "none"
-            Imailscreen.style.display = "block"
+            ImailscreenClose.style.display = "none"
+            ImailscreenOpen.style.display = "block"
 		}
 	}
 
@@ -271,7 +280,29 @@ $(document).ready(function() {
         FauxRomscreen_Para.style.display = "none"
         FauxRomscreen_changeMdp.style.display = "none"
         FauxRomscreenOpen.style.display = "block"
-    })   
+    }) 
+    
+    //Parametrage InstaGroove 
+
+    $('.iconereg').click(function (){
+        InstaGroovescreenOpen.style.display = "none"
+        InstaGroovescreen_Para.style.display = "block"
+    })
+
+    $('.retournerInstaGroove').click(function (){
+        InstaGroovescreen_Para.style.display = "none"
+        InstaGroovescreenOpen.style.display = "block"
+    }) 
+
+    $('.mdpInstaGroove').click(function (){
+        InstaGroovescreen_Para.style.display = "none"
+        InstaGroovescreen_changeMdp.style.display = "block"
+    })
+
+    $('.annulerMdpInstaGroove').click(function (){
+        InstaGroovescreen_changeMdp.style.display = "none"
+        InstaGroovescreen_Para.style.display = "block"
+    })
 
 });
 

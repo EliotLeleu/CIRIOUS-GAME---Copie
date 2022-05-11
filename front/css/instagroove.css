@@ -24,12 +24,11 @@
     top: 10%;
 }
 
-#InstaGrooveLock{
+.bigboxLockInstaGroove{
+    height: 74vh;
     background-color: white;
-    height: 85vh;
-    width: 60vw;
-    margin: 4vh 40vh;
-    border: solid 8px black;
+    position: relative;
+    bottom: 3.5vh;
 }
 
 .middleboxlock_InstaGroove {
@@ -68,4 +67,220 @@
     position: absolute;
     left: 25.5vw;
     padding-top: 0.5vh;
+} 
+
+.middleboxInstaGroove{
+    background-color: orange;
+    height: 70vh;
+
+}
+
+.imgpseudo{
+    width: 30vh;
+    text-align: center;
+    /* height: 10vh; */
+    flex-direction: column;
+    size: 150%;
+    /* position: relative; */
+    /* right: 35vh; */
+    border: 3px solid black;
+    border-radius: 4px;
+    height: auto;
+    position: absolute;
+    top: 20vh;
+    left: 50vh;
+}
+
+.icon {
+    font-size: 120%;
+    flex-direction: column;
+    position: absolute;
+    left: 140vh;
+    top: 20vh;
+}
+
+.iconemess{
+    position: relative;
+    top: 2vh;
+}
+
+.boitedestr {
+    display: flex;
+    justify-content: space-around;
+    width: 50vh;
+    position: relative;
+    left: 50vh;
+    top: 5vh;
+
+}
+
+.publication{
+    flex-direction: column;
+    position: relative;
+    /* left: 5vh; */
+    text-align: center;
+    font-size: 130%;
+}
+
+.abonnes{
+    flex-direction: column;
+    position: relative;
+    /* left: 25vh; */
+    text-align: center;
+    font-size: 130%;
+
+    
+}
+
+.abonnement{
+    flex-direction: column;
+    position: relative;
+    /* right: 5vh; */
+    text-align: center;
+    font-size: 130%;
+
+}
+
+.bioetbio {
+    flex-direction: column;
+    position: relative;
+    left: 10vh;
+    width: 25vh;
+    top: 20vh;
+}   
+
+.bio{
+    font-size: 120%;
+}
+
+.descbio {
+    font-size: 110%;
+    border: 3px solid black;
+    border-radius: 4px;
+}
+
+.infoInstaGroove {
+    flex-direction: column;
+    position: relative;
+    left: 50vh;
+    top: -8vh;
+    width: 60vh;
+}
+
+.nomuser {
+    border: 3px solid black;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.locauser {
+    position: relative;
+    top: 2vh;
+    border: 3px solid black;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pvuser {
+    position: relative;
+    top: 4vh;
+    border: 3px solid black;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.questionInstaGroove{
+    position: relative;
+    left: 10vh;
+    flex-direction: column;
+    width: 100vh;
+    font-size: 130%;
+    top: 7vh;
+    line-height: 5vh;
+}
+
+.pseudoInstaGroove {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: -10vh;
+}
+
+.locaInstaGroove {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: -6vh;
+}
+
+.statutcompteInstaGroove {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: -6vh;
+}
+
+.mdpInstaGroove{
+    position: relative;
+    top: 2vh;
+    width: 28vh;
+    border: 3px solid black;
+    border-radius: 4px;
+}
+
+.ConfirmerInfoInstaGroove {
+    text-align: center;
+    font-size: 130%;
+    position: relative;
+    top: 15vh;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 20vh;
+    left: 50vh;
+}
+
+.retournerInstaGroove{
+    position: relative;
+    left: 30vh;
+    top: 20vh;
+    width: 50vh;
+    text-align: center;
+}
+
+.middleboxInstaGroove_changeMdp {
+    background-color: orange;
+    margin-left: 15vh;
+    margin-right: 14vh;
+    height: 74vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bigboxInstaGroove_changeMdp {
+    height: 74vh;
+    background-color: orange;
+}
+
+.pseudoInstaGroovechange{
+    font-size: 120%;
+    position: relative;
+    top: 2vh;
+}
+
+.locInstaGroovechange{
+    font-size: 120%;
+    position: relative;
+    top: 2vh;
+}
+
+.statutInstaGroovechange{
+    font-size: 120%;
+    position: relative;
+    top: 2vh;
 }

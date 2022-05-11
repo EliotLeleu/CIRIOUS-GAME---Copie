@@ -159,7 +159,7 @@
             </div>
         </div>
 
-        <!-- Affichage fenetre Changement de mots de passe -->
+        <!-- Affichage fenetre Changement d'informations -->
         <div class="bigboxFaceJunia_changeInfo">
             <div class="middleboxFaceJunia_changeInfo">
 
@@ -217,16 +217,16 @@
 
     </div>
 
-    <div id="InstaGrooveLock">
-        
+    <div id="InstaGroove" rel="InstaGroove">
+
         <div class="headerInstaGroove">
-            <i class="Title fa-brands fa-instagram">InstaGroove</i>
+            <i class="Title fa-brands fa-instagram"> InstaGroove</i>
             <div class="goBack"> <i class="cross fa-solid fa-xmark"></i> </div>
         </div>
-    
-        <div class="bigboxlock_InstaGroove">
-            <div class="middleboxlock_InstaGroove">
 
+                <!-- Affichage fenetre ferme -->
+        <div class="bigboxLockInstaGroove">  
+            <div class="middleboxlock_InstaGroove">
                 <div class="InstaGroovePass">
                     <h1>Mots de Passe</h1>
                     <input type="text" id="InstaGroovepassword">
@@ -235,24 +235,137 @@
             </div>
         </div>
 
-    </div>
-    <div id="InstaGroove">
-        <div class="headerInstaGroove">
-            <i class="Title fa-brands fa-instagram"> InstaGroove</i>
-            <div class="goBack"> <i class="cross fa-solid fa-xmark"></i> </div>
-        </div>
-    </div>
+                    <!-- Affichage fenetre ouvert -->
+        <div class="bigboxInstaGroove">
+            <div class="middleboxInstaGroove">
+                <div class="imgpseudo">
+                    <h1>Pseudo du joueur</h1>
+                    <img src="/front/css/img/pdp-annon.png" height="100vh" width="100vh ">
+                </div>
 
-    <div id="ImailLock">
-        
-        <div class="headerImail">
-            <i class="Title fa-brands fa-solid fa-envelope"> Imail</i>
-            <div class="goBack"> <i class="cross fa-solid fa-xmark"></i> </div>
+                <div class="icon">
+                    <i class="fa-solid fa-gears iconereg"></i>
+                    <i class="fa-solid fa-message iconemess"></i>
+                </div>
+
+                <div class="boitedestr">
+                    <div class="publication">
+                        <h2>18</h2>
+                        <h4>Publications</h4>
+                    </div>
+                    <div class="abonnes">
+                        <h2>215</h2>
+                        <h4>Publications</h4>
+                    </div>
+                    <div class="abonnement">
+                        <h2>476</h2>
+                        <h4>Publications</h4>
+                    </div> 
+                </div>
+
+                <div class="bioetbio">
+                    <div class="bio">
+                        <h2>Bio : </h2>
+                    </div>
+                    <div class="descbio">
+                        <p>Il sera écrit ici pas mal de choses
+                            persos mais j'ai pas d'inspiration 
+                            pour le moment.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="infoInstaGroove">
+                    <div class="nomuser">
+                        <h3>Nom d'utilisateur :</h3>
+                        <div class="pseudoInstaGroovechange">Joachim</div>
+                    </div>
+                    <div class="locauser">
+                        <h3>Localisation :</h3>
+                        <div class="locInstaGroovechange">Boulognes-sur-Mer</div>
+                    </div>
+                    <div class="pvuser">
+                        <h3>Statut du compte :</h3>
+                        <div class="statutInstaGroovechange">Public</div>
+                    </div>
+                </div>
+
+            </div>
         </div>
+
+                <!-- Affichage fenetre parametre -->
+        <div class="bigboxInstaGroove_para">
+            <div class="middleboxInstaGroove_para">  
+                
+                <div class="questionInstaGroove">
+                    <div class="pseudoInstaGroove">Veuillez saisir votre nouveau pseudo : <input type="text" id="pseudoinfoInstaGroove"></div>
+
+                    <div class="locaInstaGroove">Est-ce que les autres utilisateurs peuvent accéder à ma localisation :
+                        <select name="locaInstaGroovename" id="locainfoInstaGroove">
+
+                            <option value="oui">Oui</option>
+                            <option value="non">Non</option>
+                        </select>
+                    </div>
     
-        <div class="bigboxlock_Imail">
-            <div class="middleboxlock_Imail">
+                    <div class="statutcompteInstaGroove">Choisissez si vous voulez que votre compte soit public ou privé : 
+                        <select name="statutInstaGroove" id="statueinfoInstaGroove">
 
+                        <option value="prive">Privé</option>
+                        <option value="public">Public</option>
+                    </select></div>
+                    
+                    <div class="mdpInstaGroove">Changer le mot de passe</div>
+
+                </div>
+
+                <div class="ConfirmerInfoInstaGroove">Confirmer </div>
+
+                <div class="border retournerInstaGroove">Retourner sur InstaGroove</div>
+
+            </div>
+        </div>
+
+        <!-- Affichage fenetre Changement de mots de passe -->
+        <div class="bigboxInstaGroove_changeMdp">
+            <div class="middleboxInstaGroove_changeMdp">
+
+                <h1>Changer son Mot de Passe</h1>
+
+                <div>Ancien Mot de Passe
+                    <input id="oldPasswordInstaGroove" value="" placeholder="Entrez l'ancien mot de passe">
+                </div>
+                
+                <div>Nouveau Mot de Passe
+                    <input id="newPasswordInstaGroove" value="" placeholder="Entrez le nouveau mot de passe">
+                </div>
+                
+                <div>Confirmation
+                    <input id="confirmPasswordInstaGroove" value="" placeholder="Re-saisissez le nouveau mot de passe">
+                </div>
+
+                <span id="msgInstaGroove"></span>
+
+                <div class="annulerMdpInstaGroove">Annuler</div>
+                <div class="ConfirmerMdpInstaGroove">Confirmer</div>
+
+            </div>
+        </div>
+        
+
+    </div>
+
+
+    <div id="Imail" rel="Imail">
+
+        <div class="headerImail">
+            <i class="Title fa-brands fa-imail"> Imail</i>
+            <div class="goBack"> <i class="cross fa-solid fa-xmark"></i> </div>
+        </div>
+
+                <!-- Affichage fenetre ferme -->
+        <div class="bigboxLockImail">  
+            <div class="middleboxlock_Imail">
                 <div class="ImailPass">
                     <h1>Mots de Passe</h1>
                     <input type="text" id="Imailpassword">
@@ -261,14 +374,15 @@
             </div>
         </div>
 
-    </div>
-    <div id="Imail">
-        <div class="headerImail">
-            <i class="Title fa-brands fa-solid fa-envelope"> Imail</i>
-            <div class="goBack"> <i class="cross fa-solid fa-xmark"></i> </div>
+                    <!-- Affichage fenetre ouvert -->
+        <div class="bigboxImail">
+            <div class="middleboxImail">
+
+            </div>
         </div>
 
     </div>
+
 
     <div id="Faux-Rom" rel="Faux-Rom">
         
@@ -391,7 +505,7 @@
             </div>
         </div>
 
-        <!-- Affichage fenetre Changement de mots de passe -->
+        <!-- Affichage fenetre reponse a bastien -->
         <div class="bigboxFaux-Rom_reponseBastiens">
             <div class="middleboxFaux-Rom_reponseBastiens">
 
