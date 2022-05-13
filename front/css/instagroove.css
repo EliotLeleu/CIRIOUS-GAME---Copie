@@ -366,5 +366,6 @@
     position: relative;
     margin: 2vh;
     left: 60vh;
+    z-index: 10;
 }
 
