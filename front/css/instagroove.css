@@ -101,7 +101,7 @@
 
 .iconemess{
     position: relative;
-    top: 2vh;
+    top: 4vh;
 }
 
 .boitedestr {
@@ -284,3 +284,87 @@
     position: relative;
     top: 2vh;
 }
+
+.retourInstaGroove {
+    font-size: 150%;
+    position: relative;
+    left: 105vh;
+    top: 3vh;
+}
+
+.form-recherch {
+    font-size: 120%;
+    position: relative;
+    left: 40vh;
+    top: 3vh;
+}
+
+.defilenom {
+    position: relative;
+    width: 30vh;
+    height: 55vh;
+    top: 8vh;
+    left: 5vh;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: 4px;
+}
+
+.defile {
+    display: flex;
+    margin: 2vh;
+    border: 2px solid black;
+    border-radius: 3px;
+
+}
+
+.defile:hover{
+    background-color: orangered;
+    box-shadow: 1px 2px 1px black;
+}
+
+.defile h3{
+    position: relative;
+    left: 2vh;
+}
+
+.discussion {
+    border: 2px solid black;
+    height: 50vh;
+    position: relative;
+    width: 35vw;
+    left: 42vh;
+    bottom: 45vh;
+}
+
+.headerdiscuss {
+    border-bottom: 3px solid black;
+    height: 7vh;
+}
+
+.presentationmess {
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    top: 10vh;
+}
+
+.arrowpres{
+    font-size: 175%;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+.headerdiscuss h2 {
+    position: relative;
+    bottom: 7vh;
+    left: 4vh;
+}
+
+.poubelle {
+    font-size: 130%;
+    position: relative;
+    margin: 2vh;
+    left: 60vh;
+}
+

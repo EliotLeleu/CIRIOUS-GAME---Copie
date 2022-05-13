@@ -13,6 +13,7 @@ let InstaGroovescreenClose = document.querySelector('.bigboxLockInstaGroove')
 let InstaGroovescreenOpen = document.querySelector('.bigboxInstaGroove')
 let InstaGroovescreen_Para = document.querySelector('.bigboxInstaGroove_para')
 let InstaGroovescreen_changeMdp = document.querySelector('.bigboxInstaGroove_changeMdp')
+let InstaGroovescreen_mess = document.querySelector('.bigboxInstaGroove_mess')
 
 let Imailscreen = document.querySelector('#Imail')
 let ImailscreenClose = document.querySelector('.bigboxLockImail')
@@ -47,8 +48,9 @@ FaceJuniascreen_changeInfo.style.display = "none"
 InstaGroovescreen.style.display = "block"
 InstaGroovescreenClose.style.display = "none"
 InstaGroovescreenOpen.style.display = "none"
-InstaGroovescreen_Para.style.display = "block"
+InstaGroovescreen_Para.style.display = "none"
 InstaGroovescreen_changeMdp.style.display = "none"
+InstaGroovescreen_mess.style.display = "block"
 
 Imailscreen.style.display = "none"
 ImailscreenClose.style.display = "none"
@@ -289,6 +291,11 @@ $(document).ready(function() {
         InstaGroovescreen_Para.style.display = "block"
     })
 
+    $('.iconemess').click(function (){
+        InstaGroovescreenOpen.style.display = "none"
+        InstaGroovescreen_mess.style.display = "block"
+    })
+
     $('.retournerInstaGroove').click(function (){
         InstaGroovescreen_Para.style.display = "none"
         InstaGroovescreenOpen.style.display = "block"
@@ -302,6 +309,27 @@ $(document).ready(function() {
     $('.annulerMdpInstaGroove').click(function (){
         InstaGroovescreen_changeMdp.style.display = "none"
         InstaGroovescreen_Para.style.display = "block"
+    })
+
+    $('.retourInstaGroove').click(function (){
+        InstaGroovescreen_mess.style.display = "none"
+        InstaGroovescreenOpen.style.display = "block"
+    }) 
+
+    //Fonction pour changer de page
+    $('.defile').click(function(){
+        //va = div que tu veux masquer
+        let va = $(this).parent().parent()[0]
+        for(let i = 0; i<va.childElementCount; i++){
+            if($(va.children[i]).hasClass("active")){
+                $(va.children[i]).removeClass("active")
+                $(va.children[i])[0].style.display = "none"
+            }
+        }
+        //page = div que tu veux afficher qui a pour class le rel du truc que tu click
+        let page = $(this).attr("rel")
+        $('.'+ page)[0].style.display = "block"
+        $('.'+ page).addClass("active")
     })
 
 });

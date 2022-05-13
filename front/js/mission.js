@@ -208,6 +208,11 @@ $('.ConfirmerMdpInstaGroove').click(function (){
     }
 })
 
+//Supprimer GENS
+$(".poubelle").click(function(){
+    console.log("yaaaya")
+})
+
 //Confirmation Info InstaGroove
 
 $('.ConfirmerInfoInstaGroove').click(function () {
