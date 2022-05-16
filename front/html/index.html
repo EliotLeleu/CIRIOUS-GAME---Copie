@@ -24,7 +24,7 @@
     <div id="Room">
 
         <div id="Ordi"></div>
-        <div class="OrdiClick">
+        <div class="BureauClick">
             <p>Ordinateur</p>
         </div>
         
@@ -35,19 +35,25 @@
 
         <canvas id="myCanvas"></canvas>
     </div>
-
-    <div id="PClock">
-        <h1>Session de Joachim</h1>
-        <input type="text" id="PCpassword">
-        <div class="ComeBackRoom">Go Room</div>
-    </div>
     
-    <div id="PC">
-        <div class="Icon IconFaceJunia" rel="FaceJunia">FaceJunia</div>
-        <div class="Icon IconInstaGroove" rel="InstaGroove">InstaGroove</div>
-        <div class="Icon IconImail" rel="Imail">Imail</div>
-        <div class="Icon IconForum" rel="Faux-Rom">Forum</div>
-        <div class="ComeBackRoom">Go Room</div>
+    <div id="fondBureau">
+        <div class="clickPC"></div>
+        <div class="ComeBackRoom"> <i class="fa-solid fa-angle-left"></i> Go Room</div>
+    </div>
+
+    <div id="fondPC">
+        <div id="PC">
+            <div class="Icon IconFaceJunia" rel="FaceJunia">FaceJunia</div>
+            <div class="Icon IconInstaGroove" rel="InstaGroove">InstaGroove</div>
+            <div class="Icon IconImail" rel="Imail">Imail</div>
+            <div class="Icon IconForum" rel="Faux-Rom">Forum</div>
+            <div class="ComeBackBureau"> <i class="fa-solid fa-angle-left"></i> Go Bureau</div>
+        </div>
+        <div id="PClock">
+            <h1>Session de Joachim</h1>
+            <input type="text" id="PCpassword">
+            <div class="ComeBackBureau"> <i class="fa-solid fa-angle-left"></i> Go Bureau</div>
+        </div>
     </div>
 
     <div class="PtitCarre">
@@ -69,6 +75,8 @@
         </div>
 
     </div>
+
+
     
     <!-- Page des sites -->
     <div id="FaceJunia" rel="FaceJunia">
@@ -394,7 +402,6 @@
                 
 
                 <div class="discussion nom1" style="display: none;">
-                    
                     <div class="headerdiscuss">
                         <div class="poubelle fa-solid fa-ban "></div>
                         <h2>Romain</h2>

@@ -9,11 +9,17 @@ let PC = document.querySelector('#PC')
 let PClock = document.querySelector('#PClock')
 PClock.style.display = "none"
 
-let Room = document.querySelector('#Room')
-Room.style.display = "none"
+let FondBureau = document.querySelector('#fondBureau')
+let FondPC = document.querySelector('#fondPC')
+FondBureau.style.display = "none"
+FondPC.style.display = "none"
 
-let Ordi = document.querySelector('#Ordi')
-let ClickOrdi = document.querySelector('.OrdiClick')
+let Room = document.querySelector('#Room')
+Room.style.display = "block"
+
+let ClickBureau = document.querySelector('.BureauClick')
+let Ordi = document.querySelector('#Ordi')  
+let ClickPC = document.querySelector('.clickPC')
 let Biblio = document.querySelector('#Biblio')
 let ClickBiblio = document.querySelector('.BiblioClick')
 
@@ -135,11 +141,11 @@ function updatePersonnage() {
         //Affiche la description de l'ordi
         if(inComputer){
             Ordi.style.backgroundColor = "red"
-            ClickOrdi.style.display = "block"
+            ClickBureau.style.display = "block"
         }
         else{
             Ordi.style.backgroundColor = "gray"
-            ClickOrdi.style.display = "none"
+            ClickBureau.style.display = "none"
         }
 
         //Test si je suis devant la bibliothèque
@@ -168,22 +174,35 @@ $(document).ready(function() {
     
     setInterval(updatePersonnage, 25);
 
-    $(ClickOrdi).click(function() {
+    $(ClickBureau).click(function(){
+        FondBureau.style.display = "block"
+        Room.style.display = "none"
+    })
+
+    $(ClickPC).click(function() {
         if(PC_is_lock){
             PClock.style.display = "block"
-            Room.style.display = "none"
+            FondPC.style.display = "block"
+            FondBureau.style.display = "none"
             socket.emit('whichMission',(1))
         }
         else{
+            FondBureau.style.display = "none"
             PC.style.display = "block"
-            Room.style.display = "none"
+            FondPC.style.display = "block"
         }
         inRoom = false
     })
 
-    $(".ComeBackRoom").click(function(){
+    $(".ComeBackBureau").click(function(){
         PC.style.display = "none"
         PClock.style.display = "none"
+        FondPC.style.display = "none"
+        FondBureau.style.display = "block"
+    })
+
+    $(".ComeBackRoom").click(function(){
+        FondBureau.style.display = "none"
         Room.style.display = "block"
         inRoom = true
     })

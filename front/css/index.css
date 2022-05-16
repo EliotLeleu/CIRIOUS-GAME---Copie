@@ -17,24 +17,37 @@ body{
     background-color: red;
 }
 
+#fondBureau{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../image/PC.png);
+    background-size: cover;
+}
+
 #PC{
     background-color: gray;
     height: 85vh;
     width: 60vw;
-    margin: 4vh 40vh;
     border: solid 8px black;
+}
+
+#fondPC{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../image/PCzoome.png);
+    background-size: cover;
 }
 
 #PClock{
     background-color: black;
-    height: 35vh;
-    width: 60vw;
-    margin: 4vh 40vh;
+    height: 26vh;
+    width: 67vw;
+    margin: 9vh 34vh;
     border: solid 8px black;
     color: white;
     text-align: center;
     padding-top: 20vh;
-    padding-bottom: 30vh;
+    padding-bottom: 30vh;   
 }
 
 #PClock h1{
@@ -62,7 +75,7 @@ body{
     height: 10vh;
 }
 
-.OrdiClick{
+.BureauClick{
     position: absolute;
     left: 37vw;
     top: 15vh;
@@ -91,6 +104,13 @@ body{
     height: 10vh;
     border-radius: 10px;
 }
+.clickPC{
+    height: 60vh;
+    width: 50.5vw;
+    position: absolute;
+    left: 25.5vw;
+    top: 12vh;
+}
 
 .Icon{
     border: solid 3px black;
@@ -118,30 +138,24 @@ body{
     background-color: green;
 }
 
-#PC .ComeBackRoom{
-    position: absolute;
-    top: 6.5%;
-    left: 69.5%;
-}
-
 .ComeBackRoom{
     width: 10vw;
     height: 5vh;
-    background-color: red;
     position: absolute;
-    top: 5%;
-    left: 70.2%;
+    top: 2%;
+    left: 1%;
+    color: white;
 }
 
-
-#Imail{
-    background-color: yellow;
-    height: 85vh;
-    width: 60vw;
-    margin: 4vh 40vh;
-    border: solid 8px black;
-    
+.ComeBackBureau{
+    color: white;
+    width: 10vw;
+    height: 5vh;
+    position: absolute;
+    top: 2%;
+    left: 1%;
 }
+
 
 #Forum{
     background-color: green;
