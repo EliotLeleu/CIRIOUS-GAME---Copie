@@ -1,10 +1,8 @@
 /*PAGE FACEJUNIA DE BASE SANS AUCUN ECRAN DEDANS !!!!!!!*/
 #FaceJunia{
     background-color: white;
-    height: 85vh;
-    width: 60vw;
-    margin: 4vh 40vh;
-    border: solid 8px black;
+    width: 68.2vw;
+    margin: 8vh 32.9vh;
 }
 
 .headerFaceJunia {
@@ -27,7 +25,7 @@
 
 /*ECRAN PRINCIPALE DE FACEJUNIA UNE FOIS CONNECTE !!!!!!!*/
 .bigboxFaceJunia {
-    height: 73.5vh;
+    height: 63.5vh;
     background-color: white;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -62,8 +60,8 @@
     background-image: url(../image/wallpaper-images-hero.jpg);
     background-size: cover;
     position: relative; 
-    top: 0.5vh;
-    left: 15vh;
+    top: 1.5vh;
+    left: 25vh;
     height: 18vh;
     width: 30vw;
     border-radius: 15px;
@@ -72,7 +70,7 @@
 .pdp {
     text-align: center;
     position: relative;
-    left: 20vw;
+    left: 25vw;
     bottom: 5vh;
     background-image: url(../image/pdp-annon.png);
     background-size: contain;
@@ -87,8 +85,8 @@
     font-family: 'Koulen', cursive;
     font-size: 100%;
     position: relative;
-    bottom: 10vh;
-
+    bottom: 8vh;
+    left: 2vh;
 }
 
 .details {
@@ -119,8 +117,8 @@
 
 .reglage{
     position: relative;
-    bottom: 58.5vh;
-    left: 89vh;
+    bottom: 51.5vh;
+    left: 92vh;
     height: 4.5vh;
     width: 5vh;
     border: 1px solid black;
@@ -145,12 +143,12 @@
     background-color: rgb(217, 216, 219);
     margin-left: 15vh;
     margin-right: 14vh;
-    height: 74vh;
+    height: 63.5vh;
     
 }
 
 .bigboxlockFaceJunia {
-    height: 74vh;
+    height: 61vh;
     background-color: white;
     position: relative;
     bottom: 3.5vh;
@@ -177,7 +175,7 @@
     width: 8vw;
     border-radius: 10px;
     position: relative;
-    left: 19vw;
+    left: 22.5vw;
     padding-top: 0.5vh;
 }
 
@@ -187,7 +185,7 @@
     background-color: rgb(217, 216, 219);
     margin-left: 15vh;
     margin-right: 14vh;
-    height: 74vh;
+    height: 63.5vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -195,7 +193,7 @@
 }
 
 .bigboxFaceJunia_para {
-    height: 74vh;
+    height: 63.5vh;
     background-color: white;
 }
 
@@ -212,7 +210,7 @@
     background-color: rgb(217, 216, 219);
     margin-left: 15vh;
     margin-right: 14vh;
-    height: 74vh;
+    height: 63.5vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -220,7 +218,7 @@
 }
 
 .bigboxFaceJunia_changeMdp {
-    height: 74vh;
+    height: 63.5vh;
     background-color: white;
 }
 
@@ -230,7 +228,7 @@
     background-color: rgb(217, 216, 219);
     margin-left: 15vh;
     margin-right: 14vh;
-    height: 74vh;
+    height: 63.5vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -238,6 +236,6 @@
 }
 
 .bigboxFaceJunia_changeInfo {
-    height: 74vh;
+    height: 63.5vh;
     background-color: white;
 }

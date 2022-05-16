@@ -1,9 +1,8 @@
 #InstaGroove{
     background-color: orange;
-    height: 85vh;
-    width: 60vw;
-    margin: 4vh 40vh;
-    border: solid 8px black;
+    width: 68.2vw;
+    margin: 8vh 32.9vh;
+    /* border: solid 8px black; */
 }
 
 .headerInstaGroove {
@@ -25,7 +24,7 @@
 }
 
 .bigboxLockInstaGroove{
-    height: 74vh;
+    height: 61vh;
     background-color: white;
     position: relative;
     bottom: 3.5vh;
@@ -33,12 +32,12 @@
 
 .middleboxlock_InstaGroove {
     background-color: orange;
-    height: 74vh;
+    height: 61vh;
     height: 100%;
 }
 
 .bigboxlock_InstaGroove {
-    height: 74vh;
+    height: 61vh;
     background-color: white;
     position: relative;
     bottom: 3.5vh;
@@ -65,13 +64,13 @@
     width: 8vw;
     border-radius: 10px;
     position: absolute;
-    left: 25.5vw;
+    left: 30vw;
     padding-top: 0.5vh;
 } 
 
 .middleboxInstaGroove{
     background-color: orange;
-    height: 70vh;
+    height: 63.3vh;
 
 }
 
@@ -88,7 +87,7 @@
     height: auto;
     position: absolute;
     top: 20vh;
-    left: 50vh;
+    left: 42vh;
 }
 
 .icon {
@@ -101,7 +100,7 @@
 
 .iconemess{
     position: relative;
-    top: 4vh;
+    top: 7vh;
 }
 
 .boitedestr {
@@ -110,7 +109,7 @@
     width: 50vh;
     position: relative;
     left: 50vh;
-    top: 5vh;
+    top: 2vh;
 
 }
 
@@ -151,19 +150,23 @@
 
 .bio{
     font-size: 120%;
+    POSITION: RELATIVE;
+    top: -5vh;
 }
 
 .descbio {
     font-size: 110%;
     border: 3px solid black;
     border-radius: 4px;
+    position: relative;
+    top: -5vh;
 }
 
 .infoInstaGroove {
     flex-direction: column;
     position: relative;
     left: 50vh;
-    top: -8vh;
+    top: -15vh;
     width: 60vh;
 }
 
@@ -195,7 +198,7 @@
 
 .questionInstaGroove{
     position: relative;
-    left: 10vh;
+    left: 20vh;
     flex-direction: column;
     width: 100vh;
     font-size: 130%;
@@ -221,12 +224,13 @@
     display: flex;
     justify-content: space-around;
     position: relative;
-    left: -6vh;
+    left: -6.5vh;
 }
 
 .mdpInstaGroove{
     position: relative;
     top: 2vh;
+    left: -1vh;
     width: 28vh;
     border: 3px solid black;
     border-radius: 4px;
@@ -240,22 +244,38 @@
     border: 2px solid black;
     border-radius: 5px;
     width: 20vh;
-    left: 50vh;
+    left: 60vh;
 }
 
 .retournerInstaGroove{
     position: relative;
-    left: 30vh;
+    left: 40vh;
     top: 20vh;
     width: 50vh;
     text-align: center;
+}
+
+.bigboxInstaGroove_para {
+    height: 63.3vh;
+}
+
+.middleboxInstaGroove_para {
+    height: 63.3vh;
+}
+
+.middleboxInstaGroove_mess {
+    height: 63.3vh;
+}
+
+.bigboxInstaGroove_mess {
+    height: 63.3vh;
 }
 
 .middleboxInstaGroove_changeMdp {
     background-color: orange;
     margin-left: 15vh;
     margin-right: 14vh;
-    height: 74vh;
+    height: 63.3vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -263,7 +283,7 @@
 }
 
 .bigboxInstaGroove_changeMdp {
-    height: 74vh;
+    height: 63.3vh;
     background-color: orange;
 }
 
@@ -288,23 +308,23 @@
 .retourInstaGroove {
     font-size: 150%;
     position: relative;
-    left: 105vh;
+    left: 115vh;
     top: 3vh;
 }
 
 .form-recherch {
     font-size: 120%;
     position: relative;
-    left: 40vh;
+    left: 47vh;
     top: 3vh;
 }
 
 .defilenom {
     position: relative;
     width: 30vh;
-    height: 55vh;
-    top: 8vh;
-    left: 5vh;
+    height: 52.5vh;
+    top: 5vh;
+    left: 10vh;
     flex-direction: column;
     border: 3px solid black;
     border-radius: 4px;
@@ -333,8 +353,8 @@
     height: 50vh;
     position: relative;
     width: 35vw;
-    left: 42vh;
-    bottom: 45vh;
+    left: 48vh;
+    bottom: 47.5vh;
 }
 
 .headerdiscuss {

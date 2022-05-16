@@ -25,11 +25,13 @@ body{
 }
 
 #PC{
-    background-color: gray;
-    height: 85vh;
-    width: 60vw;
+    background-color: black;
+    height: 71.8vh;
+    width: 67vw;
+    margin: 8.8vh 33vh;
     border: solid 8px black;
 }
+
 
 #fondPC{
     height: 100vh;
@@ -40,14 +42,14 @@ body{
 
 #PClock{
     background-color: black;
-    height: 26vh;
-    width: 67vw;
-    margin: 9vh 34vh;
+    height: 22vh;
+    width: 67.5vw;
+    margin: 8.5vh 32.5vh;
     border: solid 8px black;
     color: white;
     text-align: center;
     padding-top: 20vh;
-    padding-bottom: 30vh;   
+    padding-bottom: 30vh; 
 }
 
 #PClock h1{
@@ -116,7 +118,7 @@ body{
     border: solid 3px black;
     width: 7vw;
     height: 7vw;
-    margin: 4vh;
+    margin: 2.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -171,8 +173,8 @@ body{
     width: 3.5vw;
     height: 3.3vw;
     position: absolute;
-    top: 6.5vh;
-    left: 75vw;
+    top: 9vh;
+    left: 79vw;
     border: solid 2px black;
     border-radius: 10px;
     text-align: center;
