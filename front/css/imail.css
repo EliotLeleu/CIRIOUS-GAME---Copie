@@ -24,7 +24,7 @@
     top: 10%;
 }
 
-.bigboxLockImail{
+#ImailLock{
     background-color: white;
     height: 85vh;
     width: 60vw;
@@ -33,12 +33,12 @@
 }
 
 .middleboxlock_Imail {
-    background-color: yellow;
+    background-color: white;
     height: 74vh;
     height: 100%;
 }
 
-.bigboxlock_Imail {
+.bigboxlockImail {
     height: 74vh;
     background-color: white;
     position: relative;
@@ -69,3 +69,171 @@
     left: 25.5vw;
     padding-top: 0.5vh;
 }
+
+/*Page principale*/
+
+.barreGauche{
+    border: 1px solid black;
+    height: 65vh;
+    position: absolute;
+    width: auto;
+    padding: 1vh;
+    top: 18vh;
+    left: 21vw;
+}
+.barreDroite{
+    border: 1px solid black;
+    height: 65vh;
+    position: absolute;
+    width: 44vw;
+    padding: 1vh;
+    top: 18vh;
+    left: 33vw;
+}
+
+.allmessageImail{
+    border: 1px solid black;
+    width: 43vw;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 2vh;
+    left: 1vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: gray lightgray ;
+}
+
+.allImailSupprimer{
+    border: 1px solid black;
+    width: 43vw;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 2vh;
+    left: 1vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: gray lightgray ;
+}
+
+.mdp_Imail{
+    border: 1px solid black;
+    width: 43vw;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 1vh;
+    left: 30vh;
+    text-align: center;
+    justify-content: space-around;
+    visibility:hidden;
+}
+
+.Imail_mainPage{
+    margin: 1.1vh;
+    padding: 2vh;
+    border: 1px solid black;
+    display: flex;
+}
+
+.rechercher{
+    position: relative;
+    left: 2vh;
+}
+
+/*CHANGER LA BARRE DE SCROLL DANS CHROME*/
+.allmessageImail::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+.allmessageImail::-webkit-scrollbar-track {
+    background: lightgray;
+  }
+  
+.allmessageImail::-webkit-scrollbar-thumb {
+    background-color: rgb(70, 33, 33);
+    border-radius: 20px;
+    border: 0px solid lightgray; 
+}
+
+.ReadImail{
+    border: 1px solid black;
+    height: 65vh;
+    position: absolute;
+    width: 44vw;
+    padding: 1vh;
+    top: 18vh;
+    left: 33vw;
+}
+
+.envoyecashFaux{
+    background-color: red;
+    height: auto;
+    width: 25vw;
+    font-size: 3rem;
+    text-align: center;
+    padding: 10vh;
+}
+
+.envoyecashVrai{
+    background-color: green;
+    height: auto;
+    width: 18vw;
+    font-size: 3rem;
+    text-align: center;
+    padding: 5vh;
+}
+
+#CodeCarte{
+    position: relative;
+    bottom: 2vh;
+}
+
+.iconImail{
+    height: 2.5vh;
+    width: 2.5vh;
+    visibility: hidden;
+}
+
+.propoImail{
+    position: absolute;
+    left: 20vw;
+}
+
+.titreImail{
+    position: relative;
+    left: 2.5vw;
+}
+
+.clickImail{
+    font-size: 1.4rem;
+    color: gray;
+}
+
+.Imail_mainPage:hover .clickImail{
+    color: black;
+}
+
+.Imail_mainPage:hover {
+    box-shadow: 1px 2px 1px black;
+    background-color: lightgray;
+}
+
+.Imail_mainPage:hover .iconImail{
+    position: absolute;
+    left: 40vw;
+    visibility: visible; 
+}
+
+#bigtrash{
+    position: absolute;
+    left: 40vw;
+    top: 1.5vh;
+}
+

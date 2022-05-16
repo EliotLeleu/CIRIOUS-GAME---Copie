@@ -16,7 +16,7 @@ let InstaGroovescreen_changeMdp = document.querySelector('.bigboxInstaGroove_cha
 let InstaGroovescreen_mess = document.querySelector('.bigboxInstaGroove_mess')
 
 let Imailscreen = document.querySelector('#Imail')
-let ImailscreenClose = document.querySelector('.bigboxLockImail')
+let ImailscreenClose = document.querySelector('.bigboxlockImail')
 let ImailscreenOpen = document.querySelector('.bigboxImail')
 
 let FauxRomscreen = document.querySelector('#Faux-Rom')
@@ -113,9 +113,9 @@ $(document).ready(function() {
                 break;
 
             case "Imail":
-                Imailcreen.style.display = "block"
+                Imailscreen.style.display = "block"
                 if(Imail_is_lock){
-                $('.bigboxLock' + va)[0].style.display = "block"
+                $('.bigboxlock' + va)[0].style.display = "block"
                 }
                 else{
                     $('.bigbox' + va)[0].style.display = "block"
@@ -141,8 +141,6 @@ $(document).ready(function() {
         let va = $(this).parent().parent()[0]
         console.log(va.childElementCount)
         for (let i = va.childElementCount-1; i >= 1; i--){
-            console.log(i)
-            console.log(va.children[i])
             va.children[i].style.display = "none"
         }
         va.style.display = "none"
@@ -330,6 +328,27 @@ $(document).ready(function() {
         let page = $(this).attr("rel")
         $('.'+ page)[0].style.display = "block"
         $('.'+ page).addClass("active")
+    })
+
+    //Parametre Imail//
+    
+    //Fonction pour changer de page
+    $('.Imail_mainPage').click(function(){
+        console.log("je suis là")
+        //va = div que tu veux masquer
+        let va = $(this).parent().parent()[0]
+        //page = div que tu veux afficher qui a pour class le rel du truc que tu click
+        let page = $(this).attr("rel")
+        va.style.display = "none"
+        $('.'+ page)[0].style.display = "block"
+    })
+    
+    $('.backAllImail').click(function(){
+        $(this).parent()[0].style.display = "none"
+        document.querySelector(".barreDroite").style.display = "block"
+    })
+    $('.envoyecashFaux').click(function(){
+        console.log("tu viens de te faire pirater gros bouffon")
     })
 
 });
