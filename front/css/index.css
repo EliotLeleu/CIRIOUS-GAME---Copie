@@ -5,7 +5,10 @@ body{
     padding: 0px;
 }
 
-#Room{
+
+
+
+.Room{
     margin: 0px;
     width: 100vw;
     height: 100vh;
@@ -14,7 +17,67 @@ body{
     background-size: 80vw 90vh;
     background-repeat: no-repeat;
     background-position: 10vw 5vh;
-    background-color: red;
+    background-color: black;
+}
+
+.Room2{
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../image/MeublesTransp/canapeTranspa.png);
+    background-size: contain;
+    background-size: 80vw 90vh;
+    background-repeat: no-repeat;
+    background-position: 10vw 5vh;
+    background-color: black;
+}
+
+.Room3{
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../image/MeublesTransp/planteTranspa.png);
+    background-size: contain;
+    background-size: 80vw 90vh;
+    background-repeat: no-repeat;
+    background-position: 10vw 5vh;
+    background-color: black;
+}
+
+.Room4{
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../image/MeublesTransp/teleTranspa.png);
+    background-size: contain;
+    background-size: 80vw 90vh;
+    background-repeat: no-repeat;
+    background-position: 10vw 5vh;
+    background-color: black;
+}
+
+.Room5{
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../image/MeublesTransp/tableChevetTranspa.png);
+    background-size: contain;
+    background-size: 80vw 90vh;
+    background-repeat: no-repeat;
+    background-position: 10vw 5vh;
+    background-color: black;
+}
+
+.Room6{
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../image/MeublesTransp/entreeTranspa.png);
+    background-size: contain;
+    background-size: 80vw 90vh;
+    background-repeat: no-repeat;
+    background-position: 10vw 5vh;
+    background-color: black;
 }
 
 #fondBureau{
@@ -70,16 +133,15 @@ body{
 
 #Ordi{
     position: absolute;
-    left: 30vw;
-    top: 28vh;
-    border: solid 2px black;
-    width: 8vw;
-    height: 10vh;
+    left: 18.5vw;
+    top: 31vh;
+    width: 4vw;
+    height: 8vh;
 }
 
 .BureauClick{
     position: absolute;
-    left: 37vw;
+    left: 14vw;
     top: 15vh;
     border: solid 2px black;
     width: 8vw;
@@ -90,22 +152,78 @@ body{
 
 #Biblio{
     position: absolute;
-    left:12.8vw;
-    top: 50vh;
-    border: solid 2px black;
-    width: 10vh;
-    height: 8vw;
+    left:34.5vw;
+    top: 40vh;
+    width: 4vw;
+    height: 12vh;
 }
 
 .BiblioClick{
     position: absolute;
-    left: 16.5vw;
-    top: 38vh;
+    left: 24.5vw;
+    top: 40vh;
     border: solid 2px black;
     width: 8vw;
     height: 10vh;
     border-radius: 10px;
 }
+
+
+#TV{
+    position: absolute;
+    left:55vw;
+    top: 82vh;
+    width: 9vw;
+    height: 6vh;
+}
+
+.TVClick{
+    position: absolute;
+    left: 65vw;
+    top: 82vh;
+    border: solid 2px black;
+    width: 8vw;
+    height: 10vh;
+    border-radius: 10px;
+}
+
+#Frigo{
+    position: absolute;
+    left:63.5vw;
+    top: 31vh;
+    width: 4vw;
+    height: 4vh;
+}
+
+.FrigoClick{
+    position: absolute;
+    left: 59vw;
+    top: 18vh;
+    border: solid 2px black;
+    width: 8vw;
+    height: 10vh;
+    border-radius: 10px;
+}
+
+#Console{
+    position: absolute;
+    left:75vw;
+    top: 45vh;
+    width: 9vw;
+    height: 6vh;
+}
+
+.ConsoleClick{
+    position: absolute;
+    left: 75vw;
+    top: 55vh;
+    border: solid 2px black;
+    width: 8vw;
+    height: 10vh;
+    border-radius: 10px;
+}
+
+
 .clickPC{
     height: 60vh;
     width: 50.5vw;
@@ -113,6 +231,7 @@ body{
     left: 25.5vw;
     top: 12vh;
 }
+
 
 .Icon{
     border: solid 3px black;
