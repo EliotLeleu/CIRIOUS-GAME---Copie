@@ -19,12 +19,12 @@ FondPC.style.display = "none"
 
 let Room = document.querySelector('#Room')
 Room.style.display = "block"
-setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/canapeTranspa.png")'},100)
-setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/entreeTranspa.png")'},200)
-setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/planteTranspa.png")'},300)
-setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/tableChevetTranspa.png")'},400)
-setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/teleTranspa.png")'},500)
-setTimeout(function(){Room.style.backgroundImage = 'url("front/image/room.png")'},600)
+setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/canapeTranspa.png")'},200)
+setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/entreeTranspa.png")'},400)
+setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/planteTranspa.png")'},600)
+setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/tableChevetTranspa.png")'},800)
+setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/teleTranspa.png")'},1000)
+setTimeout(function(){Room.style.backgroundImage = 'url("front/image/room.png")'},1200)
 console.log("new image")
 let waiter = document.querySelector('#waiter')
 waiter.style.display = "none"
@@ -213,7 +213,7 @@ function updatePersonnage() {
             else {
                 Room.style.backgroundImage = 'url("front/image/room.png")'
             }
-        },700)
+        },1200)
 
         //Test si je suis devant l'odinateur
         if((x>=window.innerWidth*0.195) && (x<=window.innerWidth*0.22) && (y<=window.innerHeight*0.38)){
