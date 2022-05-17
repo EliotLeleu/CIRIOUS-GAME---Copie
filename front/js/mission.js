@@ -47,6 +47,7 @@ $('.ConfirmerMdpFaceJunia').click(function (){
             alert("Le mot de passe a été correctement modifié")
             FaceJunia_mission_1 = true
             socket.emit('newMdp',newpassword, 0)
+            document.querySelector(".BLFaceJunia").innerHTML = newpassword
             if((FaceJunia_mission_1 == true) && (FaceJunia_mission_2 == true) && (FaceJunia_mission_3 == true)){
                 socket.emit('whichMission',(4))
                 console.log("FaceJunia Fini")
@@ -120,6 +121,7 @@ $('.ConfirmerMdpFaux-Rom').click(function (){
             alert("Le mot de passe a été correctement modifié")
             FauxRom_mission_1 = true
             socket.emit('newMdp',newpassword, 1)
+            document.querySelector(".BLFauxRom").innerHTML = newpassword
             if((FauxRom_mission_1 == true) && (FauxRom_mission_2 == true) && (FauxRom_mission_3 == true)){
                 socket.emit('whichMission',(6))
                 console.log("FauxRom Fini")
@@ -196,6 +198,7 @@ $('.ConfirmerMdpInstaGroove').click(function (){
             alert("Le mot de passe a été correctement modifié")
             Instagroove_mission_1= true
             socket.emit('newMdp',newpassword, 2)
+            document.querySelector(".BLInstaGroove").innerHTML = newpassword
             if((Instagroove_mission_1 == true) && (InstaGroove_mission_2 == true) && (InstaGroove_mission_3 == true)){
                 socket.emit('whichMission',(9))
                 console.log("InstaGroove Fini")
@@ -239,6 +242,141 @@ $('.ConfirmerInfoInstaGroove').click(function () {
 
 })
 
+//Tu te fais voler de l'argent
+$('.EnvoieReponseFauxRom').click(function (){
+    console.log("yo")
+    let message = document.createElement('div')
+    let reponse = document.querySelector("#reponseBastiens").value
+    let discution = document.querySelector(".discutionBastiens")
+
+    message.innerHTML = reponse
+    discution.appendChild(message)
+
+    if((message.textContent.includes("qwant")) || ((message.textContent.includes("Qwant")))){
+        FauxRom_mission_3 = true
+        if((FauxRom_mission_1 == true) && (FauxRom_mission_2 == true) && (FauxRom_mission_3 == true)){
+            socket.emit('whichMission',(6))
+            console.log("FauxRom Fini")
+        }
+    }
+
+
+})
+
+//Confiramation payement Imail
+$('.envoyecashVrai').click(function(){
+    if(document.querySelector("#CodeCarte").value == 1209){
+        Imail_mission_2 = true
+        if((Imail_mission_1 == true) && (Imail_mission_2 == true) && (Imail_mission_3 == true)){
+            socket.emit('whichMission',(10))
+            console.log("Imail Fini")
+        }
+    }
+    else{
+        document.querySelector("#CodeCarte").value = ""
+        document.querySelector("#CodeCarte").placeholder = "Ce n'est pas le Code"
+    }
+})
+
+//vérifie si on a supprimé tous les mails
+function verifSuppSpam(){
+    let MainPage = document.querySelector(".allmessageImail")
+    let CBon = true
+    for(let i = 0; i <= MainPage.childElementCount-1; i++){
+        if(MainPage.children[i].childNodes[5].textContent.includes("spam") == true){
+            CBon = false
+        }
+    }
+    if(CBon){
+        Imail_mission_3 = true
+        if((Imail_mission_1 == true) && (Imail_mission_2 == true) && (Imail_mission_3 == true)){
+            socket.emit('whichMission',(10))
+            console.log("Imail Fini")
+        }
+    }
+    else{
+        console.log("Pas encore")
+    }
+}
+
+//Fonction qui change selection les Imails
+var ImailSelect = []
+$('.clickImail').click(function(e){
+    if($(this).hasClass("fa-square-o")){
+        $(this).removeClass("fa-square-o").addClass("fa-square-check")
+        $(this).parent()[0].style.backgroundColor = "lightgray"
+        $(this)[0].style.color = "black"
+        ImailSelect.push($(this).parent()[0])
+    }
+    else{
+        $(this).removeClass("fa-square-check").addClass("fa-square-o")
+        $(this).parent()[0].style.backgroundColor = ""
+        $(this)[0].style.color = "gray"
+        ImailSelect.splice($.inArray($(this).parent()[0],ImailSelect) , 1)
+    }
+    if(ImailSelect.length == 0){
+        document.querySelector('#bigtrash').style.display = "none"
+    }
+    else{
+        document.querySelector('#bigtrash').style.display = "block"
+    }
+    e.stopPropagation();
+})
+
+//Supprime tout les mails séléctionné
+$('#bigtrash').click(function(){
+    for(let i = 0; i < ImailSelect.length; i++){
+        ImailSelect[i].parentNode.removeChild(ImailSelect[i])
+    }
+    ImailSelect = [];
+    verifSuppSpam();
+})
+
+//Supprime un mail
+$('.iconImail').click(function(e){
+    let SuppPage = document.querySelector(".allImailSupprimer")
+    SuppPage.appendChild($(this).parent()[0])
+    verifSuppSpam()
+    e.stopPropagation();
+})
+
+$('.ConfirmerMdpImail').click(function (){
+        
+    var oldpassword = document.getElementById('oldPasswordImail').value;
+    var newpassword = document.getElementById('newPasswordImail').value;
+    var confirmpassword = document.getElementById('confirmPasswordImail').value;
+    if (oldpassword == "" || newpassword == "" || confirmpassword == "") {
+        alert('Veuillez remplir tous les champs');
+    }
+    else if (oldpassword == newpassword) {
+        alert("L'ancien et le nouveau mot de passe ne peuvent être identique");
+    }
+    else if (newpassword != confirmpassword) {
+        alert("Les mots de passe ne correspondent pas");
+    }
+    else {
+        if (newpassword.match( /[0-9]/g) && newpassword.match( /[A-Z]/g) && newpassword.match(/[a-z]/g) && newpassword.match( /[^a-zA-Z\d]/g) && newpassword.length == 18){
+            msg = "<p style='color:green'>Votre mot de passe fort, il resiste à n'importe quel attaque !</p>"; 
+            document.querySelector(".bigboxImail").style.display = "none";
+            document.querySelector(".bigboxlockImail").style.display = "block";
+            document.querySelector('.mdp_Imail').style.visibility = 'hidden',
+            alert("Le mot de passe a été correctement modifié")
+            socket.emit('newMdp',newpassword, 3)
+            document.querySelector(".BLImail").innerHTML = newpassword
+            Imail_mission_1 = true
+            
+        if((Imail_mission_1 == true) && (Imail_mission_2 == true) && (Imail_mission_3 == true)){
+            
+            socket.emit('whichMission',(10))
+            console.log("Imail Fini")
+        }
+        }
+        else {
+            msg = "<p style='color:red'>Mot de passe trop faible pour ce niveau.</p>";
+        }
+        document.getElementById("msgFaux-Rom").innerHTML= msg; 
+    }
+})
 
 socket.on('thisMission', (nb) => {
     if (MissionCout < nb){

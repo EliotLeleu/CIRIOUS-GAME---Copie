@@ -444,7 +444,7 @@
             </div>
     
                     <!-- Affichage fenetre ferme -->
-            <div class="bigboxLockImail">  
+            <div class="bigboxlockImail">  
                 <div class="middleboxlock_Imail">
                     <div class="ImailPass">
                         <h1>Mots de Passe</h1>
@@ -457,7 +457,180 @@
                         <!-- Affichage fenetre ouvert -->
             <div class="bigboxImail">
                 <div class="middleboxImail">
+                    <div class="barreGauche">
+                        <!--<div class="NewImail">Nouveau</div>-->
+                        <div class="boiteReception" onclick="document.querySelector('.barreDroite').style.display = 'block',
+                                                             document.querySelector('.allmessageImail').style.display = 'block',
+                                                             document.querySelector('.mdp_Imail').style.visibility = 'hidden',
+                                                             document.querySelector('.allImailSupprimer').style.display = 'none'">
+                                                             Boite de Récéption</div>
+                        <div class="ImailSupprimer" onclick="document.querySelector('.allImailSupprimer').style.display = 'block',
+                                                             document.querySelector('.allmessageImail').style.display = 'none'">
+                                                             Imail Supprimer</div>
+                        <div class="ImailSupprimer" onclick="document.querySelector('.barreDroite').style.display = 'none',
+                                                             document.querySelector('.mdp_Imail').style.visibility = 'visible'">
+                                                             Changer le mdp</div>                                     
     
+                    </div>
+    
+                    <div class="mdp_Imail">
+                        <h1>Changer son Mot de Passe</h1>
+    
+                        <div>Ancien Mot de Passe
+                            <input class="form-control" id="oldPasswordImail" name="oldPassword" value="" placeholder="Entrez l'ancien mot de passe" type="password">
+                        </div>
+                        
+                        <div>Nouveau Mot de Passe
+                            <input class="form-control" id="newPasswordImail" name="newPassword" value="" placeholder="Entrez le nouveau mot de passe" type="password">
+                        </div>
+                        
+                        <div>Confirmation
+                            <input class="form-control" id="confirmPasswordImail" name="confirmPassword" value="" placeholder="Re-saisissez le nouveau mot de passe" type="password">
+                        </div>
+    
+                        <span id="msg"></span>
+    
+                        <div class="annulerMdp">Annuler</div>
+                        <div class="ConfirmerMdpImail">Confirmer</div>
+                    </div>
+    
+                    <div class="barreDroite" style="display: none;">
+                        <div>Rechercher
+                            <input type="text" class="rechercher"></input>
+                            <div class="fa fa-trash" id="bigtrash" style="display: none;"></div>
+                        </div>
+    
+                        <div class="allImailSupprimer">
+    
+                        </div>
+    
+                        <div class="allmessageImail">
+                            
+                            <div class="Imail_mainPage" rel="Louis">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Louis de Chez Zarrah</div>
+                                <div class="propoImail">spam</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage" rel="BigBoss">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">LeBigBoss</div>
+                                <div class="propoImail">spam</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage" rel="Roger">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Roger Doumien</div>
+                                <div class="propoImail">blablabla</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage" rel="BaNquE">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">BaNque</div>
+                                <div class="propoImail">blablabla</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Sylvie Lancaste</div>
+                                <div class="propoImail">blablabla</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Ebou</div>
+                                <div class="propoImail">spam</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">John Smith</div>
+                                <div class="propoImail">blablabla</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Gabriel Chenevert</div>
+                                <div class="propoImail">blablabla</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Gabri Taoto</div>
+                                <div class="propoImail">blablabla</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            
+                            <div class="Imail_mainPage">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Narata</div>
+                                <div class="propoImail">spam</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Pierre Bloc</div>
+                                <div class="propoImail">blablabla</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">UCG</div>
+                                <div class="propoImail">blablabla</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">LeCoinBon</div>
+                                <div class="propoImail">spam</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage" rel="Banque">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Banque</div>
+                                <div class="propoImail">blablabla</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Annouk de Fever</div>
+                                <div class="propoImail">spam</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+    
+                        </div>
+                    </div>
+                    <div class="ReadImail Louis" style="display:none";>
+                        <div class="backAllImail"><i class="fa-solid fa-arrow-left"></i></div>
+                        <h1>Louis de Chez Zarrah</h1>
+                        <p>yo</p>
+                    </div>
+                    <div class="ReadImail BigBoss" style="display:none";>
+                        <div class="backAllImail"><i class="fa-solid fa-arrow-left"></i></div>
+                        <h1>LeBigBoss</h1>
+                        <p>yo</p>
+                    </div>
+                    <div class="ReadImail Roger" style="display:none";>
+                        <div class="backAllImail"><i class="fa-solid fa-arrow-left"></i></div>
+                        <h1>Roger</h1>
+                        <p>yo</p>
+                    </div>
+                    <div class="ReadImail BaNquE" style="display:none";>
+                        <div class="backAllImail"><i class="fa-solid fa-arrow-left"></i></div>
+                        <h1>BaNquE</h1>
+                        <p>Vous devez envoyé 75€ pour l'achat d'un collier 18 cara</p>
+                        <div class="envoyecashFaux">Payer</div>
+                    </div>
+                    <div class="ReadImail Banque" style="display:none";>
+                        <div class="backAllImail"><i class="fa-solid fa-arrow-left"></i></div>
+                        <h1>Banque</h1>
+                        <p>Bonjour, vous avez fais un achat pour dans la boutique PreHistoire d'Or</p>
+                        <p>Vous devez envoyé 75€ pour l'achat d'un collier 18 cara</p>
+                        <h3>Code de Carte</h3>
+                        <input type="text" id="CodeCarte" placeholder="">
+    
+                        <div class="envoyecashVrai">Payer</div>
+                    </div>
                 </div>
             </div>
     
@@ -621,6 +794,28 @@
         <div class="GrosCarre blockNote">
             <h1>Block-Note</h1>
             <div class="leave cross fa-solid fa-xmark" onclick="document.querySelector('.blockNote').style.display = 'none'"></div>
+            <div class="ListeMdp">
+                <div class="code">
+                    <h2>PC</h2>
+                    <p class="BLPC">???</p>
+                </div>
+                <div class="code">  
+                    <h2>FaceJunia</h2>
+                    <p class="BLFaceJunia">???</p>
+                </div>
+                <div class="code">
+                    <h2>InstaGroove</h2>
+                    <p class="BLInstaGroove">???</p>
+                </div>
+                <div class="code">
+                    <h2>Imail</h2>
+                    <p class="BLImail">???</p>
+                </div>
+                <div>
+                    <h2>Faux-Rom</h2>
+                    <p class="BLIFauxRom">???</p>
+                </div>
+            </div>
         </div>
 
     </div>
