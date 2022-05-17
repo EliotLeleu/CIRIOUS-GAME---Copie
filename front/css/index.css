@@ -12,7 +12,6 @@ body{
     margin: 0px;
     width: 100vw;
     height: 100vh;
-    background-image: url(../image/room.png);
     background-size: contain;
     background-size: 80vw 90vh;
     background-repeat: no-repeat;
@@ -20,65 +19,7 @@ body{
     background-color: black;
 }
 
-.Room2{
-    margin: 0px;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../image/MeublesTransp/canapeTranspa.png);
-    background-size: contain;
-    background-size: 80vw 90vh;
-    background-repeat: no-repeat;
-    background-position: 10vw 5vh;
-    background-color: black;
-}
 
-.Room3{
-    margin: 0px;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../image/MeublesTransp/planteTranspa.png);
-    background-size: contain;
-    background-size: 80vw 90vh;
-    background-repeat: no-repeat;
-    background-position: 10vw 5vh;
-    background-color: black;
-}
-
-.Room4{
-    margin: 0px;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../image/MeublesTransp/teleTranspa.png);
-    background-size: contain;
-    background-size: 80vw 90vh;
-    background-repeat: no-repeat;
-    background-position: 10vw 5vh;
-    background-color: black;
-}
-
-.Room5{
-    margin: 0px;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../image/MeublesTransp/tableChevetTranspa.png);
-    background-size: contain;
-    background-size: 80vw 90vh;
-    background-repeat: no-repeat;
-    background-position: 10vw 5vh;
-    background-color: black;
-}
-
-.Room6{
-    margin: 0px;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../image/MeublesTransp/entreeTranspa.png);
-    background-size: contain;
-    background-size: 80vw 90vh;
-    background-repeat: no-repeat;
-    background-position: 10vw 5vh;
-    background-color: black;
-}
 
 #fondBureau{
     height: 100vh;

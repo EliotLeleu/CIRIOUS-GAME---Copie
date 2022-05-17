@@ -19,8 +19,15 @@ FondPC.style.display = "none"
 
 let Room = document.querySelector('#Room')
 Room.style.display = "block"
-let Room2 = document.querySelector('#Room2')
-Room2.style.display = "none"
+setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/canapeTranspa.png")'},100)
+setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/entreeTranspa.png")'},200)
+setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/planteTranspa.png")'},300)
+setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/tableChevetTranspa.png")'},400)
+setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/teleTranspa.png")'},500)
+setTimeout(function(){Room.style.backgroundImage = 'url("front/image/room.png")'},600)
+console.log("new image")
+let waiter = document.querySelector('#waiter')
+waiter.style.display = "none"
 
 let ClickBureau = document.querySelector('.BureauClick')
 let Ordi = document.querySelector('#Ordi')  
@@ -183,57 +190,30 @@ function updatePersonnage() {
             }
         }
 
-        //Test si je suis derrière le canapé
-        if((x >= window.innerWidth*0.5227864583333333) && (y >= window.innerHeight*0.4524137931034483) && (x <= window.innerWidth*0.6627604166666667) && (y <= window.innerHeight*0.583448275862069)){
-            Room.style.display = "none"
-            Room2.style.display = "block"
-        }
-        else{
-            Room2.style.display = "none"
-            Room.style.display = "block"
-        }
-
-        //Test si je suis derrière la plante
-        if((x >= window.innerWidth*0.2428385416666667) && (y <= window.innerHeight*0.376551724137931) && (x <= window.innerWidth*0.30)){
-            Room.classList.remove('Room');
-            Room.classList.add('Room3')
-        }
-        else{
-            Room.classList.remove('Room3');
-            Room.classList.add('Room')
-        }
-
-        //Test si je suis derrière la télé
-        if ((x >= window.innerWidth * 0.548828125) && (y >= window.innerHeight * 0.7972413793103448) && (x <= window.innerWidth * 0.6497395833333333)) {
-
-            Room.classList.remove('Room');
-            Room.classList.add('Room4')
-        }
-        else {
-            Room.classList.remove('Room4');
-            Room.classList.add('Room')
-        }
-
-        //Test si je suis derrière la table de chevet
-        if((x <= window.innerWidth*0.1549479166666667) && (y >= window.innerHeight*0.6248275862068966)){
-
-            Room.classList.remove('Room');
-            Room.classList.add('Room5')
-        }
-        else {
-            Room.classList.remove('Room5');
-            Room.classList.add('Room')
-        }
-
-        //Test si je suis derrière la console
-        if ((x >= window.innerWidth * 0.7213541666666667) && (y >= window.innerHeight * 0.485)){ 
-        Room.classList.remove('Room');
-        Room.classList.add('Room6')
-        }
-        else {
-        Room.classList.remove('Room6');
-        Room.classList.add('Room')
-        }
+        setTimeout(function(){
+            if((x >= window.innerWidth*0.5227864583333333) && (y >= window.innerHeight*0.4524137931034483) && (x <= window.innerWidth*0.6627604166666667) && (y <= window.innerHeight*0.583448275862069)){
+                Room.style.backgroundImage = 'url("front/image/MeublesTransp/canapeTranspa.png")'
+            }
+            //Test si je suis derrière la plante
+            else if((x >= window.innerWidth*0.2428385416666667) && (y <= window.innerHeight*0.376551724137931) && (x <= window.innerWidth*0.30)){
+                Room.style.backgroundImage = 'url("front/image/MeublesTransp/planteTranspa.png")'
+            }
+            //Test si je suis derrière la télé
+            else if ((x >= window.innerWidth * 0.548828125) && (y >= window.innerHeight * 0.7972413793103448) && (x <= window.innerWidth * 0.6497395833333333)) {
+                Room.style.backgroundImage = 'url("front/image/MeublesTransp/teleTranspa.png")'
+            }
+            //Test si je suis derrière la table de chevet
+            else if((x <= window.innerWidth*0.1549479166666667) && (y >= window.innerHeight*0.6248275862068966)){
+                Room.style.backgroundImage = 'url("front/image/MeublesTransp/tableChevetTranspa.png")'
+            }
+            //Test si je suis derrière meuble d'entrée'
+            else if ((x >= window.innerWidth * 0.7213541666666667) && (y >= window.innerHeight * 0.485)){ 
+                Room.style.backgroundImage = 'url("front/image/MeublesTransp/entreeTranspa.png")'
+            }
+            else {
+                Room.style.backgroundImage = 'url("front/image/room.png")'
+            }
+        },700)
 
         //Test si je suis devant l'odinateur
         if((x>=window.innerWidth*0.195) && (x<=window.innerWidth*0.22) && (y<=window.innerHeight*0.38)){
