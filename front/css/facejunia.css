@@ -56,6 +56,15 @@
     height: 100vh;
 }
 
+.iconeregInsta{
+    position: relative;
+    height: 7vh;
+    width: 7vh;
+    font-size: 150%;
+    left: 6vh;
+    top: 2vh;
+}
+
 .wallpaper {
     background-image: url(../image/wallpaper-images-hero.jpg);
     background-size: cover;

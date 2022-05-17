@@ -18,6 +18,7 @@ let InstaGroovescreen_mess = document.querySelector('.bigboxInstaGroove_mess')
 let Imailscreen = document.querySelector('#Imail')
 let ImailscreenClose = document.querySelector('.bigboxlockImail')
 let ImailscreenOpen = document.querySelector('.bigboxImail')
+let Imailscreen_changeMdp = document.querySelector('.mdp_Imail')
 
 let FauxRomscreen = document.querySelector('#Faux-Rom')
 let FauxRomscreenClose = document.querySelector('.bigboxlockFaux-Rom')
@@ -313,6 +314,11 @@ $(document).ready(function() {
         InstaGroovescreen_mess.style.display = "none"
         InstaGroovescreenOpen.style.display = "block"
     }) 
+
+    $('.annulerMdpImail').click(function (){
+        Imailscreen_changeMdp.style.display = "none"
+        ImailscreenOpen.style.display = "block"
+    })
 
     //Fonction pour changer de page
     $('.defile').click(function(){

@@ -75,7 +75,7 @@
 }
 
 .imgpseudo{
-    width: 30vh;
+    width: 25vh;
     text-align: center;
     /* height: 10vh; */
     flex-direction: column;
@@ -86,7 +86,7 @@
     border-radius: 4px;
     height: auto;
     position: absolute;
-    top: 20vh;
+    top: 22vh;
     left: 42vh;
 }
 
@@ -156,7 +156,7 @@
 
 .descbio {
     font-size: 110%;
-    border: 3px solid black;
+    border: 2px solid black;
     border-radius: 4px;
     position: relative;
     top: -5vh;
@@ -171,7 +171,7 @@
 }
 
 .nomuser {
-    border: 3px solid black;
+    border: 2px solid black;
     border-radius: 4px;
     display: flex;
     justify-content: space-around;
@@ -181,7 +181,7 @@
 .locauser {
     position: relative;
     top: 2vh;
-    border: 3px solid black;
+    border: 2px solid black;
     border-radius: 4px;
     display: flex;
     justify-content: space-around;
@@ -190,7 +190,7 @@
 .pvuser {
     position: relative;
     top: 4vh;
-    border: 3px solid black;
+    border: 2px solid black;
     border-radius: 4px;
     display: flex;
     justify-content: space-around;

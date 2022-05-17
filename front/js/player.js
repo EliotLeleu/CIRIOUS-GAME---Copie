@@ -1,3 +1,5 @@
+let socket = io();
+
 let inRoom = true
 let inComputer = false
 let inBiblio = false
