@@ -47,6 +47,7 @@ $('.ConfirmerMdpFaceJunia').click(function (){
             alert("Le mot de passe a été correctement modifié")
             FaceJunia_mission_1 = true
             socket.emit('newMdp',newpassword, 0)
+            document.querySelector(".BLFaceJunia").innerHTML = newpassword
             if((FaceJunia_mission_1 == true) && (FaceJunia_mission_2 == true) && (FaceJunia_mission_3 == true)){
                 socket.emit('whichMission',(4))
                 console.log("FaceJunia Fini")
@@ -120,6 +121,7 @@ $('.ConfirmerMdpFaux-Rom').click(function (){
             alert("Le mot de passe a été correctement modifié")
             FauxRom_mission_1 = true
             socket.emit('newMdp',newpassword, 1)
+            document.querySelector(".BLFauxRom").innerHTML = newpassword
             if((FauxRom_mission_1 == true) && (FauxRom_mission_2 == true) && (FauxRom_mission_3 == true)){
                 socket.emit('whichMission',(6))
                 console.log("FauxRom Fini")
@@ -196,6 +198,7 @@ $('.ConfirmerMdpInstaGroove').click(function (){
             alert("Le mot de passe a été correctement modifié")
             Instagroove_mission_1= true
             socket.emit('newMdp',newpassword, 2)
+            document.querySelector(".BLInstaGroove").innerHTML = newpassword
             if((Instagroove_mission_1 == true) && (InstaGroove_mission_2 == true) && (InstaGroove_mission_3 == true)){
                 socket.emit('whichMission',(9))
                 console.log("InstaGroove Fini")
@@ -359,8 +362,11 @@ $('.ConfirmerMdpImail').click(function (){
             document.querySelector('.mdp_Imail').style.visibility = 'hidden',
             alert("Le mot de passe a été correctement modifié")
             socket.emit('newMdp',newpassword, 3)
+            document.querySelector(".BLImail").innerHTML = newpassword
             Imail_mission_1 = true
+            
         if((Imail_mission_1 == true) && (Imail_mission_2 == true) && (Imail_mission_3 == true)){
+            
             socket.emit('whichMission',(10))
             console.log("Imail Fini")
         }
