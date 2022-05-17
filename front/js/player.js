@@ -326,6 +326,7 @@ $(document).ready(function() {
     $(ClickBureau).click(function(){
         FondBureau.style.display = "block"
         Room.style.display = "none"
+        inRoom = false
     })
 
     $(ClickPC).click(function() {
@@ -340,7 +341,6 @@ $(document).ready(function() {
             PC.style.display = "block"
             FondPC.style.display = "block"
         }
-        inRoom = false
     })
 
     $(".ComeBackBureau").click(function(){
