@@ -298,12 +298,40 @@ function updatePersonnage() {
     }   
 }
 
+let popup1 = document.querySelector('.pop1')
+popup1.style.display = "none"
+let popup2 = document.querySelector('.pop2')
+popup2.style.display = "none"
+let popup3 = document.querySelector('.pop3')
+popup3.style.display = "none"
+let popup4 = document.querySelector('.pop4')
+popup4.style.display = "none"
 
+var popupmarche = false;
 
+function affichpop() {
+    if(popupmarche == true){
+        numpop = Math.floor(Math.random()*(4-1+1))+1;
+        if(numpop == 1){
+            popup1.style.display = "block"
+        }
+        else if(numpop == 2){
+            popup2.style.display = "block"
+        }
+        else if(numpop == 3){
+            popup3.style.display = "block"
+        }
+        else if(numpop == 4){
+            popup4.style.display = "block"
+        }
+    }
+}
 
 $(document).ready(function() {
     
     setInterval(updatePersonnage, 25);
+
+    setInterval(affichpop, 2500)
 
     $(ClickBureau).click(function(){
         FondBureau.style.display = "block"
@@ -345,6 +373,22 @@ $(document).ready(function() {
             PClock.style.display = "none"
             PC.style.display = "block"
             PC_is_lock = false
+            popupmarche = true
+            $('.pop1').click(function (){
+                popup1.style.display = "none"
+            })
+            $('.pop2').click(function (){
+                popup2.style.display = "none"
+            })
+            $('.pop3').click(function (){
+                popup3.style.display = "none"
+            })
+            $('.pop4').click(function (){
+                popup4.style.display = "none"
+            })
 		}
-	}
+    }
+    $('.wifiicon').click(function(){
+        popupmarche = false
+    })
 })

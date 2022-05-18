@@ -29,18 +29,18 @@ body{
 }
 
 #PC{
-    background-color: black;
+    /* background-color: black; */
     height: 71.8vh;
     width: 67vw;
     margin: 8.8vh 33vh;
-    border: solid 8px black;
+    /* border: solid 8px black; */
 }
 
 
 #fondPC{
     height: 100vh;
     width: 100vw;
-    background-image: url(../image/PCzoome.png);
+    background-image: url(../image/PCzoome_fondecran.png);
     background-size: cover;
 }
 
@@ -175,16 +175,18 @@ body{
 
 
 .Icon{
-    border: solid 3px black;
-    width: 7vw;
-    height: 7vw;
+    /* border: solid 3px black; */
+    width: 2.5vw;
+    height: 2.5vw;
     margin: 2.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: 3vh;
 }
 
-.IconFaceJunia{
+/* .IconFaceJunia{
     background-color: white;
 }
 
@@ -198,7 +200,7 @@ body{
 
 .IconForum{
     background-color: green;
-}
+} */
 
 .ComeBackRoom{
     width: 10vw;
@@ -309,4 +311,46 @@ body{
 .code{
     border-bottom: 1px solid black;
     width: 20vw;
+}
+
+.pop {
+    font-size: 150%;
+    text-align: center;
+}
+
+.pop1 {
+    /* display: block; */
+    POSITION: absolute;
+    bottom: 22vh;
+    background-color: white;
+    width: 40vh;
+    left: 50vh;
+}
+
+.pop2 {
+    position: absolute;
+    bottom: 45vh;
+    left: 45vh;
+}
+
+.pop3{
+    POSITION: absolute;
+    bottom: 20vh;
+    left: 75vh;
+    width: 20vh;
+}
+
+.pop4 {
+    position: absolute;
+    bottom: 20vh;
+    width: 50vh;
+    left: 115vh;
+}
+
+.wifiicon{
+    FONT-SIZE: 75%;
+    color: white;
+    position: absolute;
+    left: 147.5vh;
+    bottom: 18.3vh;
 }
