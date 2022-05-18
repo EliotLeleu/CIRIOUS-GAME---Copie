@@ -1,13 +1,18 @@
 /*PAGE FACEJUNIA DE BASE SANS AUCUN ECRAN DEDANS !!!!!!!*/
+@font-face {
+    font-family: 'Pixeled';
+    src: url(../fonts/Pixeled.ttf);
+}
+
+
 #FaceJunia{
-    background-color: white;
+    background-color: #9CC4B2;
     width: 68.2vw;
     margin: 8vh 32.9vh;
 }
 
 .headerFaceJunia {
-    background-color: lightsteelblue;
-    font-size: 200%;
+    background-color: #006d68;
     border-bottom: 8px solid black;
     height: 10vh;
 }
@@ -16,17 +21,20 @@
     position: relative;
     top: 20%;
     left: 2%;
+    color: #ff5c39;
+    font-family: 'Pixeled';
+    font-size: 2rem;
 }
 
 .headerFaceJunia .cross{
     position: relative;
-    top: 10%;
+    top: 35%;
 }
 
 /*ECRAN PRINCIPALE DE FACEJUNIA UNE FOIS CONNECTE !!!!!!!*/
 .bigboxFaceJunia {
     height: 63.5vh;
-    background-color: white;
+    background-color: #9CC4B2;
     overflow-x: hidden;
     overflow-y: scroll;
     scrollbar-width: thin;
@@ -39,18 +47,18 @@
   }
   
 .bigboxFaceJunia::-webkit-scrollbar-track {
-    background: lightgray;
+    background-color: #9CC4B2;
   }
   
 .bigboxFaceJunia::-webkit-scrollbar-thumb {
-    background-color: rgb(70, 33, 33);
+    background-color: #ff5c39;
     border-radius: 20px;
-    border: 0px solid lightgray; 
+    border: 0px solid #9CC4B2; 
 }
 
 /*FOND GRIS OU IL Y A LA PHOTO ET LES DONNEES DU JOUEUR*/
 .middleboxFaceJunia {
-    background-color: rgb(217, 216, 219);
+    background-color: #9CC4B2;
     margin-left: 15vh;
     margin-right: 14vh;
     height: 100vh;
@@ -66,7 +74,7 @@
 }
 
 .wallpaper {
-    background-image: url(../image/wallpaper-images-hero.jpg);
+    background-image: url(../image/pixelartBann.jpg);
     background-size: cover;
     position: relative; 
     top: 1.5vh;
@@ -141,15 +149,20 @@
 /*ECRAN VERROUILLE DE FACEJUNIA !!!!!!!*/
 
 #FaceJuniaLock{
-    background-color: white;
+    background-color: #9CC4B2;
     height: 85vh;
     width: 60vw;
     margin: 4vh 40vh;
-    border: solid 8px black;
+    border: solid 8px #071013;
+}
+
+#FaceJuniapassword{
+    border-radius: 10px;
+    border: solid #071013 1px;
 }
 
 .middleboxlockFaceJunia {
-    background-color: rgb(217, 216, 219);
+    background-color: #9CC4B2;
     margin-left: 15vh;
     margin-right: 14vh;
     height: 63.5vh;
@@ -158,7 +171,7 @@
 
 .bigboxlockFaceJunia {
     height: 61vh;
-    background-color: white;
+    background-color: #9CC4B2;
     position: relative;
     bottom: 3.5vh;
 }
@@ -167,24 +180,23 @@
     text-align: center;
     position: relative;
     top: 20vh;
+    font-family: 'Pixeled';
+    color: #071013;
+    font-size: 0.5em;
 }
 
 .FaceJuniaPass h1{
-    font-size: 1.8rem;
-}
-
-#FaceJuniapassword{
-    font-size: 5vh;
+    font-size: 1rem;
 }
 
 .valideFaceJunia{
     margin-top: 2vh;
-    border: 2px solid black;
+    border: 2px solid #071013;
     height: 5vh;
     width: 8vw;
     border-radius: 10px;
     position: relative;
-    left: 22.5vw;
+    left: 23.1vw;
     padding-top: 0.5vh;
 }
 

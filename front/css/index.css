@@ -229,13 +229,11 @@ body{
 }
 
 .goBack{
-    background: red;
     width: 3.5vw;
     height: 3.3vw;
     position: absolute;
     top: 9vh;
     left: 79vw;
-    border: solid 2px black;
     border-radius: 10px;
     text-align: center;
 }

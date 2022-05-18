@@ -38,7 +38,7 @@ Mission.style.display = "none"
 BlocNote.style.display = "none"
 
 
-PCscreen.style.display = "none"
+PCscreen.style.display = "block"
 FaceJuniascreen.style.display = "none"
 FaceJuniascreenClose.style.display = "none"
 FaceJuniascreenOpen.style.display = "none"

@@ -15,10 +15,10 @@ PClock.style.display = "none"
 let FondBureau = document.querySelector('#fondBureau')
 let FondPC = document.querySelector('#fondPC')
 FondBureau.style.display = "none"
-FondPC.style.display = "none"
+FondPC.style.display = "block"
 
 let Room = document.querySelector('#Room')
-Room.style.display = "block"
+Room.style.display = "none"
 setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/canapeTranspa.png")'},200)
 setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/entreeTranspa.png")'},400)
 setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/planteTranspa.png")'},600)
