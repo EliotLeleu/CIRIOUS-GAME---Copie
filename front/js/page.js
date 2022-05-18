@@ -314,7 +314,12 @@ $(document).ready(function() {
         InstaGroovescreen_mess.style.display = "none"
         InstaGroovescreenOpen.style.display = "block"
     }) 
-    
+
+    $('.annulerMdpImail').click(function (){
+        Imailscreen_changeMdp.style.display = "none"
+        ImailscreenOpen.style.display = "block"
+    })
+
     //Fonction pour changer de page
     $('.defile').click(function(){
         //va = div que tu veux masquer
