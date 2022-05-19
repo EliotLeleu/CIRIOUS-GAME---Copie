@@ -1,13 +1,22 @@
+@font-face {
+    font-family: 'Pixeled';
+    src: url(../fonts/Pixeled.ttf);
+}
+
+@font-face {
+    font-family: 'Minimal';
+    src: url(../fonts/MinimalFont5x7.ttf);
+}
+
 #InstaGroove{
-    background-color: orange;
+    background-color: #E16F7C ;
     width: 68.2vw;
     margin: 8vh 32.9vh;
     /* border: solid 8px black; */
 }
 
 .headerInstaGroove {
-    background-color: orangered;
-    font-size: 200%;
+    background-color: #DD5E98;
     border-bottom: 8px solid black;
     height: 5vw;
 }
@@ -16,6 +25,9 @@
     position: relative;
     top: 20%;
     left: 2%;
+    color:  #71A2B6;
+    font-family: 'Pixeled';
+    font-size: 2rem;
 }
 
 .headerInstaGroove .cross{
@@ -25,19 +37,20 @@
 
 .bigboxLockInstaGroove{
     height: 30.5vw;
-    background-color: white;
+    background-color: #E16F7C;
     position: relative;
     bottom: 1.75vw;
 }
 
 .middleboxlock_InstaGroove {
-    background-color: orange;
+    background-color: #E16F7C;
     height: 100%;
+    font-family: 'Minimal';
 }
 
 .bigboxlock_InstaGroove {
     height: 30.5vw;
-    background-color: white;
+    background-color: #E16F7C;
     position: relative;
     bottom: 1.75vw;
 }
@@ -46,14 +59,17 @@
     text-align: center;
     position: relative;
     top: 10vw;
+    font-family: 'Pixeled';
+    font-size: 0.5em;
 }
 
 .InstaGroovePass h1{
-    font-size: 1.8rem;
+    font-size: 1rem;
 }
 
 #InstaGroovepassword{
-    font-size: 2.5vw;
+    border-radius: 10px;
+    border: solid black 1px;
 }
 
 .valideInstaGroove{
@@ -68,8 +84,9 @@
 } 
 
 .middleboxInstaGroove{
-    background-color: orange;
+    background-color: #E16F7C;
     height: 31.65vw;
+    font-family: 'Minimal';
 
 }
 
@@ -106,6 +123,7 @@
     position: relative;
     left: 25vw;
     top: 1vw;
+    font-size: 1.2rem;
 
 }
 
@@ -168,6 +186,7 @@
     border-radius: 4px;
     display: flex;
     justify-content: space-around;
+    font-size: 1.2rem;
 
 }
 
@@ -178,6 +197,7 @@
     border-radius: 4px;
     display: flex;
     justify-content: space-around;
+    font-size: 1.2rem;
 }
 
 .pvuser {
@@ -187,6 +207,7 @@
     border-radius: 4px;
     display: flex;
     justify-content: space-around;
+    font-size: 1.2rem;
 }
 
 .questionInstaGroove{
@@ -254,6 +275,8 @@
 
 .middleboxInstaGroove_para {
     height: 31.65vw;
+    font-family: 'Minimal';
+    font-size: 1.2rem;
 }
 
 .middleboxInstaGroove_mess {
@@ -262,10 +285,11 @@
 
 .bigboxInstaGroove_mess {
     height: 31.65vw;
+    font-family: 'Minimal';
 }
 
 .middleboxInstaGroove_changeMdp {
-    background-color: orange;
+    background-color: #E16F7C;
     margin-left: 7.5vw;
     margin-right: 7.5vw;
     height: 31.65vw;
@@ -277,7 +301,7 @@
 
 .bigboxInstaGroove_changeMdp {
     height: 31.65vw;
-    background-color: orange;
+    background-color: #E16F7C;
 }
 
 .pseudoInstaGroovechange{
@@ -332,7 +356,7 @@
 }
 
 .defile:hover{
-    background-color: orangered;
+    background-color: #DD5E98;
     box-shadow: 1px 2px 1px black;
 }
 
