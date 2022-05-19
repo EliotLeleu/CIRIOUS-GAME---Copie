@@ -4,6 +4,18 @@
     src: url(../fonts/Pixeled.ttf);
 }
 
+@font-face {
+    font-family: 'Impostor';
+    src: url(../fonts/TheImpostor.ttf);
+}
+
+@font-face {
+    font-family: 'Minimal';
+    src: url(../fonts/MinimalFont5x7.ttf);
+}
+
+
+
 
 #FaceJunia{
     background-color: #9CC4B2;
@@ -59,8 +71,8 @@
 /*FOND GRIS OU IL Y A LA PHOTO ET LES DONNEES DU JOUEUR*/
 .middleboxFaceJunia {
     background-color: #9CC4B2;
-    margin-left: 15vh;
-    margin-right: 14vh;
+    margin-right: 5vw;
+    margin-left: 8vw;
     height: 100vh;
 }
 
@@ -78,7 +90,7 @@
     background-size: cover;
     position: relative; 
     top: 1.5vh;
-    left: 25vh;
+    left: 12vw;
     height: 18vh;
     width: 30vw;
     border-radius: 15px;
@@ -99,42 +111,42 @@
 
 .name {
     text-align: center;
-    font-family: 'Koulen', cursive;
-    font-size: 100%;
+    font-family: 'Impostor';
+    font-size: 0.8rem;
     position: relative;
-    bottom: 8vh;
-    left: 2vh;
+    bottom: 6vh;
 }
 
 .details {
-    font-family: 'Koulen', cursive;
+    font-family: 'Minimal';
     text-indent: 12vh;
     background-color: white;
     border: 3px solid black;
     border-radius: 5px;
     position: relative;
-    bottom: 10vh;
+    bottom: 5vh;
 }
 
 .infos {
-    font-family: 'Koulen', cursive;
+    font-family: 'Minimal';
     white-space: pre;
     position: relative;
     bottom: 11vh;
 }
 
+
 .loisirs {
-    font-family: 'Koulen', cursive;
+    font-family: 'Minimal';
+    font-size: 1.5rem;
     margin-left: 50px;
     word-spacing: 0.2em;
-    font-size: 100%;
     position: relative;
     bottom: 10vh;
 }
 
 .reglage{
     position: relative;
-    bottom: 51.5vh;
+    bottom: 45vh;
     left: 92vh;
     height: 4.5vh;
     width: 5vh;
@@ -203,7 +215,7 @@
 /*ECRAN DE PARAMETRE DE FACE JUNIA*/
 
 .middleboxFaceJunia_para {
-    background-color: rgb(217, 216, 219);
+    background-color:#9CC4B2;
     margin-left: 15vh;
     margin-right: 14vh;
     height: 63.5vh;
@@ -215,7 +227,7 @@
 
 .bigboxFaceJunia_para {
     height: 63.5vh;
-    background-color: white;
+    background-color: #9CC4B2;
 }
 
 .border{
@@ -228,7 +240,7 @@
 /*ECRAN DE CHANGEMENT DE MDP*/
 
 .middleboxFaceJunia_changeMdp {
-    background-color: rgb(217, 216, 219);
+    background-color: #9CC4B2;
     margin-left: 15vh;
     margin-right: 14vh;
     height: 63.5vh;
@@ -240,13 +252,13 @@
 
 .bigboxFaceJunia_changeMdp {
     height: 63.5vh;
-    background-color: white;
+    background-color: #9CC4B2;
 }
 
 /*ECRAN DE CHANGEMENT DES INFOS*/
 
 .middleboxFaceJunia_changeInfo {
-    background-color: rgb(217, 216, 219);
+    background-color: #9CC4B2;
     margin-left: 15vh;
     margin-right: 14vh;
     height: 63.5vh;
@@ -258,5 +270,5 @@
 
 .bigboxFaceJunia_changeInfo {
     height: 63.5vh;
-    background-color: white;
+    background-color: #9CC4B2;
 }
