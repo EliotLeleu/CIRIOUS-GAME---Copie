@@ -28,10 +28,29 @@ body{
     background-size: cover;
 }
 
+#fondTele{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../image/TV.png);
+    background-size: cover;
+}
+
+#fondFrigo{
+    height: 100vh;
+    width: 100vw;
+    background-color: darkblue;
+}
+
+#fondTable{
+    height: 100vh;
+    width: 100vw;
+    background-color: rosybrown;
+}
+
 #PC{
     /* background-color: black; */
     height: 71.8vh;
-    width: 67vw;
+    width: 70vw;
     margin: 8.8vh 33vh;
     /* border: solid 8px black; */
 }
@@ -42,6 +61,16 @@ body{
     width: 100vw;
     background-image: url(../image/PCzoome_fondecran.png);
     background-size: cover;
+}
+
+#lettre{
+    position: absolute;
+    top: 25vh;
+    left: 20vw;
+    width: 60vw;
+    height: 55vh;
+    background-image: url(../image/lettre.png);
+    background-size: 100% 100%;
 }
 
 #PClock{
@@ -91,7 +120,66 @@ body{
     transition-duration: 2s;
 }
 
-#Biblio{
+.clickBox{
+    height: 9vh;
+    width: 20vw;
+    position: absolute;
+    left: 42.5vw;
+    bottom: 2vh;
+}
+
+.mdpBox{
+    background-color: wheat;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    top: 30vh;
+    left: 30vw;
+    padding: 10vh;
+    width: 30vw;
+    
+}
+
+.clickMdpPC{
+    width: 4vw;
+    height: 8vh;
+    position: absolute;
+    bottom: 4vh;
+    left: 9vw;
+}
+
+.mdpPC{
+    background-color: wheat;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    top: 30vh;
+    left: 30vw;
+    padding: 10vh;
+    width: 30vw;
+}
+
+.clickPost-itJunia{
+    background-color: red;
+    height: 35vh;
+    width: 15vw;
+    position: absolute;
+    top: 20vh;
+    left: 30vw;
+}
+
+.mdpFrigoJunia{
+    background-color: wheat;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    top: 30vh;
+    left: 30vw;
+    padding: 10vh;
+    width: 30vw;
+}
+
+#Table{
     position: absolute;
     left:34.5vw;
     top: 40vh;
@@ -99,7 +187,7 @@ body{
     height: 12vh;
 }
 
-.BiblioClick{
+.TableClick{
     position: absolute;
     left: 24.5vw;
     top: 40vh;
@@ -154,7 +242,7 @@ body{
     height: 6vh;
 }
 
-.ConsoleClick{
+.LettreClick{
     position: absolute;
     left: 75vw;
     top: 55vh;
@@ -162,6 +250,25 @@ body{
     width: 8vw;
     height: 10vh;
     border-radius: 10px;
+}
+
+.clickLivre{
+    background-color: black;
+    height: 50vh;
+    width: 25vw;
+    position: absolute;
+    left: 20vw;
+    top: 20vh;
+}
+
+.tableauMdp{
+    background-image: url(../image/tableau.png);
+    height: 90vh;
+    width: 70vw;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 15vw;
+    top: 5vh;
 }
 
 
@@ -348,9 +455,64 @@ body{
 }
 
 .wifiicon{
-    FONT-SIZE: 75%;
+    font-size: 75%;
     color: white;
     position: absolute;
-    left: 147.5vh;
-    bottom: 18.3vh;
+    left: 72.8vw;
+    bottom: 16.3vh;
+}
+
+.ListeMdp h2{
+    font-size: 1rem;
+}
+
+#dialogue{
+    background-color: wheat;
+    height: 20vh;
+    width: 60vw;
+    position: absolute;
+    background-size: cover;
+    bottom: 10vh;
+    left: 30vh;
+    border: 4px solid black;
+    border-radius: 30px;
+    padding: 7vh;
+    font-size: 1.5rem;
+}
+
+.parametreWifi{
+    background: bisque;
+    position: absolute;
+    right: 13.3vw;
+    top: 9vh;
+    height: 35.4vw;
+    width: 15vw;
+    border: 1px solid black;
+}
+
+.parametreWifi h1{
+    border-bottom: 2px solid black;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.reseau{
+    padding: 10px;
+    border-bottom: 2px solid black;
+    position: relative;
+    bottom: 4vh;
+}
+
+.reseau input{
+    position: relative;
+    bottom: 1vh;
+}
+
+.connectReseau{
+    border: 1px solid black;
+    width: 7vw;
+    text-align: center;
+    background: darkblue;
+    border-radius: 20px;
+    padding: 0.5vh;
 }

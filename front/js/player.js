@@ -1,45 +1,58 @@
 let socket = io();
 
-let inRoom = true
+let inRoom = false
 let inComputer = false
-let inBiblio = false
+let inTable = false
 let inTV = false
 let inFrigo = false
-let inConsole = false
+let inLettre = false
 let PC_is_lock = true
 
 let PC = document.querySelector('#PC')
 let PClock = document.querySelector('#PClock')
 PClock.style.display = "none"
+PC.style.display = "none"
 
 let FondBureau = document.querySelector('#fondBureau')
 let FondPC = document.querySelector('#fondPC')
 FondBureau.style.display = "none"
-FondPC.style.display = "block"
+FondPC.style.display = "none"
+
+let FondTele =document.querySelector("#fondTele")
+FondTele.style.display = 'none'
+let FondFrigo =document.querySelector("#fondFrigo")
+FondFrigo.style.display = 'none'
+let FondTable =document.querySelector("#fondTable")
+FondTable.style.display = 'none'
 
 let Room = document.querySelector('#Room')
-Room.style.display = "none"
+Room.style.display = "block"
 setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/canapeTranspa.png")'},200)
 setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/entreeTranspa.png")'},400)
 setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/planteTranspa.png")'},600)
 setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/tableChevetTranspa.png")'},800)
 setTimeout(function(){Room.style.backgroundImage = 'url("front/image/MeublesTransp/teleTranspa.png")'},1000)
 setTimeout(function(){Room.style.backgroundImage = 'url("front/image/room.png")'},1200)
-console.log("new image")
 let waiter = document.querySelector('#waiter')
 waiter.style.display = "none"
 
 let ClickBureau = document.querySelector('.BureauClick')
 let Ordi = document.querySelector('#Ordi')  
 let ClickPC = document.querySelector('.clickPC')
-let Biblio = document.querySelector('#Biblio')
-let ClickBiblio = document.querySelector('.BiblioClick')
+let Table = document.querySelector('#Table')
+let ClickTable = document.querySelector('.TableClick')
 let TV = document.querySelector('#TV')
 let ClickTV = document.querySelector('.TVClick')
 let Frigo = document.querySelector('#Frigo')
 let ClickFrigo = document.querySelector('.FrigoClick')
-let Console = document.querySelector('#Console')
-let ClickConsole = document.querySelector('.ConsoleClick')
+let Lettre = document.querySelector('#Lettre')
+let ClickLettre = document.querySelector('.LettreClick')
+
+ClickLettre.style.display = "none"
+ClickFrigo.style.display = "none"
+ClickTV.style.display = "none"
+ClickTable.style.display = "none"
+ClickBureau.style.display = "none"
 
 let canvas = document.querySelector(".myCanvas");
 let ctx = canvas.getContext('2d');
@@ -79,38 +92,34 @@ document.addEventListener("keyup", keyUpHandler, false);
 function keyDownHandler(e) {
     if(e.key == "ArrowDown") {
         DownPressed = true;
-        console.log("x :" + x + "y :" + y)
+        //Lettre.log("x :" + x + "y :" + y)
     }
     else if(e.key == "ArrowUp") {
         UpPressed = true;
-        console.log("x :" + x + "y :" + y)
+        //Lettre.log("x :" + x + "y :" + y)
     }
     if(e.key == "ArrowLeft") {
         LeftPressed = true;
-        console.log("x :" + x + "y :" + y)
+        //Lettre.log("x :" + x + "y :" + y)
     }
     else if(e.key == "ArrowRight") {
         RightPressed = true;
-        console.log("x :" + x + "y :" + y)
+        //Lettre.log("x :" + x + "y :" + y)
     }
 }
 
 function keyUpHandler(e) {
     if(e.key == "ArrowDown") {
         DownPressed = false;
-        console.log("ArrowUp")
     }
     else if(e.key == "ArrowUp") {
         UpPressed = false;
-        console.log("ArrowUp")
     }
     if(e.key == "ArrowLeft") {
         LeftPressed = false;
-        console.log("ArrowUp")
     }
     else if(e.key == "ArrowRight") {
         RightPressed = false;
-        console.log("ArrowUp")
     }
 }
 
@@ -233,18 +242,18 @@ function updatePersonnage() {
 
         //Test si je suis devant la table
         if((x >= window.innerWidth*0.32421875) && (y <= window.innerHeight*0.5144827586206897) && (x <=window.innerWidth*0.373046875) && (y >= window.innerHeight*0.4110344827586207)){
-            inBiblio = true
+            inTable = true
         }
         else{
-            inBiblio = false
+            inTable = false
         }
 
         //Affiche la description de la table
-        if(inBiblio){
-            ClickBiblio.style.display = "block"
+        if(inTable){
+            ClickTable.style.display = "block"
         }
         else{
-            ClickBiblio.style.display = "none"
+            ClickTable.style.display = "none"
         }
 
         //Test si je suis devant la TV
@@ -280,20 +289,20 @@ function updatePersonnage() {
             ClickFrigo.style.display = "none"
         }
 
-         //Test si je suis devant la Console
+         //Test si je suis devant la Lettre
          if ((x >= window.innerWidth*0.7506510416666667) && (y >= window.innerHeight*0.4662068965517241)) {
-            inConsole = true
+            inLettre = true
         }
         else {
-            inConsole = false
+            inLettre = false
         }
 
-        //Affiche la description de la Console
-        if (inConsole) {
-            ClickConsole.style.display = "block"
+        //Affiche la description de la Lettre
+        if (inLettre) {
+            ClickLettre.style.display = "block"
         }
         else {
-            ClickConsole.style.display = "none"
+            ClickLettre.style.display = "none"
         } 
     }   
 }
@@ -327,11 +336,14 @@ function affichpop() {
     }
 }
 
+//Icon wifi qui ouvre et qui ferme la page de connection
+let iconwifi = false
+
 $(document).ready(function() {
     
     setInterval(updatePersonnage, 25);
 
-    setInterval(affichpop, 2500)
+    setInterval(affichpop, 25000)
 
     $(ClickBureau).click(function(){
         FondBureau.style.display = "block"
@@ -339,12 +351,43 @@ $(document).ready(function() {
         inRoom = false
     })
 
+    $(ClickTV).click(function(){
+        FondTele.style.display = "block"
+        Room.style.display = "none"
+        inRoom = false
+    })
+
+    $(ClickFrigo).click(function(){
+        FondFrigo.style.display = "block"
+        Room.style.display = "none"
+        inRoom = false
+    })
+
+    $(ClickTable).click(function(){
+        FondTable.style.display = "block"
+        Room.style.display = "none"
+        inRoom = false
+    })
+
+    $(ClickTable).click(function(){
+        FondTable.style.display = "block"
+        Room.style.display = "none"
+        inRoom = false
+    })
+
+    $(ClickLettre).click(function(){
+        document.querySelector("#lettre").style.display = "block"
+        inRoom = false
+    })
+
+
     $(ClickPC).click(function() {
         if(PC_is_lock){
             PClock.style.display = "block"
             FondPC.style.display = "block"
             FondBureau.style.display = "none"
             socket.emit('whichMission',(1))
+            socket.emit('EnvoyeDialogue', 4, 2500)
         }
         else{
             FondBureau.style.display = "none"
@@ -352,6 +395,41 @@ $(document).ready(function() {
             FondPC.style.display = "block"
         }
     })
+
+    $('.clickBox').click(function(){
+        document.querySelector('.mdpBox').style.display = "block"
+        if($('.BLFauxRom').parent().hasClass('code')){
+        }else{
+            
+            let Titre = document.createElement("h2")
+            let code = document.createElement("p")
+            Titre.innerHTML = "Wifi"
+            code.innerHTML = "yvFofzUgoF15QxJnojuJ"
+            let div = document.createElement("div")
+            div.appendChild(Titre)
+            div.appendChild(code)
+            document.querySelector('.ListeMdp').appendChild(div)
+            let FauxRomBL = $('.BLFauxRom').parent()
+            FauxRomBL.addClass('code')
+        }
+    })
+
+    $('.clickMdpPC').click(function(){
+        document.querySelector('.mdpPC').style.display = "block"
+        document.querySelector('.BLPC').innerHTML = "J3su1sl3bo0sS"
+    })
+
+    $('.clickPost-itJunia').click(function(){
+        Lettre.log("yo")
+        document.querySelector('.mdpFrigoJunia').style.display = "block"
+        document.querySelector('.BLFaceJunia').innerHTML = "mdpn1234"
+    })
+
+    $('.clickLivre').click(function(){
+        document.querySelector('.tableauMdp').style.display = "block"
+    })
+
+
 
     $(".ComeBackBureau").click(function(){
         PC.style.display = "none"
@@ -361,7 +439,8 @@ $(document).ready(function() {
     })
 
     $(".ComeBackRoom").click(function(){
-        FondBureau.style.display = "none"
+        let va = $(this).attr('rel')
+        $('#' + va)[0].style.display = "none"
         Room.style.display = "block"
         inRoom = true
     })
@@ -386,9 +465,32 @@ $(document).ready(function() {
             $('.pop4').click(function (){
                 popup4.style.display = "none"
             })
+            socket.emit('whichMission',(2))
+            socket.emit('EnvoyeDialogue', 6, 7000)
 		}
     }
+
+    
     $('.wifiicon').click(function(){
-        popupmarche = false
+
+        if(iconwifi){
+            document.querySelector(".parametreWifi").style.display = "block"
+            iconwifi = false
+        }else{
+            document.querySelector(".parametreWifi").style.display = "none"
+            iconwifi = true
+        }
+    })
+
+    $(".connectReseau").click(function(){
+        console.log('yo')
+        if(document.querySelector("#BonWifi").value == "yvFofzUgoF15QxJnojuJ"){
+            popupmarche = false;
+            document.querySelector(".mcWifi").innerHTML  = "Non Connecté"
+            document.querySelector(".PasmcWifi").innerHTML  = "Connecté"
+            document.querySelector("#BonWifi").parentNode.removeChild(document.querySelector("#BonWifi"))
+            document.querySelector(".connectReseau").parentNode.removeChild(document.querySelector(".connectReseau"))
+        }
+
     })
 })

@@ -28,8 +28,8 @@
             <p>Ordinateur</p>
         </div>
         
-        <div id="Biblio"></div>
-        <div class="BiblioClick">
+        <div id="Table"></div>
+        <div class="TableClick">
             <p>Table</p>
         </div>
 
@@ -43,9 +43,9 @@
             <p>Frigo</p>
         </div>
 
-        <div id="Console"></div>
-        <div class="ConsoleClick">
-            <p>Console</p>
+        <div id="Lettre"></div>
+        <div class="LettreClick">
+            <p>Commode</p>
         </div>
 
         <canvas class="myCanvas"></canvas>
@@ -54,14 +54,37 @@
     <div id="waiter">
 
     </div>
+
+    <div id="fondTele">
+        <div class="clickBox"></div>
+        <div class="mdpBox" style="display: none;" onclick="document.querySelector('.mdpBox').style.display = 'none'">yvFofzUgoF15QxJnojuJ</div>
+        <div class="ComeBackRoom" rel="fondTele"> <i class="fa-solid fa-angle-left"></i> Go Room</div>
+    </div>
+
+    <div id="lettre" style="display: none"; onclick="document.querySelector('#lettre').style.display = 'none', inRoom = true"></div>
+
+    <div id="fondFrigo">
+        <div class="clickPost-itJunia"></div>
+        <div class="mdpFrigoJunia" style="display: none;" onclick="document.querySelector('.mdpFrigoJunia').style.display = 'none'">mdpn1234</div>
+        <div class="ComeBackRoom" rel="fondFrigo"> <i class="fa-solid fa-angle-left"></i> Go Room</div>
+    </div>
+
+    <div id="fondTable">
+        <div class="clickLivre"></div>
+        <div class="tableauMdp" style="display: none;" onclick="document.querySelector('.tableauMdp').style.display = 'none'"></div>
+        <div class="ComeBackRoom" rel="fondTable" none;" onclick="document.querySelector('.tableauMdp').style.display = 'none'"> <i class="fa-solid fa-angle-left"></i> Go Room</div>
+    </div>
     
     <div id="fondBureau">
         <div class="clickPC"></div>
-        <div class="ComeBackRoom"> <i class="fa-solid fa-angle-left"></i> Go Room</div>
+        <div class="ComeBackRoom" rel="fondBureau"> <i class="fa-solid fa-angle-left"></i> Go Room</div>
+        <div class="clickMdpPC"></div>
+        <!-- mots de passe PC -->
+        <div class="mdpPC" style="display: none;" onclick="document.querySelector('.mdpPC').style.display = 'none'">J3su1sl3bo0sS</div>
     </div>
 
     <div id="fondPC">
-        <div id="PC">
+        <div id="PC" style="display: none;">
             <div class="Icon IconFaceJunia" rel="FaceJunia"></div>
             <div class="Icon IconInstaGroove" rel="InstaGroove"></div>
             <div class="Icon IconImail" rel="Imail"></div>
@@ -84,9 +107,22 @@
             <div class="wifi">
                 <i class="fa-solid fa-wifi wifiicon"></i>
             </div>
+            <div class="parametreWifi" style="display: none;">
+                <h1>Wifi</h1>
+                <div class="reseau">
+                    <h3>Wifi McObsèse gratuit</h3>
+                    <p class="mcWifi">Connecté</p>
+                </div>
+                <div class="reseau">
+                    <h3>Bbox-76468GF</h3>
+                    <p class="PasmcWifi">Non Connecté</p>
+                    <input type="text" id="BonWifi">
+                    <div class="connectReseau">Se connecter</div>
+                </div>
+            </div>
         </div>
         <div id="PClock">
-            <h1>Session de Joachim</h1>
+            <h1>Naikté Paco</h1>
             <input type="text" id="PCpassword">
             <div class="ComeBackBureau"> <i class="fa-solid fa-angle-left"></i> Go Bureau</div>
         </div>
@@ -826,16 +862,20 @@
                 </div>
                 <div>
                     <h2>Faux-Rom</h2>
-                    <p class="BLIFauxRom">???</p>
+                    <p class="BLFauxRom">???</p>
                 </div>
             </div>
         </div>
 
+    </div>
+
+    <div id="dialogue" style="visibility: hidden;">
     </div>
     
 </body>
     <script src="../js/player.js"></script>
     <script src="../js/mission.js"></script>
     <script src="/front/js/page.js"></script>
+    <script src="/front/js/bulle.js"></script>
     
 </html>

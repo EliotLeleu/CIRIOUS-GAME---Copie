@@ -68,6 +68,10 @@ io.on('connection', (socket) =>{
     socket.on('newMdp',(newpassword, site) => {
         socket.emit('addNewMDP',({newpassword, site}));
     });
+
+    socket.on('EnvoyeDialogue',(nb, time) => {
+        socket.emit('updateDialogue',({nb, time}));
+    })
 });
 
 //Ceci est un commentaire

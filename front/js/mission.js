@@ -55,6 +55,7 @@ $('.ConfirmerMdpFaceJunia').click(function (){
         }
         else {
             msg = "<p style='color:red'>Mot de passe faible.</p>";
+            socket.emit('EnvoyeDialogue', 8, 1500)
         }
         document.getElementById("msg").innerHTML= msg; 
     }
@@ -98,7 +99,7 @@ $('.ConfirmerInfoFaceJunia').click(function (){
     }
 })
 
-//Confirmation MDP FaceJunia
+//Confirmation MDP FauxRom
 $('.ConfirmerMdpFaux-Rom').click(function (){
         
     var oldpassword = document.getElementById('oldPasswordFaux-Rom').value;
@@ -121,6 +122,7 @@ $('.ConfirmerMdpFaux-Rom').click(function (){
             alert("Le mot de passe a été correctement modifié")
             FauxRom_mission_1 = true
             socket.emit('newMdp',newpassword, 1)
+            socket.emit('EnvoyeDialogue', 11, 1500)
             document.querySelector(".BLFauxRom").innerHTML = newpassword
             if((FauxRom_mission_1 == true) && (FauxRom_mission_2 == true) && (FauxRom_mission_3 == true)){
                 socket.emit('whichMission',(6))
@@ -129,6 +131,7 @@ $('.ConfirmerMdpFaux-Rom').click(function (){
         }
         else {
             msg = "<p style='color:red'>Mot de passe trop faible pour ce niveau.</p>";
+            socket.emit('EnvoyeDialogue', 10, 1500)
         }
         document.getElementById("msgFaux-Rom").innerHTML= msg; 
     }
@@ -206,6 +209,7 @@ $('.ConfirmerMdpInstaGroove').click(function (){
         }
         else {
             msg = "<p style='color:red'>Mot de passe trop faible pour ce niveau.</p>";
+            socket.emit('EnvoyeDialogue', 14, 1500)
         }
         document.getElementById("msgInstaGroove").innerHTML= msg; 
     }
@@ -373,6 +377,7 @@ $('.ConfirmerMdpImail').click(function (){
         }
         else {
             msg = "<p style='color:red'>Mot de passe trop faible pour ce niveau.</p>";
+            socket.emit('EnvoyeDialogue', 15, 1500)
         }
         document.getElementById("msgFaux-Rom").innerHTML= msg; 
     }
@@ -381,6 +386,11 @@ $('.ConfirmerMdpImail').click(function (){
 socket.on('thisMission', (nb) => {
     if (MissionCout < nb){
         MissionCout = nb
+        if (MissionCout == 3){
+            socket.emit('EnvoyeDialogue', 7, 1500)
+        }else if(MissionCout == 8){
+            socket.emit('EnvoyeDialogue', 12, 1500)
+        }
     }
     
 });
@@ -406,7 +416,7 @@ $('.clickMission').click(function (){
         case 1:
             //On trouve l'ordi
             var li = document.createElement('li');
-            li.innerHTML = "Trouve le mot de passe de l'ordi";
+            li.innerHTML = "Trouve et rentre le mot de passe de l'ordi";
             listeMission.appendChild(li);
             
             break;
@@ -502,6 +512,7 @@ $('.clickMission').click(function (){
             listeMission.appendChild(li2);
             listeMission.appendChild(li3);
             break;
+        
     }  
 });
 
