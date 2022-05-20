@@ -1,14 +1,23 @@
+@font-face {
+    font-family: 'Pixeled';
+    src: url(../fonts/Pixeled.ttf);
+}
+
+@font-face {
+    font-family: 'Minimal';
+    src: url(../fonts/MinimalFont5x7.ttf);
+}
+
 #Faux-Rom{
     width: 68.2vw;
     margin: 8vh 32.9vh;
+    background-color: rgb(168, 162, 162);
 }
 
 .headerFaux-Rom {
     background-color: rgb(48, 46, 46);
-    font-size: 200%;
     border-bottom: 8px solid black;
     height: 10vh;
-    color: white;
     top: 5vh;
 }
 
@@ -16,6 +25,9 @@
     position: relative;
     top: 20%;
     left: 2%;
+    font-family: 'Pixeled';
+    font-size: 2rem;
+    color: white;
 }
 
 .headerFaux-Rom .cross{
@@ -48,14 +60,17 @@
     text-align: center;
     position: relative;
     top: 20vh;
+    font-family: 'Pixeled';
+    font-size: 0.5em;
 }
 
 .Faux-RomPass h1{
-    font-size: 1.8rem;
+    font-size: 1rem;
 }
 
 #Faux-Rompassword{
-    font-size: 5vh;
+    border-radius: 10px;
+    border: solid black 1px;
 }
 
 .valideFaux-Rom{
@@ -78,10 +93,11 @@
 .middleboxFaux-Rom {
     background-color: rgb(168, 162, 162);
     height: 64.5vh;
+    font-family: 'Minimal';
+    font-size: 1.4rem;
 }
 
 .titre {
-    font-family: 'Koulen', cursive;
     position: relative;
     height: 8vh;
     left: 15vh;
@@ -93,7 +109,6 @@
 }
 
 .box1 {
-    font-family: 'Koulen', cursive;
     position: relative;
     border: 2px solid black;
     border-radius: 2px;
@@ -103,7 +118,6 @@
 }
 
 .box2 {
-    font-family: 'Koulen', cursive;
     position: relative;
     border: 2px solid black;
     border-radius: 2px;
@@ -113,7 +127,6 @@
 }
 
 .box3 {
-    font-family: 'Koulen', cursive;
     position: relative;
     border: 2px solid black;
     border-radius: 2px;
@@ -125,7 +138,6 @@
 .box4 {
     font-size: 120%;
     text-align: center;
-    font-family: 'Koulen', cursive;
     position: relative;
     /* border: 2px solid black; */
     width: 25vh;
@@ -138,7 +150,6 @@
 .box5 {
     font-size: 120%;
     text-align: center;
-    font-family: 'Koulen', cursive;
     position: relative;
     /* border: 2px solid black; */
     width: 25vh;
@@ -169,6 +180,8 @@
     display: flex; 
     background-color: rgb(168, 162, 162);
     height: 64vh;
+    font-family: 'Minimal';
+    font-size: 1.2rem;
 }
 
 .profilmodif {
@@ -238,7 +251,7 @@
 /*ECRAN DE CHANGEMENT DE MDP*/
 
 .middleboxFaux-Rom_changeMdp {
-    background-color: rgb(217, 216, 219);
+    background-color: rgb(168, 162, 162);
     margin-left: 15vh;
     margin-right: 14vh;
     height: 64vh;
@@ -246,6 +259,8 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    font-family: 'Minimal';
+    font-size: 1.2rem;
 }
 
 .bigboxFaux-Rom_changeMdp {
@@ -253,3 +268,11 @@
     background-color: white;
 }
 
+.middleboxFaux-Rom_reponseBastiens{
+    background-color: rgb(168, 162, 162);
+    margin-left: 15vh;
+    margin-right: 14vh;
+    height: 64vh;
+    font-family: 'Minimal';
+    font-size: 1.2rem;
+}
