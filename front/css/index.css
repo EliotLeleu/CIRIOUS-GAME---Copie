@@ -128,8 +128,8 @@ body{
     bottom: 2vh;
 }
 
-.mdpBox{
-    background-color: wheat;
+.mdpBox {
+    background-color: white;
     text-align: center;
     font-size: 2rem;
     position: relative;
@@ -137,7 +137,8 @@ body{
     left: 30vw;
     padding: 10vh;
     width: 30vw;
-    
+    border: grey;
+    border-radius: 2px;
 }
 
 .clickMdpPC{
@@ -347,12 +348,13 @@ body{
     position: absolute;
     top: 9vh;
     left: 79vw;
+
     border-radius: 10px;
     text-align: center;
 }
 
 
-.PtitCarre{
+.PtitCarre {
     height: 22vh;
     width: 6vw;
     position: absolute;
@@ -362,44 +364,52 @@ body{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    font-family: 'Pixeled';
+    font-size: 60%;
 }
 
 .Carre{
     height: 4.5vw;
     width: 4.5vw;
-    background-color: gray;
+    background-color: wheat;
+    border: 3px solid black;
+    text-align: center;
 }
 
 .GrosCarre{
     height: 93vh;
     width: 33vw;
-    background-color: gray;
+    background-color: black;
     position: absolute;
     left: 2vw;
     top: 3vh;
     border-radius: 50px;
     text-align: center;
     z-index: 1000;
+    color: wheat;
+    border: 3px solid wheat;
 }
 
 .mission h1{
-    background-color: green;
+    background-color: black;
     height: 8vh;
-    border: 3px solid black;
+    border: 3px solid wheat;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     position: relative;
     bottom: 3.5vh;
+    color: wheat;
 }
 
 .blockNote h1{
-    background-color: red;
+    background-color: black;
     height: 8vh;
-    border: 3px solid black;
+    border: 3px solid wheat;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     position: relative;
     bottom: 3.5vh;
+    color: wheat;
 }
 
 .GrosCarre .leave{
