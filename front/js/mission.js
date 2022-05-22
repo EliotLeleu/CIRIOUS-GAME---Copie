@@ -12,9 +12,9 @@ let FauxRom_mission_2 = false
 let FauxRom_mission_3 = false
 
 //Test mission Instagroove
-let Instagroove_mission_1 = false
-let Instagroove_mission_2 = false
-let Instagroove_mission_3 = false
+let InstaGroove_mission_1 = false
+let InstaGroove_mission_2 = false
+let InstaGroove_mission_3 = false
 
 //Test mission Imail
 let Imail_mission_1 = false
@@ -51,6 +51,8 @@ $('.ConfirmerMdpFaceJunia').click(function (){
             if((FaceJunia_mission_1 == true) && (FaceJunia_mission_2 == true) && (FaceJunia_mission_3 == true)){
                 socket.emit('whichMission',(4))
                 console.log("FaceJunia Fini")
+                socket.emit('EnvoyeDialogue', 17, 1500)
+                document.querySelector(".BLFauxRom").innerHTML = "aknjshu"
             }
         }
         else {
@@ -96,6 +98,8 @@ $('.ConfirmerInfoFaceJunia').click(function (){
     if((FaceJunia_mission_1 == true) && (FaceJunia_mission_2 == true) && (FaceJunia_mission_3 == true)){
         socket.emit('whichMission',(4))
         console.log("FaceJunia Fini")
+        socket.emit('EnvoyeDialogue', 17, 1500)
+        document.querySelector(".BLFauxRom").innerHTML = "aknjshu"
     }
 })
 
@@ -205,6 +209,7 @@ $('.ConfirmerMdpInstaGroove').click(function (){
             if((Instagroove_mission_1 == true) && (InstaGroove_mission_2 == true) && (InstaGroove_mission_3 == true)){
                 socket.emit('whichMission',(9))
                 console.log("InstaGroove Fini")
+                socket.emit('EnvoyeDialogue', 19, 1500)
             }
         }
         else {
@@ -217,7 +222,12 @@ $('.ConfirmerMdpInstaGroove').click(function (){
 
 //Supprimer GENS
 $(".poubelle").click(function(){
-    console.log("yaaaya")
+    InstaGroove_mission_3 == true
+    if((Instagroove_mission_1 == true) && (InstaGroove_mission_2 == true) && (InstaGroove_mission_3 == true)){
+        socket.emit('whichMission',(9))
+        console.log("InstaGroove Fini")
+        socket.emit('EnvoyeDialogue', 19, 1500)
+    }
 })
 
 //Confirmation Info InstaGroove
@@ -232,9 +242,7 @@ $('.ConfirmerInfoInstaGroove').click(function () {
 
     let newstatueInstaGroove = document.getElementById('statueinfoInstaGroove').value
     document.querySelector('.statutInstaGroovechange').innerHTML = newstatueInstaGroove;
-    console.log("yo")
     alert("Vos données ont été correctement sauvegardés.")
-    console.log("ya")
     InstaGroovescreen_Para.style.display = "none";
     InstaGroovescreenOpen.style.display = "block";
 
@@ -243,12 +251,16 @@ $('.ConfirmerInfoInstaGroove').click(function () {
     if(replocaInstaGroove == "non"){
         Instagroove_mission_2 == true;
     }
+    if((Instagroove_mission_1 == true) && (InstaGroove_mission_2 == true) && (InstaGroove_mission_3 == true)){
+        socket.emit('whichMission',(9))
+        console.log("InstaGroove Fini")
+        socket.emit('EnvoyeDialogue', 19, 1500)
+    }
 
 })
 
 //Tu te fais voler de l'argent
 $('.EnvoieReponseFauxRom').click(function (){
-    console.log("yo")
     let message = document.createElement('div')
     let reponse = document.querySelector("#reponseBastiens").value
     let discution = document.querySelector(".discutionBastiens")
@@ -272,7 +284,7 @@ $('.envoyecashVrai').click(function(){
     if(document.querySelector("#CodeCarte").value == 1209){
         Imail_mission_2 = true
         if((Imail_mission_1 == true) && (Imail_mission_2 == true) && (Imail_mission_3 == true)){
-            socket.emit('whichMission',(10))
+            socket.emit('whichMission',(11))
             console.log("Imail Fini")
         }
     }
@@ -294,7 +306,7 @@ function verifSuppSpam(){
     if(CBon){
         Imail_mission_3 = true
         if((Imail_mission_1 == true) && (Imail_mission_2 == true) && (Imail_mission_3 == true)){
-            socket.emit('whichMission',(10))
+            socket.emit('whichMission',(11))
             console.log("Imail Fini")
         }
     }
@@ -371,7 +383,7 @@ $('.ConfirmerMdpImail').click(function (){
             
         if((Imail_mission_1 == true) && (Imail_mission_2 == true) && (Imail_mission_3 == true)){
             
-            socket.emit('whichMission',(10))
+            socket.emit('whichMission',(11))
             console.log("Imail Fini")
         }
         }
@@ -468,6 +480,7 @@ $('.clickMission').click(function (){
             var li = document.createElement('li');
             li.innerHTML = "Enleve les pops ups";
             listeMission.appendChild(li);
+            document.querySelector('.wifiicon').style.display = 'block'
             break;
         
         case 7:
@@ -476,6 +489,7 @@ $('.clickMission').click(function (){
             var li = document.createElement('li');
             li.innerHTML = "Ouvrir InstaGroove";
             listeMission.appendChild(li);
+            document.querySelector('.clickPost-itInsta').style.display = 'block'
             break;
 
         case 8:
@@ -498,6 +512,7 @@ $('.clickMission').click(function (){
             var li = document.createElement('li');
             li.innerHTML = "Ouvrir Imail";
             listeMission.appendChild(li);
+            document.querySelector(".BLImail").innerHTML = "cR0u$" 
             break;
 
         case 10:
@@ -512,7 +527,9 @@ $('.clickMission').click(function (){
             listeMission.appendChild(li2);
             listeMission.appendChild(li3);
             break;
-        
+        case 11:
+            socket.emit('EnvoyeDialogue', 20, 1500)
+            break;
     }  
 });
 

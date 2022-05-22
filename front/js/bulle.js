@@ -11,13 +11,16 @@ let TabDialogue = ["Tu t'appelles Naikté Paco et tu es un étudiant de Venomous
 "Le mot de passe que tu proposes ne convient pas… Si tu veux, il y a des documents que ton père t'a donné ; regarde un peu dans l'appartement.",
 "Voilà qui est intéressant… ce tableau indique combien de temps un hacker mettra pour trouver ton mot de passe… essaies-en un qui résistera à trois semaines, ça devrait faire l'affaire.",
 "Le mot de passe que tu proposes n'est pas suffisamment sécurisé… Il faudrait qu'il résiste à au moins 5 ans celui-là… Rappelle-toi tu as des documents si besoin.",
-"C’est mieux de ne pas utiliser les mêmes mots de passe partout…",
+"C’est bien de ne pas utiliser les mêmes mots de passe partout",
 "oula il y a beaucoup d’infos là ! il y en a que tu ne devrais peut-être pas partager.",
 "Le McObèse d'à côté ? Pas super sécurisé ça... tu ferais mieux de te connecter à ta box, le mot de passe est dessus.",
 "Le mot de passe que tu proposes n’est pas suffisamment sécurisé… Il faudrait qu'il résiste à au moins 800 000 ans celui-là… Rappelle-toi t'as des documents si besoin.",
 "Le mot de passe que tu proposes n'est pas suffisamment sécurisé… Il ne doit pas pouvoir se faire hacker lui. Rappelle-toi t'as des documents si besoin.",
 "Tu savais que les e-mails étaient polluants ? En fait, un mail représente 4 g d'équivalent CO2 (émissions liées au fonctionnement de l'ordinateur et des serveurs, ainsi qu'à une partie de leur fabrication). 65 mails émettent ainsi autant qu'un kilomètre en voiture. Un mail avec une pièce jointe volumineuse peut atteindre 50 g. Un spam non lu coûte à la planète 0,3 g.",
-"Il me semble que le mots de passe de Faux-Rom est "]
+"Il me semble que le mots de passe de Faux-Rom est aknjshu",
+"Regarde sur le post-it à cotê du stylo",
+"Il me semble que le mots de passe de Imail est cR0u$",
+"Bravo tu as fini le jeu"]
 
 
 let i = 0

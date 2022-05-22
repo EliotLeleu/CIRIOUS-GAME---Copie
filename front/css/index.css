@@ -163,16 +163,34 @@ body{
 }
 
 .clickPost-itJunia {
-    /* background-color: red; */
-    height: 35vh;
-    width: 15vw;
+    background-color: blue;
+    height: 25vh;
+    width: 7vw;
     position: absolute;
-    top: 20vh;
-    left: 30vw;
-    border: 3px solid red;
+    bottom: 6vh;
+    right: 13.5vw;
+}
+
+.clickPost-itInsta {
+    height: 32vh;
+    width: 10vw;
+    position: absolute;
+    bottom: 39vh;
+    right: 26.5vw;
 }
 
 .mdpFrigoJunia{
+    background-color: wheat;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    top: 30vh;
+    left: 30vw;
+    padding: 10vh;
+    width: 30vw;
+}
+
+.mdpTableInsta{
     background-color: wheat;
     text-align: center;
     font-size: 2rem;
@@ -477,7 +495,7 @@ body{
     color: white;
     position: absolute;
     left: 73vw;
-    bottom: 18.3vh;
+    bottom: 16.3vh;
 }
 
 .ListeMdp h2{

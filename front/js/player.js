@@ -497,9 +497,13 @@ $(document).ready(function() {
     })
 
     $('.clickPost-itJunia').click(function(){
-        Lettre.log("yo")
         document.querySelector('.mdpFrigoJunia').style.display = "block"
         document.querySelector('.BLFaceJunia').innerHTML = "mdpn1234"
+    })
+
+    $('.clickPost-itInsta').click(function(){
+        document.querySelector('.mdpTableInsta').style.display = "block"
+        document.querySelector('.BLInstaGroove').innerHTML = "202220212020"
     })
 
     $('.clickLivre').click(function(){
@@ -567,6 +571,8 @@ $(document).ready(function() {
             document.querySelector(".PasmcWifi").innerHTML  = "Connecté"
             document.querySelector("#BonWifi").parentNode.removeChild(document.querySelector("#BonWifi"))
             document.querySelector(".connectReseau").parentNode.removeChild(document.querySelector(".connectReseau"))
+            socket.emit('whichMission',(7))
+            socket.emit('EnvoyeDialogue', 18, 10000)
         }
 
     })

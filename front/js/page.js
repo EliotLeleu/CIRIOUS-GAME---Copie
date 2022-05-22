@@ -167,6 +167,7 @@ $(document).ready(function() {
                     InstaGroove_is_lock = false
                     InstaGroovescreenClose.style.display = "none"
                     InstaGroovescreenOpen.style.display = "block"
+                    socket.emit('whichMission',(8))
                 }
                 break;
             
@@ -175,6 +176,7 @@ $(document).ready(function() {
                     Imail_is_lock = false
                     ImailscreenClose.style.display = "none"
                     ImailscreenOpen.style.display = "block"
+                    socket.emit('whichMission',(10))
                 }
                 break;
                 
@@ -208,6 +210,7 @@ $(document).ready(function() {
             InstaGroove_is_lock = false
             InstaGroovescreenClose.style.display = "none"
             InstaGroovescreenOpen.style.display = "block"
+            socket.emit('whichMission',(8))
 		}
 	}
 
@@ -218,6 +221,7 @@ $(document).ready(function() {
             Imail_is_lock = false
             ImailscreenClose.style.display = "none"
             ImailscreenOpen.style.display = "block"
+            socket.emit('whichMission',(10))
 		}
 	}
 
