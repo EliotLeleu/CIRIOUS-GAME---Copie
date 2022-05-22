@@ -530,7 +530,7 @@ $(document).ready(function() {
     $('#PCpassword')[0].onkeypress = function(e){
         var e=window.event || e;
 		var touche=e.charCode || e.keyCode;
-		if((touche==13) && (this.value == "YO")){
+		if((touche==13) && (this.value == "J3su1sl3bo0sS")){
             PClock.style.display = "none"
             PC.style.display = "block"
             PC_is_lock = false

@@ -64,10 +64,10 @@ FauxRomscreen_Para.style.display = "none"
 FauxRomscreen_changeMdp.style.display = "none"
 FauxRomscreen_reponseBastiens.style.display = "none"
 
-let motdepasseFaceJunia = "YO"
-let motdepasseInstaGroove = "YO"
-let motdepasseImail = "YO"
-let motdepasseFauxRom = "YO"
+let motdepasseFaceJunia = "mdpn1234"
+let motdepasseInstaGroove = "202220212020"
+let motdepasseImail = "cR0u$"
+let motdepasseFauxRom = "aknjshu"
 
 socket.on('addNewMDP',({newpassword, site}) =>{
     console.log(newpassword)
