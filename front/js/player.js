@@ -72,19 +72,40 @@ let DownPressed = false;
 let UpPressed = false;
 let LeftPressed = false;
 let RightPressed = false;
+let ShiftPressed = false;
 
 let x = window.innerWidth/2;
 let y = window.innerHeight/2;
-let ballRadius = window.innerHeight*0.03294892915;
 
-function drawBall() {
+var sprites = new Image();
+sprites.src = "../front/image/Personnage.png"
+console.log(sprites)
+
+function drawBall(side, step) {
     ctx.beginPath();
-    ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-    ctx.fillStyle = "black";
-    ctx.globalCompositeOperation='destination-over';
-    ctx.fill();
+    switch(side){
+        case 0:
+            ctx.drawImage(sprites,64*step, 64*10, 64,64, x-50, y-(64*1.7), 64*1.7,64*1.7)
+            break;
+        case 1:
+            ctx.drawImage(sprites,64*step, 64*8, 64,64, x-50, y-(64*1.7), 64*1.7,64*1.7)
+            break;
+        case 2:
+            ctx.drawImage(sprites,64*step, 64*11, 64,64, x-50, y-(64*1.7), 64*1.7,64*1.7)
+            break;
+        case 3:
+            ctx.drawImage(sprites,64*step, 64*9, 64,64, x-50, y-(64*1.7), 64*1.7,64*1.7)
+            break;
+        case 4:
+            ctx.drawImage(sprites,64*step, 64*20, 64,64, x-50, y-(64*1.7), 64*1.7,64*1.7)
+            break;
+    }
     ctx.closePath();
 }
+
+let side = 0
+let step = 1
+let walk = 0
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
@@ -106,6 +127,10 @@ function keyDownHandler(e) {
         RightPressed = true;
         //Lettre.log("x :" + x + "y :" + y)
     }
+    else if(e.key == "Shift") {
+        ShiftPressed = true;
+        //Lettre.log("x :" + x + "y :" + y)
+    }
 }
 
 function keyUpHandler(e) {
@@ -121,6 +146,10 @@ function keyUpHandler(e) {
     else if(e.key == "ArrowRight") {
         RightPressed = false;
     }
+    else if(e.key == "Shift") {
+        ShiftPressed = false;
+        //Lettre.log("x :" + x + "y :" + y)
+    }
 }
 
 function updatePersonnage() {
@@ -128,9 +157,18 @@ function updatePersonnage() {
 
         
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        drawBall();
+        drawBall(side, step);
         
         if(DownPressed) {
+            side = 0
+            walk++
+            if(walk >= 3){
+                step++
+                walk=0
+            }
+            if(step >= 9){
+                step = 1
+            }
             y += 5;
             if((y >= window.innerHeight*0.8813838550245) || 
               ((x >= window.innerWidth*0.6811023622) && ( y >= window.innerHeight*0.535)) ||
@@ -148,6 +186,15 @@ function updatePersonnage() {
             }
         }
         if(UpPressed) {
+            side = 1
+            walk++
+            if(walk >= 3){
+                step++
+                walk=0
+            }
+            if(step >= 9){
+                step = 1
+            }
             y -= 5;
             if((y <= window.innerHeight*0.29654036244 ) || 
               ((x >= window.innerWidth*0.665) && (y <= window.innerHeight*0.38714991762)) ||
@@ -163,7 +210,28 @@ function updatePersonnage() {
                 y +=5
             }
         }
+        if(ShiftPressed) {
+            side = 4
+            walk++
+            if(walk >= 8){
+                if(step >= 5){
+                step = 5
+                }else{
+                    step++
+                }
+                walk=0
+            }
+        }
         if(LeftPressed) {
+            side = 3
+            walk++
+            if(walk >= 3){
+                step++
+                walk=0
+            }
+            if(step >= 9){
+                step = 1
+            }
             x -= 5;
             if((x <= window.innerWidth*0.125) ||
               ((x <= window.innerWidth*0.335) && (y >= window.innerHeight*0.6455172413793103) && (x >= window.innerWidth*0.291015625)) ||
@@ -179,6 +247,15 @@ function updatePersonnage() {
             }
         }
         if(RightPressed) {
+            side = 2
+            walk++
+            if(walk >= 3){
+                step++
+                walk=0
+            }
+            if(step >= 9){
+                step = 1
+            }
             x += 5;
             if(((x >= window.innerWidth*0.665) && ( y >= window.innerHeight*0.535)) || 
               (x >= window.innerWidth*0.875) || 
