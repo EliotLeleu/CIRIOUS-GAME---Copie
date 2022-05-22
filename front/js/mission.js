@@ -202,12 +202,13 @@ $('.ConfirmerMdpInstaGroove').click(function (){
             msg = "<p style='color:green'>Votre mot de passe fort, il resiste 800 000 ans !</p>"; 
             document.querySelector(".bigboxInstaGroove_changeMdp").style.display = "none";
             document.querySelector(".bigboxInstaGroove_para").style.display = "block";
-            alert("Le mot de passe a été correctement modifié")
-            Instagroove_mission_1= true
+            alert("Le mot de passe a été correctement modifié");
+            InstaGroove_mission_1 = true;
+            console.log(InstaGroove_mission_1)
             socket.emit('newMdp',newpassword, 2)
             document.querySelector(".BLInstaGroove").innerHTML = newpassword
-            if((Instagroove_mission_1 == true) && (InstaGroove_mission_2 == true) && (InstaGroove_mission_3 == true)){
-                socket.emit('whichMission',(9))
+            if((InstaGroove_mission_1 == true) && (InstaGroove_mission_2 == true) && (InstaGroove_mission_3 == true)){
+                socket.emit('whichMission', (9))
                 console.log("InstaGroove Fini")
                 socket.emit('EnvoyeDialogue', 19, 1500)
             }
@@ -236,55 +237,35 @@ $('.ConfirmerInfoInstaGroove').click(function () {
     InstaGroovescreen_Para.style.display = "none";
     InstaGroovescreenOpen.style.display = "block";
 
-    replocaInstaGroove = document.getElementsByClassName('locInstaGroovechange');
+    // replocaInstaGroove = document.querySelector('.locInstaGroovechange');
+    replocaInstaGroove = document.querySelector('.locainfoInstaGroove');
 
-    if(replocaInstaGroove == "non"){
-        Instagroove_mission_2 == true;
+    if(replocaInstaGroove = "Non"){
+        InstaGroove_mission_2 = true;        
+        console.log(InstaGroove_mission_2)
     }
-    if((Instagroove_mission_1 == true) && (InstaGroove_mission_2 == true) && (InstaGroove_mission_3 == true)){
-        socket.emit('whichMission',(9))
+    if((InstaGroove_mission_1 == true) && (InstaGroove_mission_2 == true) && (InstaGroove_mission_3 == true)){
+        socket.emit('whichMission', (9))
         console.log("InstaGroove Fini")
         socket.emit('EnvoyeDialogue', 19, 1500)
     }
 
 })
 
-let spam1 = document.querySelector('.nom4');
-let spam2 = document.querySelector('.nom5');
-
-let verifspam1 = false;
-let verifspam2 = false;
-
 //Supprimer GENS
 $(".poubelle4").click(function(){
+
+    let spam1 = document.querySelector('.nom4');
     spam1.style.display = "none";
-
-    verifspam1 = true;
-
-    if((verifspam1 && verifspam2) == true){
-        InstaGroove_mission_3 == true;
-        if((Instagroove_mission_1 == true) && (InstaGroove_mission_2 == true) && (InstaGroove_mission_3 == true)){
-            socket.emit('whichMission',(9))
-            console.log("InstaGroove Fini")
-            socket.emit('EnvoyeDialogue', 19, 1500)
-        }
+    InstaGroove_mission_3 = true;
+    console.log(InstaGroove_mission_3)
+    if((InstaGroove_mission_1 == true) && (InstaGroove_mission_2 == true) && (InstaGroove_mission_3 == true)){
+        socket.emit('whichMission', (9))
+        console.log("InstaGroove Fini")
+        socket.emit('EnvoyeDialogue', 19, 1500)
     }
 })
 
-$(".poubelle5").click(function(){
-    spam2.style.display = "none";
-
-    verifspam2 = true;
-
-    if((verifspam1 && verifspam2) == true){
-        InstaGroove_mission_3 == true;
-        if((Instagroove_mission_1 == true) && (InstaGroove_mission_2 == true) && (InstaGroove_mission_3 == true)){
-            socket.emit('whichMission',(9))
-            console.log("InstaGroove Fini")
-            socket.emit('EnvoyeDialogue', 19, 1500)
-        }
-    }
-})
 
 
 //Tu te fais voler de l'argent
@@ -304,22 +285,30 @@ $('.EnvoieReponseFauxRom').click(function (){
         }
     }
 
-
 })
 
-//Confirmation payement Imail
-$('.envoyecashVrai').click(function(){
-    if(document.querySelector("#CodeCarte").value == 1209){
-        Imail_mission_2 = true
-        if((Imail_mission_1 == true) && (Imail_mission_2 == true) && (Imail_mission_3 == true)){
-            socket.emit('whichMission',(11))
-            console.log("Imail Fini")
-        }
+// //Confirmation payement Imail
+// $('.envoyecashVrai').click(function(){
+//     if(document.querySelector("#CodeCarte").value == 1209){
+//         Imail_mission_2 = true;
+//         if((Imail_mission_1 == true) && (Imail_mission_2 == true) && (Imail_mission_3 == true)){
+//             socket.emit('whichMission',(11))
+//             console.log("Imail Fini")
+//         }
+//     }
+//     else{
+//         document.querySelector("#CodeCarte").value = ""
+//         document.querySelector("#CodeCarte").placeholder = "Ce n'est pas le Code"
+//     }
+// })
+
+$('.clickMe2').click(function (){
+    Imail_mission_2 = true;
+    if((Imail_mission_1 == true) && (Imail_mission_2 == true) && (Imail_mission_3 == true)){
+        socket.emit('whichMission',(11))
+        console.log("Imail Fini")
     }
-    else{
-        document.querySelector("#CodeCarte").value = ""
-        document.querySelector("#CodeCarte").placeholder = "Ce n'est pas le Code"
-    }
+    console.log(Imail_mission_2)
 })
 
 //vérifie si on a supprimé tous les mails
@@ -334,9 +323,10 @@ function verifSuppSpam(){
     if(CBon){
         Imail_mission_3 = true
         if((Imail_mission_1 == true) && (Imail_mission_2 == true) && (Imail_mission_3 == true)){
-            socket.emit('whichMission',(11))
+            socket.emit('whichMission', (11))
             console.log("Imail Fini")
         }
+        console.log(Imail_mission_3)
     }
     else{
         console.log("Pas encore")
@@ -384,6 +374,7 @@ $('.iconImail').click(function(e){
     e.stopPropagation();
 })
 
+//Confirme MDP Imail
 $('.ConfirmerMdpImail').click(function (){
         
     var oldpassword = document.getElementById('oldPasswordImail').value;
@@ -407,13 +398,14 @@ $('.ConfirmerMdpImail').click(function (){
             alert("Le mot de passe a été correctement modifié")
             socket.emit('newMdp',newpassword, 3)
             document.querySelector(".BLImail").innerHTML = newpassword
-            Imail_mission_1 = true
+            Imail_mission_1 = true;
             
-        if((Imail_mission_1 == true) && (Imail_mission_2 == true) && (Imail_mission_3 == true)){
+            if((Imail_mission_1 == true) && (Imail_mission_2 == true) && (Imail_mission_3 == true)){
             
-            socket.emit('whichMission',(11))
-            console.log("Imail Fini")
-        }
+                socket.emit('whichMission',(11))
+                console.log("Imail Fini")
+            }
+            console.log(Imail_mission_1)
         }
         else {
             msg = "<p style='color:red'>Mot de passe trop faible pour ce niveau.</p>";

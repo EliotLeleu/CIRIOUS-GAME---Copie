@@ -9,7 +9,7 @@ let TabDialogue = ["Tu t'appelles Naikté Paco et tu es un étudiant de Venomous
 "Toutes tes applis sont bloquées par des mots de passe…tu ne les aurais pas notés quelque part ? ",
 "Ton mot de passe n'est pas assez sécurisé… tu devrais le changer...",
 "Le mot de passe que tu proposes ne convient pas… Si tu veux, il y a des documents que ton père t'a donné ; regarde un peu dans l'appartement.",
-"Voilà qui est intéressant… ce tableau indique combien de temps un hacker mettra pour trouver ton mot de passe… essaies-en un qui résistera à trois semaines, ça devrait faire l'affaire.",
+"Voilà qui est intéressant… ce tableau indique combien de temps un hacker mettra pour trouver ton mot de passe… Un mot de passe qui resiste 3 semaines devrait faire l'affaire pour FaceJunia.",
 "Le mot de passe que tu proposes n'est pas suffisamment sécurisé… Il faudrait qu'il résiste à au moins 5 ans celui-là… Rappelle-toi tu as des documents si besoin.",
 "C’est bien de ne pas utiliser les mêmes mots de passe partout",
 "oula il y a beaucoup d’infos là ! il y en a que tu ne devrais peut-être pas partager.",
@@ -20,7 +20,7 @@ let TabDialogue = ["Tu t'appelles Naikté Paco et tu es un étudiant de Venomous
 "Il me semble que le mots de passe de Faux-Rom est aknjshu",
 "Regarde sur le post-it à cotê du stylo",
 "Il me semble que le mots de passe de Imail est cR0u$",
-"Bravo tu as fini le jeu ! "]
+"Bravo tu as fini le jeu ! Tu en sais maintenant un petit peu plus sur l'identité numérique ! N'hésites pas à mettre en application ce que tu as appris ici ! "]
 
 
 let i = 0

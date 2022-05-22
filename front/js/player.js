@@ -508,6 +508,7 @@ $(document).ready(function() {
 
     $('.clickLivre').click(function(){
         document.querySelector('.tableauMdp').style.display = "block"
+        socket.emit('EnvoyeDialogue', 9, 1500)
     })
 
 
@@ -557,6 +558,7 @@ $(document).ready(function() {
         if(iconwifi){
             document.querySelector(".parametreWifi").style.display = "block"
             iconwifi = false
+            socket.emit('EnvoyeDialogue', 13, 1500)
         }else{
             document.querySelector(".parametreWifi").style.display = "none"
             iconwifi = true
