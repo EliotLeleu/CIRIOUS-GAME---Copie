@@ -220,16 +220,6 @@ $('.ConfirmerMdpInstaGroove').click(function (){
     }
 })
 
-//Supprimer GENS
-$(".poubelle").click(function(){
-    InstaGroove_mission_3 == true
-    if((Instagroove_mission_1 == true) && (InstaGroove_mission_2 == true) && (InstaGroove_mission_3 == true)){
-        socket.emit('whichMission',(9))
-        console.log("InstaGroove Fini")
-        socket.emit('EnvoyeDialogue', 19, 1500)
-    }
-})
-
 //Confirmation Info InstaGroove
 
 $('.ConfirmerInfoInstaGroove').click(function () {
@@ -258,6 +248,44 @@ $('.ConfirmerInfoInstaGroove').click(function () {
     }
 
 })
+
+let spam1 = document.querySelector('.nom4');
+let spam2 = document.querySelector('.nom5');
+
+let verifspam1 = false;
+let verifspam2 = false;
+
+//Supprimer GENS
+$(".poubelle4").click(function(){
+    spam1.style.display = "none";
+
+    verifspam1 = true;
+
+    if((verifspam1 && verifspam2) == true){
+        InstaGroove_mission_3 == true;
+        if((Instagroove_mission_1 == true) && (InstaGroove_mission_2 == true) && (InstaGroove_mission_3 == true)){
+            socket.emit('whichMission',(9))
+            console.log("InstaGroove Fini")
+            socket.emit('EnvoyeDialogue', 19, 1500)
+        }
+    }
+})
+
+$(".poubelle5").click(function(){
+    spam2.style.display = "none";
+
+    verifspam2 = true;
+
+    if((verifspam1 && verifspam2) == true){
+        InstaGroove_mission_3 == true;
+        if((Instagroove_mission_1 == true) && (InstaGroove_mission_2 == true) && (InstaGroove_mission_3 == true)){
+            socket.emit('whichMission',(9))
+            console.log("InstaGroove Fini")
+            socket.emit('EnvoyeDialogue', 19, 1500)
+        }
+    }
+})
+
 
 //Tu te fais voler de l'argent
 $('.EnvoieReponseFauxRom').click(function (){
