@@ -197,14 +197,14 @@
     border: 0px solid lightgray; 
 }
 
-.ReadImail{
+.ReadImail {
     border-radius: 10px;
     border: 1px solid black;
-    height: 65vh;
+    height: 57vh;
     position: absolute;
     width: 44vw;
     padding: 1vh;
-    top: 18vh;
+    top: 22vh;
     left: 33vw;
     font-family: 'Minimal';
     font-size: 1.5rem;
