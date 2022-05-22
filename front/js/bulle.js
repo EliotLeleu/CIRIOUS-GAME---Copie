@@ -20,7 +20,7 @@ let TabDialogue = ["Tu t'appelles Naikté Paco et tu es un étudiant de Venomous
 "Il me semble que le mots de passe de Faux-Rom est aknjshu",
 "Regarde sur le post-it à cotê du stylo",
 "Il me semble que le mots de passe de Imail est cR0u$",
-"Bravo tu as fini le jeu"]
+"Bravo tu as fini le jeu ! "]
 
 
 let i = 0

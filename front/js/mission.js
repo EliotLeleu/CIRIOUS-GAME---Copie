@@ -279,7 +279,7 @@ $('.EnvoieReponseFauxRom').click(function (){
 
 })
 
-//Confiramation payement Imail
+//Confirmation payement Imail
 $('.envoyecashVrai').click(function(){
     if(document.querySelector("#CodeCarte").value == 1209){
         Imail_mission_2 = true

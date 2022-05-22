@@ -50,7 +50,7 @@
 }
 
 .bigboxlockFaux-Rom {
-    height: 64.5vh;
+    height: 63vh;
     background-color: white;
     position: relative;
     bottom: 3.5vh;
@@ -92,7 +92,7 @@
 
 .middleboxFaux-Rom {
     background-color: rgb(168, 162, 162);
-    height: 64.5vh;
+    height: 62vh;
     font-family: 'Minimal';
     font-size: 1.4rem;
 }
@@ -114,7 +114,7 @@
     border-radius: 2px;
     left: 10vh;
     margin-right: 60vh;
-    top: 2vh;
+    top: -2vh;
 }
 
 .box2 {
@@ -123,7 +123,7 @@
     border-radius: 2px;
     left: 10vh;
     margin-right: 60vh;
-    top: 4vh;
+    /* top: 4vh; */
 }
 
 .box3 {
@@ -132,7 +132,7 @@
     border-radius: 2px;
     left: 10vh;
     margin-right: 60vh;
-    top: 6vh;
+    top: 2vh;
 }
 
 .box4 {
@@ -144,7 +144,7 @@
     height: 22vh;
     border-radius: 2px;
     left: 98vh;
-    bottom: 43vh;
+    bottom: 50vh;
 }
 
 .box5 {
@@ -156,7 +156,7 @@
     border-radius: 2px;
     height: 23vh;
     left: 97vh;
-    bottom: 39vh;
+    bottom: 48vh;
 }
 
 .iconereg {
@@ -265,14 +265,28 @@
 
 .bigboxFaux-Rom_changeMdp {
     height: 64vh;
-    background-color: white;
+    background-color: rgb(48, 46, 46);
 }
 
 .middleboxFaux-Rom_reponseBastiens{
     background-color: rgb(168, 162, 162);
     margin-left: 15vh;
     margin-right: 14vh;
-    height: 64vh;
+    height: 60.5vh;
     font-family: 'Minimal';
     font-size: 1.2rem;
+}
+
+.discutionBastiens {
+    padding-bottom: 4vh;
+}
+
+.EnvoieReponseFauxRom{
+    /* padding-top: 4vh; */
+    border: 3px solid black;
+    height: 5vh;
+    width: 10vh;
+    text-align: center;
+    margin-top: 4vh;
+    border-radius: 5vh;
 }
