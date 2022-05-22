@@ -38,13 +38,15 @@ body{
 #fondFrigo{
     height: 100vh;
     width: 100vw;
-    background-color: darkblue;
+    background-image: url(../image/frigo.png);
+    background-size: cover;
 }
 
 #fondTable{
     height: 100vh;
     width: 100vw;
-    background-color: rosybrown;
+    background-image: url(../image/livreMDP.png);
+    background-size: cover;
 }
 
 #PC{
@@ -120,12 +122,12 @@ body{
     transition-duration: 2s;
 }
 
-.clickBox{
-    height: 9vh;
-    width: 20vw;
+.clickBox {
+    height: 3vh;
+    width: 9vw;
     position: absolute;
-    left: 42.5vw;
-    bottom: 2vh;
+    left: 44vw;
+    bottom: 9vh;
 }
 
 .mdpBox {
@@ -160,13 +162,14 @@ body{
     width: 30vw;
 }
 
-.clickPost-itJunia{
-    background-color: red;
+.clickPost-itJunia {
+    /* background-color: red; */
     height: 35vh;
     width: 15vw;
     position: absolute;
     top: 20vh;
     left: 30vw;
+    border: 3px solid red;
 }
 
 .mdpFrigoJunia{
@@ -253,13 +256,14 @@ body{
     border-radius: 10px;
 }
 
-.clickLivre{
-    background-color: black;
-    height: 50vh;
-    width: 25vw;
+.clickLivre {
+    /* background-color: black; */
+    height: 80vh;
+    width: 26vw;
     position: absolute;
-    left: 20vw;
-    top: 20vh;
+    left: 8vw;
+    top: 10vh;
+    /* BORDER: 2px solid black; */
 }
 
 .tableauMdp{
