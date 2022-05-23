@@ -170,18 +170,18 @@ function updatePersonnage() {
                 step = 1
             }
             y += 5;
-            if((y >= window.innerHeight*0.8813838550245) || 
-              ((x >= window.innerWidth*0.6811023622) && ( y >= window.innerHeight*0.535)) ||
-              ((y >= window.innerHeight*0.6455172413793103) && (x >= window.innerWidth*0.291015625) && (x <= window.innerWidth*0.335)) ||
-              ((y >= window.innerHeight*0.84) && (x <= window.innerWidth*0.291015625)) ||
-              ((x <= window.innerWidth*0.26171875) && (y >= window.innerHeight*0.74)) ||
-              ((x <= window.innerWidth*0.16) && (y >= window.innerHeight*0.6524137931034483)) ||
+            if((y >= window.innerHeight*0.91) || 
+              ((x >= window.innerWidth*0.6811023622) && ( y >= window.innerHeight*0.56)) ||
+              ((y >= window.innerHeight*0.67) && (x >= window.innerWidth*0.291015625) && (x <= window.innerWidth*0.335)) ||
+              ((y >= window.innerHeight*0.87) && (x <= window.innerWidth*0.291015625)) ||
+              ((x <= window.innerWidth*0.26171875) && (y >= window.innerHeight*0.76)) ||
+              ((x <= window.innerWidth*0.16) && (y >= window.innerHeight*0.69)) ||
               ((y >= window.innerHeight*0.6) && (x <= window.innerWidth*0.4537760416) && (x >= window.innerWidth*0.374) && (y <= window.innerHeight*0.775)) ||
               ((y <= window.innerHeight*0.635) && (x >= window.innerWidth*0.52) && (y >= window.innerHeight*0.4868965517241379) && (x <= window.innerWidth*0.671875)) ||
               ((x >= window.innerWidth*0.543) && (y <= window.innerHeight*0.7558620689655172) && (x <= window.innerWidth*0.6355) && (y >= window.innerHeight*0.4868965517241379)) ||
-              ((x >= window.innerWidth*0.54) && (y >= window.innerHeight*0.8317241379310345) && (x <= window.innerWidth*0.649)) ||
-              ((x >= window.innerWidth*0.72) && (y >= window.innerHeight*0.4937931034482759)) ||
-              ((y >= window.innerHeight*0.3627586206896552) && (x >= window.innerWidth*0.245) && (y <= window.innerHeight*0.568) && (x <= window.innerWidth*0.3561197916))){
+              ((x >= window.innerWidth*0.54) && (y >= window.innerHeight*0.86) && (x <= window.innerWidth*0.649)) ||
+              ((x >= window.innerWidth*0.72) && (y >= window.innerHeight*0.53)) ||
+              ((y >= window.innerHeight*0.38) && (x >= window.innerWidth*0.245) && (y <= window.innerHeight*0.568) && (x <= window.innerWidth*0.3561197916))){
                 y -=5
             }
         }
@@ -206,7 +206,7 @@ function updatePersonnage() {
               ((x <= window.innerWidth*0.195) && (y <= window.innerHeight*0.385)) ||
               ((x <= window.innerWidth*0.3561197916) && (y <= window.innerHeight*0.568) && (x >= window.innerWidth*0.29105)) ||
               ((x >= window.innerWidth*0.796) && (y <= window.innerHeight*0.41)) ||
-              ((y >= window.innerHeight*0.3627586206896552) && (x >= window.innerWidth*0.245) && (y <= window.innerHeight*0.568) && (x <= window.innerWidth*0.3561197916))){
+              ((y >= window.innerHeight*0.38) && (x >= window.innerWidth*0.245) && (y <= window.innerHeight*0.568) && (x <= window.innerWidth*0.3561197916))){
                 y +=5
             }
         }
@@ -234,13 +234,13 @@ function updatePersonnage() {
             }
             x -= 5;
             if((x <= window.innerWidth*0.125) ||
-              ((x <= window.innerWidth*0.335) && (y >= window.innerHeight*0.6455172413793103) && (x >= window.innerWidth*0.291015625)) ||
-              ((x <= window.innerWidth*0.26171875) && (y >= window.innerHeight*0.74)) ||
-              ((x <= window.innerWidth*0.16) && (y >= window.innerHeight*0.6524137931034483)) ||
+              ((x <= window.innerWidth*0.335) && (y >= window.innerHeight*0.67) && (x >= window.innerWidth*0.291015625)) ||
+              ((x <= window.innerWidth*0.26171875) && (y >= window.innerHeight*0.76)) ||
+              ((x <= window.innerWidth*0.16) && (y >= window.innerHeight*0.69)) ||
               ((y >= window.innerHeight*0.6) && (x <= window.innerWidth*0.4537760416) && (x >= window.innerWidth*0.374) && (y <= window.innerHeight*0.775)) ||
               ((y <= window.innerHeight*0.635) && (x >= window.innerWidth*0.52) && (y >= window.innerHeight*0.4868965517241379) && (x <= window.innerWidth*0.667)) ||
               ((x >= window.innerWidth*0.543) && (y <= window.innerHeight*0.7558620689655172) && (x <= window.innerWidth*0.6355) && (y >= window.innerHeight*0.4868965517241379)) ||
-              ((x >= window.innerWidth*0.54) && (y >= window.innerHeight*0.8317241379310345) && (x <= window.innerWidth*0.649)) ||
+              ((x >= window.innerWidth*0.54) && (y >= window.innerHeight*0.86) && (x <= window.innerWidth*0.649)) ||
               ((x <= window.innerWidth*0.195) && (y <= window.innerHeight*0.385)) ||
               ((x <= window.innerWidth*0.3561197916) && (y <= window.innerHeight*0.568) && (x >= window.innerWidth*0.29105))) {
                 x += 5;
@@ -257,20 +257,20 @@ function updatePersonnage() {
                 step = 1
             }
             x += 5;
-            if(((x >= window.innerWidth*0.665) && ( y >= window.innerHeight*0.535)) || 
+            if(((x >= window.innerWidth*0.665) && ( y >= window.innerHeight*0.56)) || 
               (x >= window.innerWidth*0.875) || 
               ((y <= window.innerHeight*0.38714991762) && (x >= window.innerWidth*0.67)) ||
-              ((y >= window.innerHeight*0.6455172413793103) && (x >= window.innerWidth*0.291015625) && (x <= window.innerWidth*0.335)) ||
+              ((y >= window.innerHeight*0.67) && (x >= window.innerWidth*0.291015625) && (x <= window.innerWidth*0.335)) ||
               ((y >= window.innerHeight*0.6) && (x <= window.innerWidth*0.4537760416) && (x >= window.innerWidth*0.374) && (y <= window.innerHeight*0.775)) ||
               ((y <= window.innerHeight*0.635) && (x >= window.innerWidth*0.52) && (y >= window.innerHeight*0.4868965517241379) && (x <= window.innerWidth*0.667)) ||
               ((x >= window.innerWidth*0.543) && (y <= window.innerHeight*0.7558620689655172) && (x <= window.innerWidth*0.6355) && (y >= window.innerHeight*0.4868965517241379)) ||
-              ((x >= window.innerWidth*0.54) && (y >= window.innerHeight*0.8317241379310345) && (x <= window.innerWidth*0.649)) ||
+              ((x >= window.innerWidth*0.54) && (y >= window.innerHeight*0.86) && (x <= window.innerWidth*0.649)) ||
               ((x >= window.innerWidth*0.438) && (y <= window.innerHeight*0.34)) ||
               ((x <= window.innerWidth*0.3561197916) && (y <= window.innerHeight*0.568) && (x >= window.innerWidth*0.29105)) ||
               ((x >= window.innerWidth*0.828125)) ||
               ((x >= window.innerWidth*0.796) && (y <= window.innerHeight*0.41)) ||
-              ((x >= window.innerWidth*0.72) && (y >= window.innerHeight*0.4937931034482759)) ||
-              ((y >= window.innerHeight*0.3627586206896552) && (x >= window.innerWidth*0.245) && (y <= window.innerHeight*0.568) && (x <= window.innerWidth*0.3561197916))) {
+              ((x >= window.innerWidth*0.72) && (y >= window.innerHeight*0.53)) ||
+              ((y >= window.innerHeight*0.38) && (x >= window.innerWidth*0.245) && (y <= window.innerHeight*0.568) && (x <= window.innerWidth*0.3561197916))) {
 
                 x -= 5;
             }
